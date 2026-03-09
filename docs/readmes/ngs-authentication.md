@@ -3,9 +3,11 @@
 ## Snapshot
 - Path progetto idee: D:\repos\NicolaGhiselliSolutions\ngs-project-ideas\ngs-authentication
 - Path implementazione corrente (spike): D:\repos\NicolaGhiselliSolutions\ngs-budget-utilities
-- Stato avanzamento: In discovery (PoC parziale disponibile in ngs-budget-utilities)
+- Stato avanzamento: In pausa (PoC parziale disponibile in ngs-budget-utilities)
 - Priorita: Alta
 - Tipo progetto: Personale
+
+- Includi nel portfolio: Si
 - Ultimo aggiornamento: 2026-03-09
 - Owner: Nicola
 
@@ -91,4 +93,5 @@ I progetti sono separati ma hanno bisogni simili (login, utenti, ruoli, sicurezz
   - `D:\repos\NicolaGhiselliSolutions\ngs-budget-utilities\src\NgsBudgetUtilities.Web\Components\Routes.razor`
   - `D:\repos\NicolaGhiselliSolutions\ngs-budget-utilities\docs\authkit\INTEGRATION_GUIDE.md`
 - `infinite-installer-cli` potra agganciarsi a questa iniziativa usando il futuro template CLI/web condiviso.
+
 

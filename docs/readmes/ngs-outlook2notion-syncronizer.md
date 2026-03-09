@@ -2,9 +2,10 @@
 
 ## Snapshot
 - Path: $projectPath
-- Stato avanzamento: Pianificato
+- Stato avanzamento: Da Pianificare
 - Priorita: Bassa
-- Tipo progetto: Personale
+- Tipo progetto: Personale
+- Includi nel portfolio: Si
 - Ultimo aggiornamento: $today
 - Owner: Nicola
 
@@ -56,5 +57,6 @@ Perche questo progetto e importante e quale problema risolve.
 
 ## Note Libere
 - 
+
 
 

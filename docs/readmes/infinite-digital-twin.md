@@ -2,7 +2,8 @@
 
 ## Snapshot
 - Path: $projectPath
-- Tipo progetto: Personale
+- Tipo progetto: Personale
+- Includi nel portfolio: Si
 - Stato avanzamento: Da Pianificare
 - Priorita: Bassa
 - Ultimo aggiornamento: $today
@@ -56,4 +57,5 @@ Perche questo progetto e importante e quale problema risolve.
 
 ## Note Libere
 - 
+
 

@@ -5,7 +5,8 @@
 - Path implementazione: D:\repos\NicolaGhiselliSolutions\ngs-time-utilities-cli
 - Stato avanzamento: In corso avanzato (MVP operativo, versione corrente 1.3.0)
 - Priorita: Media
-- Tipo progetto: Personale
+- Tipo progetto: Personale
+- Includi nel portfolio: Si
 - Ultimo aggiornamento: 2026-03-09
 - Owner: Nicola
 
@@ -99,4 +100,5 @@ Inoltre questo progetto e un pilota per costruire un template di NGS interactive
 - Questo progetto e un acceleratore diretto per `ngs-cli-template` (gia presente in `ngs-project-ideas`).
 - Buon candidato per trasferire pattern anche su `infinite-installer-cli` quando si passa all'implementazione.
 - Path documentali aggiornati ai file effettivi in `docs\` (evitati riferimenti obsoleti in root).
+
 

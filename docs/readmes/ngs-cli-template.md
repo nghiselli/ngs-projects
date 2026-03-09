@@ -4,7 +4,8 @@
 - Path: $projectPath
 - Stato avanzamento: Pianificato
 - Priorita: Media
-- Tipo progetto: Personale
+- Tipo progetto: Personale
+- Includi nel portfolio: Si
 - Ultimo aggiornamento: $today
 - Owner: Nicola
 
@@ -56,5 +57,6 @@ Perche questo progetto e importante e quale problema risolve.
 
 ## Note Libere
 - 
+
 
 

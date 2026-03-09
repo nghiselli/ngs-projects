@@ -37,6 +37,21 @@ function Clean-TemplateValue {
     return $trimmed
 }
 
+function Resolve-IncludeInPortfolio {
+    param([string]$IncludeRaw)
+
+    if ([string]::IsNullOrWhiteSpace($IncludeRaw)) {
+        return $true
+    }
+
+    $normalized = $IncludeRaw.Trim().ToLowerInvariant()
+    if ($normalized -match '^(no|false|0|n)$') {
+        return $false
+    }
+
+    return $true
+}
+
 function Normalize-Status {
     param([string]$StatusRaw)
 
@@ -275,6 +290,7 @@ foreach ($projectDirectory in $projectDirectories) {
     $priorityRaw = Clean-TemplateValue -Value (Get-SnapshotValue -Lines $readmeLines -Label "Priorita")
     $lastUpdateRaw = Clean-TemplateValue -Value (Get-SnapshotValue -Lines $readmeLines -Label "Ultimo aggiornamento")
     $projectTypeRaw = Clean-TemplateValue -Value (Get-SnapshotValue -Lines $readmeLines -Label "Tipo progetto")
+    $includeInPortfolioRaw = Clean-TemplateValue -Value (Get-SnapshotValue -Lines $readmeLines -Label "Includi nel portfolio")
 
     if ($statusRaw -match '\|') {
         $statusRaw = "Da pianificare"
@@ -286,6 +302,15 @@ foreach ($projectDirectory in $projectDirectories) {
 
     if ($projectTypeRaw -match '\|') {
         $projectTypeRaw = ""
+    }
+
+    if ($includeInPortfolioRaw -match '\|') {
+        $includeInPortfolioRaw = ""
+    }
+
+    $includeInPortfolio = Resolve-IncludeInPortfolio -IncludeRaw $includeInPortfolioRaw
+    if (-not $includeInPortfolio) {
+        continue
     }
 
     $normalizedStatus = Normalize-Status -StatusRaw $statusRaw
@@ -332,6 +357,7 @@ foreach ($projectDirectory in $projectDirectories) {
         statusRaw      = if ($statusRaw) { $statusRaw } else { "Non specificato" }
         priority       = if ($priorityRaw) { $priorityRaw } else { "N/D" }
         projectType    = if ($projectTypeRaw) { $projectTypeRaw } else { "Non specificato" }
+        includeInPortfolio = "Si"
         lastUpdate     = if ($lastUpdateDate -ne $null) { $lastUpdateDate.ToString("yyyy-MM-dd") } elseif ($lastUpdateRaw) { $lastUpdateRaw } else { "N/D" }
         objective      = $objectiveSummary
         readmePath     = "readmes/$slug.md"
