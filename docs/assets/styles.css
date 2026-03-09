@@ -65,12 +65,52 @@ a {
   background: rgba(215, 137, 29, 0.16);
 }
 
+.brand-bar,
 .hero,
-.detail-hero {
+.detail-hero,
+.site-footer {
   border: 1px solid var(--line);
   border-radius: var(--radius-lg);
   background: rgba(249, 252, 247, 0.9);
   box-shadow: var(--shadow);
+}
+
+.brand-bar {
+  margin-bottom: 14px;
+  padding: 10px 14px;
+}
+
+.brand-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand-logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  background: #ffffff;
+  object-fit: contain;
+}
+
+.brand-text {
+  display: grid;
+  gap: 2px;
+}
+
+.brand-text strong {
+  font-size: 0.98rem;
+}
+
+.brand-text span {
+  font-size: 0.82rem;
+  color: var(--ink-soft);
+}
+
+.hero,
+.detail-hero {
   padding: 24px;
 }
 
@@ -412,6 +452,49 @@ h1 {
   padding: 12px;
 }
 
+.site-footer {
+  margin-top: 16px;
+  padding: 12px 14px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 14px;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.86rem;
+  color: var(--ink-soft);
+}
+
+.footer-company {
+  font-weight: 500;
+  color: var(--ink);
+}
+
+.footer-links {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.footer-link {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 4px 10px;
+  background: #ffffff;
+  color: var(--ink-soft);
+}
+
+.footer-link:hover {
+  color: var(--highlight);
+  border-color: var(--highlight);
+}
+
+.footer-item {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 4px 10px;
+  background: rgba(255, 255, 255, 0.75);
+  color: var(--ink-soft);
+}
 .empty {
   border: 1px dashed var(--line);
   border-radius: 10px;
@@ -432,10 +515,12 @@ h1 {
   }
 }
 
+.brand-bar,
 .column,
 .updates,
 .detail-side,
-.markdown-shell {
+.markdown-shell,
+.site-footer {
   animation: rise-in 0.32s ease;
 }
 
@@ -468,16 +553,28 @@ h1 {
     padding: 16px;
   }
 
+  .brand-logo {
+    width: 34px;
+    height: 34px;
+  }
+
   .hero,
   .detail-hero,
   .column,
   .updates,
   .detail-side,
-  .markdown-shell {
+  .markdown-shell,
+  .site-footer {
     padding: 12px;
   }
 
   .stats {
     grid-template-columns: 1fr;
   }
+
+  .site-footer {
+    align-items: flex-start;
+    flex-direction: column;
+  }
 }
+

@@ -1,6 +1,27 @@
 (() => {
   const STATUS_ORDER = ["Da iniziare", "In corso", "Completato"];
 
+  const DEFAULT_BRAND = {
+    companyName: "Nicola Ghiselli Solutions",
+    tagline: "Project portfolio",
+    logoPath: "./assets/ngs-mark.svg",
+    website: "",
+    github: "https://github.com/nghiselli",
+    email: "",
+    cellulare: "",
+    sede: "",
+    piva: "",
+    codiceDestinatario: "",
+    footerNote: ""
+  };
+
+  function setText(id, value) {
+    const node = document.getElementById(id);
+    if (node) {
+      node.textContent = value;
+    }
+  }
+
   function formatDate(value) {
     if (!value || value === "N/D") {
       return "N/D";
@@ -18,20 +39,105 @@
     return value;
   }
 
-  function setText(id, value) {
-    const node = document.getElementById(id);
-    if (node) {
-      node.textContent = value;
+  function getBrandData() {
+    const runtime = window.NGS_BRAND && typeof window.NGS_BRAND === "object" ? window.NGS_BRAND : {};
+    return {
+      ...DEFAULT_BRAND,
+      ...runtime
+    };
+  }
+
+  function appendFooterLink(host, label, href) {
+    if (!host || !href) {
+      return;
+    }
+
+    const link = document.createElement("a");
+    link.className = "footer-link";
+    link.href = href;
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
+    link.textContent = label;
+    host.appendChild(link);
+  }
+
+  function appendFooterText(host, label, value) {
+    if (!host || !value) {
+      return;
+    }
+
+    const item = document.createElement("span");
+    item.className = "footer-item";
+    item.textContent = `${label}: ${value}`;
+    host.appendChild(item);
+  }
+
+  function applyBrand() {
+    const brand = getBrandData();
+
+    setText("brand-name", brand.companyName || DEFAULT_BRAND.companyName);
+    setText("brand-tagline", brand.tagline || DEFAULT_BRAND.tagline);
+
+    const logo = document.getElementById("brand-logo");
+    if (logo) {
+      if (brand.logoPath) {
+        logo.src = brand.logoPath;
+        logo.alt = `Logo ${brand.companyName || "azienda"}`;
+      } else {
+        logo.style.display = "none";
+      }
+    }
+
+    const footerCompany = document.getElementById("footer-company");
+    if (footerCompany) {
+      if (brand.footerNote) {
+        footerCompany.textContent = `${brand.companyName} - ${brand.footerNote}`;
+      } else {
+        footerCompany.textContent = brand.companyName || DEFAULT_BRAND.companyName;
+      }
+    }
+
+    const footerLinks = document.getElementById("footer-links");
+    if (footerLinks) {
+      footerLinks.innerHTML = "";
+      appendFooterLink(footerLinks, "GitHub", brand.github);
+      appendFooterLink(footerLinks, "Website", brand.website);
+
+      if (brand.email) {
+        appendFooterLink(footerLinks, "Email", `mailto:${brand.email}`);
+      }
+
+      if (brand.cellulare) {
+        const normalizedPhone = String(brand.cellulare).replace(/\s+/g, "");
+        appendFooterLink(footerLinks, "Cellulare", `tel:${normalizedPhone}`);
+      }
+
+      appendFooterText(footerLinks, "Sede", brand.sede);
+      appendFooterText(footerLinks, "P.IVA", brand.piva);
+      appendFooterText(footerLinks, "Cod. Dest.", brand.codiceDestinatario);
     }
   }
 
   async function loadData() {
-    const response = await fetch("./data/projects.json", { cache: "no-store" });
-    if (!response.ok) {
-      throw new Error(`Impossibile caricare data/projects.json (${response.status})`);
+    const embedded = window.NGS_SITE_DATA;
+    if (embedded && Array.isArray(embedded.projects)) {
+      return embedded;
     }
 
-    return response.json();
+    try {
+      const response = await fetch("./data/projects.json", { cache: "no-store" });
+      if (!response.ok) {
+        throw new Error(`Impossibile caricare data/projects.json (${response.status})`);
+      }
+
+      return response.json();
+    } catch (error) {
+      if (window.location.protocol === "file:") {
+        throw new Error("Dati bloccati in file://. Avvia un server locale su docs (es. python -m http.server 5500 -d docs)." );
+      }
+
+      throw error;
+    }
   }
 
   function toStatusBucket(status) {
@@ -80,7 +186,7 @@
     const config = [
       { label: "Totale", value: total },
       { label: "In corso", value: counts["In corso"] || 0 },
-      { label: "Completati", value: counts["Completato"] || 0 }
+      { label: "Completati", value: counts.Completato || 0 }
     ];
 
     config.forEach((entry) => {
@@ -267,6 +373,20 @@
       return;
     }
 
+    const embeddedReadmes = window.NGS_READMES && typeof window.NGS_READMES === "object"
+      ? window.NGS_READMES
+      : null;
+
+    if (embeddedReadmes && typeof embeddedReadmes[project.slug] === "string") {
+      const markdown = embeddedReadmes[project.slug];
+      if (typeof window.marked?.parse === "function") {
+        host.innerHTML = window.marked.parse(markdown, { breaks: true, gfm: true });
+      } else {
+        host.textContent = markdown;
+      }
+      return;
+    }
+
     try {
       const response = await fetch(`./${project.readmePath}`, { cache: "no-store" });
       if (!response.ok) {
@@ -326,6 +446,8 @@
   }
 
   async function main() {
+    applyBrand();
+
     try {
       const data = await loadData();
       const page = document.body.dataset.page;
@@ -343,3 +465,4 @@
 
   void main();
 })();
+

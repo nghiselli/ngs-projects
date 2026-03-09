@@ -245,6 +245,7 @@ $projectDirectories = Get-ChildItem -Path $RepoRoot -Directory | Where-Object { 
 
 $projects = @()
 $updates = @()
+$readmesMap = [ordered]@{}
 
 foreach ($projectDirectory in $projectDirectories) {
     $readmeFile = Join-Path $projectDirectory.FullName "README.md"
@@ -305,6 +306,7 @@ foreach ($projectDirectory in $projectDirectories) {
 
     $readmeTargetPath = Join-Path $readmesRoot "$slug.md"
     Set-Content -Path $readmeTargetPath -Value $readmeRaw -Encoding utf8
+    $readmesMap[$slug] = $readmeRaw
 
     $projectRecord = [ordered]@{
         name           = $projectName
@@ -389,10 +391,17 @@ $siteData = [ordered]@{
 }
 
 $dataFile = Join-Path $dataRoot "projects.json"
+$jsDataFile = Join-Path $dataRoot "projects.js"
+$readmesJsFile = Join-Path $dataRoot "readmes.js"
 $jsonContent = $siteData | ConvertTo-Json -Depth 10
+$readmesJson = $readmesMap | ConvertTo-Json -Depth 8
 Set-Content -Path $dataFile -Value $jsonContent -Encoding utf8
+Set-Content -Path $jsDataFile -Value ("window.NGS_SITE_DATA = " + $jsonContent + ";") -Encoding utf8
+Set-Content -Path $readmesJsFile -Value ("window.NGS_READMES = " + $readmesJson + ";") -Encoding utf8
 
-Write-Host ("Generated site data for {0} projects: {1}" -f @($projects).Count, $dataFile)
+Write-Host ("Generated site data for {0} projects: {1}, {2}, {3}" -f @($projects).Count, $dataFile, $jsDataFile, $readmesJsFile)
+
+
 
 
 

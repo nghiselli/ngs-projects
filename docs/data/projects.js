@@ -1,4 +1,4 @@
-{
+window.NGS_SITE_DATA = {
   "generatedAt": "2026-03-09T07:24:36+01:00",
   "totalProjects": 16,
   "statusCounts": {
@@ -330,4 +330,4 @@
       "source": "snapshot"
     }
   ]
-}
+};
