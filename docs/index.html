@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NGS Projects - Home</title>
+  <meta name="description" content="Panoramica progetti NGS con stato avanzamento e ultimi aggiornamenti." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./assets/styles.css" />
+</head>
+<body data-page="index">
+  <div class="ambient ambient-top"></div>
+  <div class="ambient ambient-bottom"></div>
+
+  <header class="hero">
+    <div>
+      <p class="hero-kicker">NGS PROJECTS</p>
+      <h1>Roadmap portfolio</h1>
+      <p id="generated-at" class="hero-meta">Caricamento dati...</p>
+    </div>
+    <div class="hero-side">
+      <label for="search-input" class="field-label">Cerca progetto</label>
+      <input id="search-input" type="search" placeholder="Es. ngs-time-utilities" autocomplete="off" />
+      <div class="stats" id="stats"></div>
+    </div>
+  </header>
+
+  <main class="layout">
+    <section class="columns">
+      <article class="column" data-status="Da iniziare">
+        <header class="column-header">
+          <h2>Da iniziare</h2>
+          <span class="count" id="count-da-iniziare">0</span>
+        </header>
+        <div class="cards" id="cards-da-iniziare"></div>
+      </article>
+
+      <article class="column" data-status="In corso">
+        <header class="column-header">
+          <h2>In corso</h2>
+          <span class="count" id="count-in-corso">0</span>
+        </header>
+        <div class="cards" id="cards-in-corso"></div>
+      </article>
+
+      <article class="column" data-status="Completato">
+        <header class="column-header">
+          <h2>Completato</h2>
+          <span class="count" id="count-completato">0</span>
+        </header>
+        <div class="cards" id="cards-completato"></div>
+      </article>
+    </section>
+
+    <aside class="updates">
+      <header class="updates-header">
+        <h2>Ultimi aggiornamenti</h2>
+      </header>
+      <ol id="updates-list" class="updates-list"></ol>
+    </aside>
+  </main>
+
+  <template id="project-card-template">
+    <a class="project-card" href="#">
+      <div class="project-top">
+        <h3></h3>
+        <span class="pill"></span>
+      </div>
+      <p class="project-status"></p>
+      <p class="project-objective"></p>
+      <div class="project-bottom">
+        <span class="mono project-date"></span>
+      </div>
+    </a>
+  </template>
+
+  <script src="./assets/site.js"></script>
+</body>
+</html>
