@@ -92,3 +92,4 @@ La documentazione tecnica tende a essere incompleta o non allineata al codice. Q
   - `scripts/*.ps1` (orchestrazione, deploy, changelog, setup remoto)
 - Stato release formale: `v0.1.0` taggata, con backlog esteso in `Unreleased`.
 - Da validare: benchmark qualità/tempo su piu repository enterprise.
+

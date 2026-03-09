@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NGS Projects - Dettaglio progetto</title>
+  <meta name="description" content="Dettaglio progetto generato da README." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./assets/styles.css" />
+</head>
+<body data-page="project">
+  <div class="ambient ambient-top"></div>
+  <div class="ambient ambient-bottom"></div>
+
+  <div class="brand-bar">
+    <a class="brand-link" href="./index.html">
+      <img id="brand-logo" class="brand-logo" src="./assets/ngs-mark.svg" alt="Logo" />
+      <div class="brand-text">
+        <strong id="brand-name">Nicola Ghiselli Solutions</strong>
+        <span id="brand-tagline">Project portfolio</span>
+      </div>
+    </a>
+  </div>
+
+  <header class="detail-hero">
+    <a class="back-link" href="./index.html">&larr; Torna alla Home</a>
+    <h1 id="project-name">Caricamento...</h1>
+    <div class="detail-meta" id="project-meta"></div>
+  </header>
+
+  <main class="detail-layout">
+    <aside class="detail-side">
+      <h2>Snapshot</h2>
+      <dl id="snapshot-list"></dl>
+      <h2>Ultima decisione</h2>
+      <div id="latest-decision" class="latest-decision"></div>
+    </aside>
+
+    <article class="markdown-shell">
+      <h2>README</h2>
+      <div id="readme-content" class="markdown-body">Caricamento README...</div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div id="footer-company" class="footer-company"></div>
+    <div id="footer-links" class="footer-links"></div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="./data/brand.js"></script>
+  <script src="./data/projects.js"></script>
+  <script src="./data/readmes.js"></script>
+  <script src="./assets/site.js"></script>
+</body>
+</html>

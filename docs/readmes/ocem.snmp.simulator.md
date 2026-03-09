@@ -3,7 +3,7 @@
 ## Snapshot
 - Path progetto idee: D:\repos\NicolaGhiselliSolutions\ngs-project-ideas\Ocem.Snmp.Simulator
 - Path implementazione: D:\repos\OCEM\Ocem.Snmp.Simulator
-- Stato avanzamento: In corso
+- Stato avanzamento: In corso (quasi completato, baseline v1.4.1)
 - Priorita: Alta
 - Tipo progetto: Cliente
 - Ultimo aggiornamento: 2026-03-08
@@ -98,3 +98,4 @@ Il progetto riduce dipendenze da ambienti fisici per validare integrazioni SNMP 
   - `./tools/test-snmp-matrix.ps1`
 - Versione applicativa corrente in `csproj`: `1.4.1`.
 - Il file `CHANGELOG.md` indica una sezione `Unreleased` ancora aperta.
+

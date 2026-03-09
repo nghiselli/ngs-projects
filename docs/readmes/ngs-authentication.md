@@ -91,3 +91,4 @@ I progetti sono separati ma hanno bisogni simili (login, utenti, ruoli, sicurezz
   - `D:\repos\NicolaGhiselliSolutions\ngs-budget-utilities\src\NgsBudgetUtilities.Web\Components\Routes.razor`
   - `D:\repos\NicolaGhiselliSolutions\ngs-budget-utilities\docs\authkit\INTEGRATION_GUIDE.md`
 - `infinite-installer-cli` potra agganciarsi a questa iniziativa usando il futuro template CLI/web condiviso.
+

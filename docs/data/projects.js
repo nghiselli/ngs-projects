@@ -1,0 +1,352 @@
+window.NGS_SITE_DATA = {
+  "generatedAt": "2026-03-09T08:49:40+01:00",
+  "totalProjects": 16,
+  "statusCounts": {
+    "Da pianificare": 4,
+    "Pianificato": 5,
+    "In corso": 6,
+    "In pausa": 0,
+    "Completato": 1,
+    "Archiviato": 0
+  },
+  "projects": [
+    {
+      "name": "infinite-digital-twin",
+      "slug": "infinite-digital-twin",
+      "status": "Da pianificare",
+      "statusRaw": "Da Pianificare",
+      "priority": "Bassa",
+      "projectType": "Personale",
+      "lastUpdate": "N/D",
+      "objective": "Breve descrizione del risultato che vuoi ottenere.",
+      "readmePath": "readmes/infinite-digital-twin.md",
+      "repositoryPath": "infinite-digital-twin",
+      "latestDecision": null
+    },
+    {
+      "name": "infinite-installer",
+      "slug": "infinite-installer",
+      "status": "In corso",
+      "statusRaw": "In corso (implementazione PowerShell avanzata; distribuzione in ridefinizione con wrapper .NET 10)",
+      "priority": "Media",
+      "projectType": "Personale",
+      "lastUpdate": "2026-03-08",
+      "objective": "Automatizzare in modo affidabile l'installazione di OCEM INFINITE su macchine target Windows, riducendo tempi, errori manuali e variabilita tra installazioni, tramite orchestrazione modulare e distribuzione controllata.",
+      "readmePath": "readmes/infinite-installer.md",
+      "repositoryPath": "infinite-installer",
+      "latestDecision": {
+        "date": "2026-03-08",
+        "decision": "Direzione tecnica aggiornata: wrapper/conversione con .NET 10",
+        "reason": "Migliorare distribuibilita e protezione IP"
+      }
+    },
+    {
+      "name": "infinite-installer-cli",
+      "slug": "infinite-installer-cli",
+      "status": "Pianificato",
+      "statusRaw": "Pianificato",
+      "priority": "Media",
+      "projectType": "Personale",
+      "lastUpdate": "2026-03-08",
+      "objective": "Creare una CLI interattiva per installazione/manutenzione INFINITE, duale rispetto al wizard principale, con UX a menu e comandi batch per automazione.",
+      "readmePath": "readmes/infinite-installer-cli.md",
+      "repositoryPath": "infinite-installer-cli",
+      "latestDecision": {
+        "date": "2026-03-08",
+        "decision": "`infinite-installer-cli` dichiarato progetto duale del wizard",
+        "reason": "Separare flusso CLI da percorso GUI/wrapper"
+      }
+    },
+    {
+      "name": "infinite-unified-simulator",
+      "slug": "infinite-unified-simulator",
+      "status": "Da pianificare",
+      "statusRaw": "Da pianificare",
+      "priority": "Bassa",
+      "projectType": "Personale",
+      "lastUpdate": "N/D",
+      "objective": "Breve descrizione del risultato che vuoi ottenere.",
+      "readmePath": "readmes/infinite-unified-simulator.md",
+      "repositoryPath": "infinite-unified-simulator",
+      "latestDecision": null
+    },
+    {
+      "name": "infinte-automated-testing-tool",
+      "slug": "infinte-automated-testing-tool",
+      "status": "Da pianificare",
+      "statusRaw": "Da pianificare",
+      "priority": "Bassa",
+      "projectType": "Personale",
+      "lastUpdate": "N/D",
+      "objective": "Breve descrizione del risultato che vuoi ottenere.",
+      "readmePath": "readmes/infinte-automated-testing-tool.md",
+      "repositoryPath": "infinte-automated-testing-tool",
+      "latestDecision": null
+    },
+    {
+      "name": "ngp-campusWorkflow-platform",
+      "slug": "ngp-campusworkflow-platform",
+      "status": "Da pianificare",
+      "statusRaw": "Da pianificare",
+      "priority": "Media",
+      "projectType": "Personale",
+      "lastUpdate": "N/D",
+      "objective": "Breve descrizione del risultato che vuoi ottenere.",
+      "readmePath": "readmes/ngp-campusworkflow-platform.md",
+      "repositoryPath": "ngp-campusWorkflow-platform",
+      "latestDecision": null
+    },
+    {
+      "name": "ngs-authentication",
+      "slug": "ngs-authentication",
+      "status": "In corso",
+      "statusRaw": "In discovery (PoC parziale disponibile in ngs-budget-utilities)",
+      "priority": "Alta",
+      "projectType": "Personale",
+      "lastUpdate": "2026-03-09",
+      "objective": "Costruire un layer di autenticazione riusabile per i progetti NGS, con due direzioni evolutive: - modulo condiviso riusabile (NuGet privato o git submodule/template); - eventuale authentication server centralizzato pe...",
+      "readmePath": "readmes/ngs-authentication.md",
+      "repositoryPath": "ngs-authentication",
+      "latestDecision": {
+        "date": "2026-03-09",
+        "decision": "Trattare ngs-budget-utilities come PoC, non implementazione shared definitiva",
+        "reason": "Ridurre coupling dominio-specifico"
+      }
+    },
+    {
+      "name": "ngs-budget-utilities",
+      "slug": "ngs-budget-utilities",
+      "status": "In corso",
+      "statusRaw": "In corso (foundation completata, sviluppo feature core in avvio)",
+      "priority": "Media",
+      "projectType": "Personale",
+      "lastUpdate": "2026-03-09",
+      "objective": "Costruire un personal finance monitor semplice ma robusto per uso individuale, con import da fonti eterogenee, categorizzazione assistita e report utili per decisioni mensili/annuali. Documenti principali di riferimen...",
+      "readmePath": "readmes/ngs-budget-utilities.md",
+      "repositoryPath": "ngs-budget-utilities",
+      "latestDecision": {
+        "date": "2026-03-09",
+        "decision": "Priorita su feature core M1/M2/M3 prima di analytics avanzate",
+        "reason": "Consegnare rapidamente valore pratico nel flusso quotidiano"
+      }
+    },
+    {
+      "name": "ngs-cli-template",
+      "slug": "ngs-cli-template",
+      "status": "Pianificato",
+      "statusRaw": "Pianificato",
+      "priority": "Media",
+      "projectType": "Personale",
+      "lastUpdate": "N/D",
+      "objective": "Breve descrizione del risultato che vuoi ottenere.",
+      "readmePath": "readmes/ngs-cli-template.md",
+      "repositoryPath": "ngs-cli-template",
+      "latestDecision": null
+    },
+    {
+      "name": "ngs-documentation-utilities",
+      "slug": "ngs-documentation-utilities",
+      "status": "In corso",
+      "statusRaw": "In corso (base completa, da consolidare su piu progetti target)",
+      "priority": "Bassa",
+      "projectType": "Personale",
+      "lastUpdate": "2026-03-09",
+      "objective": "Costruire una pipeline automatica per generare documentazione tecnica enterprise da codebase C# usando Roslyn + LLM locali + DocFX, con output navigabile e deployabile. Documenti principali di riferimento: | Documento...",
+      "readmePath": "readmes/ngs-documentation-utilities.md",
+      "repositoryPath": "ngs-documentation-utilities",
+      "latestDecision": {
+        "date": "2026-03-09",
+        "decision": "Priorita su Mermaid e XML Documentation bulk",
+        "reason": "Aumentare qualita e completezza output sui progetti target"
+      }
+    },
+    {
+      "name": "ngs-outlook2notion-syncronizer",
+      "slug": "ngs-outlook2notion-syncronizer",
+      "status": "Pianificato",
+      "statusRaw": "Pianificato",
+      "priority": "Bassa",
+      "projectType": "Personale",
+      "lastUpdate": "N/D",
+      "objective": "Breve descrizione del risultato che vuoi ottenere.",
+      "readmePath": "readmes/ngs-outlook2notion-syncronizer.md",
+      "repositoryPath": "ngs-outlook2notion-syncronizer",
+      "latestDecision": null
+    },
+    {
+      "name": "ngs-ticketing-system",
+      "slug": "ngs-ticketing-system",
+      "status": "Pianificato",
+      "statusRaw": "Pianificato",
+      "priority": "Bassa",
+      "projectType": "Personale",
+      "lastUpdate": "N/D",
+      "objective": "Breve descrizione del risultato che vuoi ottenere.",
+      "readmePath": "readmes/ngs-ticketing-system.md",
+      "repositoryPath": "ngs-ticketing-system",
+      "latestDecision": null
+    },
+    {
+      "name": "ngs-time-utilities",
+      "slug": "ngs-time-utilities",
+      "status": "In corso",
+      "statusRaw": "In corso avanzato (v2.6.0 stabile, roadmap v3.0.0 avviata)",
+      "priority": "Media",
+      "projectType": "Personale",
+      "lastUpdate": "2026-03-09",
+      "objective": "Consolidare una piattaforma operativa per monitoraggio giornate/ore, integrazione Asana-Clockify e reporting utile al lavoro quotidiano, con potenziale di upsell verso il cliente principale. Documenti principali di ri...",
+      "readmePath": "readmes/ngs-time-utilities.md",
+      "repositoryPath": "ngs-time-utilities",
+      "latestDecision": {
+        "date": "2026-03-09",
+        "decision": "Priorita a hardening/test prima del refactor strutturale v3",
+        "reason": "Ridurre regressioni sui flussi gia stabili"
+      }
+    },
+    {
+      "name": "ngs-time-utilities-cli",
+      "slug": "ngs-time-utilities-cli",
+      "status": "In corso",
+      "statusRaw": "In corso avanzato (MVP operativo, versione corrente 1.3.0)",
+      "priority": "Media",
+      "projectType": "Personale",
+      "lastUpdate": "2026-03-09",
+      "objective": "Costruire una CLI operativa per integrare Asana e Clockify in modalita veloce/scriptabile, e usarla come progetto pilota per definire un template riusabile di interactive CLI NGS. Documenti principali di riferimento: ...",
+      "readmePath": "readmes/ngs-time-utilities-cli.md",
+      "repositoryPath": "ngs-time-utilities-cli",
+      "latestDecision": {
+        "date": "2026-03-09",
+        "decision": "Posizionare `ngs-time-utilities-cli` come PoC per template CLI riusabile",
+        "reason": "Abilitare riuso su `infinite-installer-cli` e progetti futuri"
+      }
+    },
+    {
+      "name": "ngs-userManual-creator",
+      "slug": "ngs-usermanual-creator",
+      "status": "Pianificato",
+      "statusRaw": "Pianificato",
+      "priority": "Bassa",
+      "projectType": "Personale",
+      "lastUpdate": "N/D",
+      "objective": "Sarebbe comodo e interessante avere un progetto che aiuti l'utente nella generazione di manuali d'uso per i clienti. I manuali sarebbero una variante di un manuale di prodotto completo. Il sistema, oltre capire quali ...",
+      "readmePath": "readmes/ngs-usermanual-creator.md",
+      "repositoryPath": "ngs-userManual-creator",
+      "latestDecision": null
+    },
+    {
+      "name": "Ocem.Snmp.Simulator",
+      "slug": "ocem.snmp.simulator",
+      "status": "Completato",
+      "statusRaw": "In corso (quasi completato, baseline v1.4.1)",
+      "priority": "Alta",
+      "projectType": "Cliente",
+      "lastUpdate": "2026-03-08",
+      "objective": "Costruire un simulatore SNMP affidabile e configurabile per emulare device INFINITE (UPS, host, switch, NTP, printer), supportare test di integrazione senza hardware reale, e permettere verifica visuale/runtime del co...",
+      "readmePath": "readmes/ocem.snmp.simulator.md",
+      "repositoryPath": "Ocem.Snmp.Simulator",
+      "latestDecision": {
+        "date": "2026-03-08",
+        "decision": "Riorganizzata GUI con tab e visual topology (v1.4.0)",
+        "reason": "Migliorare usabilita operativa durante i test"
+      }
+    }
+  ],
+  "updates": [
+    {
+      "date": "2026-03-09",
+      "project": "ngs-authentication",
+      "slug": "ngs-authentication",
+      "status": "In corso",
+      "summary": "Trattare ngs-budget-utilities come PoC, non implementazione shared definitiva",
+      "source": "decision-log"
+    },
+    {
+      "date": "2026-03-09",
+      "project": "ngs-budget-utilities",
+      "slug": "ngs-budget-utilities",
+      "status": "In corso",
+      "summary": "Priorita su feature core M1/M2/M3 prima di analytics avanzate",
+      "source": "decision-log"
+    },
+    {
+      "date": "2026-03-09",
+      "project": "ngs-documentation-utilities",
+      "slug": "ngs-documentation-utilities",
+      "status": "In corso",
+      "summary": "Priorita su Mermaid e XML Documentation bulk",
+      "source": "decision-log"
+    },
+    {
+      "date": "2026-03-09",
+      "project": "ngs-time-utilities",
+      "slug": "ngs-time-utilities",
+      "status": "In corso",
+      "summary": "Priorita a hardening/test prima del refactor strutturale v3",
+      "source": "decision-log"
+    },
+    {
+      "date": "2026-03-09",
+      "project": "ngs-time-utilities-cli",
+      "slug": "ngs-time-utilities-cli",
+      "status": "In corso",
+      "summary": "Posizionare `ngs-time-utilities-cli` come PoC per template CLI riusabile",
+      "source": "decision-log"
+    },
+    {
+      "date": "2026-03-08",
+      "project": "infinite-installer",
+      "slug": "infinite-installer",
+      "status": "In corso",
+      "summary": "Direzione tecnica aggiornata: wrapper/conversione con .NET 10",
+      "source": "decision-log"
+    },
+    {
+      "date": "2026-03-08",
+      "project": "infinite-installer-cli",
+      "slug": "infinite-installer-cli",
+      "status": "Pianificato",
+      "summary": "`infinite-installer-cli` dichiarato progetto duale del wizard",
+      "source": "decision-log"
+    },
+    {
+      "date": "2026-03-08",
+      "project": "Ocem.Snmp.Simulator",
+      "slug": "ocem.snmp.simulator",
+      "status": "Completato",
+      "summary": "Riorganizzata GUI con tab e visual topology (v1.4.0)",
+      "source": "decision-log"
+    },
+    {
+      "date": "N/D",
+      "project": "infinite-digital-twin",
+      "slug": "infinite-digital-twin",
+      "status": "Da pianificare",
+      "summary": "Snapshot: Da Pianificare",
+      "source": "snapshot"
+    },
+    {
+      "date": "N/D",
+      "project": "infinite-unified-simulator",
+      "slug": "infinite-unified-simulator",
+      "status": "Da pianificare",
+      "summary": "Snapshot: Da pianificare",
+      "source": "snapshot"
+    },
+    {
+      "date": "N/D",
+      "project": "infinte-automated-testing-tool",
+      "slug": "infinte-automated-testing-tool",
+      "status": "Da pianificare",
+      "summary": "Snapshot: Da pianificare",
+      "source": "snapshot"
+    },
+    {
+      "date": "N/D",
+      "project": "ngp-campusWorkflow-platform",
+      "slug": "ngp-campusworkflow-platform",
+      "status": "Da pianificare",
+      "summary": "Snapshot: Da pianificare",
+      "source": "snapshot"
+    }
+  ]
+};

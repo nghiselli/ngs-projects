@@ -74,3 +74,4 @@ Il wizard attuale copre bene il flusso GUI, ma serve un canale CLI robusto per o
 - Repo implementazione installazione attuale: `D:\repos\NicolaGhiselliSolutions\ngs-infinite-scripts`
 - Coordinare naming/comandi con il progetto principale `infinite-installer`
 
+

@@ -90,3 +90,4 @@ Le funzionalita installative sono implementate in `D:\repos\NicolaGhiselliSoluti
   - `D:\repos\NicolaGhiselliSolutions\ngs-infinite-scripts\context\notes\functionalities-notes-wip.txt`
   - `D:\repos\NicolaGhiselliSolutions\ngs-infinite-scripts\context\notes\funtionalities-notes-future.txt`
   - `D:\repos\NicolaGhiselliSolutions\ngs-infinite-scripts\context\notes\wizard-distribution.md`
+

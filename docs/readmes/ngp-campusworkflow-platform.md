@@ -1,10 +1,10 @@
-# infinite-digital-twin
+# ngp-campusWorkflow-platform
 
 ## Snapshot
 - Path: $projectPath
 - Tipo progetto: Personale
-- Stato avanzamento: Da Pianificare
-- Priorita: Bassa
+- Stato avanzamento: Da pianificare
+- Priorita: Media
 - Ultimo aggiornamento: $today
 - Owner: Nicola
 
@@ -56,3 +56,6 @@ Perche questo progetto e importante e quale problema risolve.
 
 ## Note Libere
 - 
+
+
+

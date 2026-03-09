@@ -1,9 +1,9 @@
-# infinite-digital-twin
+# infinte-automated-testing-tool
 
 ## Snapshot
 - Path: $projectPath
 - Tipo progetto: Personale
-- Stato avanzamento: Da Pianificare
+- Stato avanzamento: Da pianificare
 - Priorita: Bassa
 - Ultimo aggiornamento: $today
 - Owner: Nicola
@@ -56,3 +56,6 @@ Perche questo progetto e importante e quale problema risolve.
 
 ## Note Libere
 - 
+
+
+

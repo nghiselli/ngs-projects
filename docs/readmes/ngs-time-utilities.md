@@ -97,3 +97,4 @@ Il progetto automatizza task giornalieri ad alto impatto (import dati, confronto
 - Nei riferimenti documentali usare i nomi file reali: `v3.0.0-specification.md` e `v4.0.0-analysis-wizard-idea.md`.
 - Progetto correlato: `D:\repos\NicolaGhiselliSolutions\ngs-time-utilities-cli` (esperienza CLI interattiva).
 - Quando pronto, `ngs-time-utilities` puo riusare il modulo condiviso `ngs-authentication` per la fase v3.
+

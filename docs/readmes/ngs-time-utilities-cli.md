@@ -99,3 +99,4 @@ Inoltre questo progetto e un pilota per costruire un template di NGS interactive
 - Questo progetto e un acceleratore diretto per `ngs-cli-template` (gia presente in `ngs-project-ideas`).
 - Buon candidato per trasferire pattern anche su `infinite-installer-cli` quando si passa all'implementazione.
 - Path documentali aggiornati ai file effettivi in `docs\` (evitati riferimenti obsoleti in root).
+

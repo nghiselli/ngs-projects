@@ -1,10 +1,10 @@
-# infinite-digital-twin
+# ngs-cli-template
 
 ## Snapshot
 - Path: $projectPath
+- Stato avanzamento: Pianificato
+- Priorita: Media
 - Tipo progetto: Personale
-- Stato avanzamento: Da Pianificare
-- Priorita: Bassa
 - Ultimo aggiornamento: $today
 - Owner: Nicola
 
@@ -56,3 +56,5 @@ Perche questo progetto e importante e quale problema risolve.
 
 ## Note Libere
 - 
+
+

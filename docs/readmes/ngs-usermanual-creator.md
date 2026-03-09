@@ -1,18 +1,21 @@
-# infinite-digital-twin
+# ngs-userManual-creator
 
 ## Snapshot
 - Path: $projectPath
-- Tipo progetto: Personale
-- Stato avanzamento: Da Pianificare
+- Stato avanzamento: Pianificato
 - Priorita: Bassa
+- Tipo progetto: Personale
 - Ultimo aggiornamento: $today
 - Owner: Nicola
 
 ## Obiettivo
-Breve descrizione del risultato che vuoi ottenere.
+Sarebbe comodo e interessante avere un progetto che aiuti l'utente nella generazione di manuali d'uso per i clienti.
+I manuali sarebbero una variante di un manuale di prodotto completo.
+Il sistema, oltre capire quali funzionalità sono disponibili, dovrebbe poi svolgere una serie di screenshot da aggiungere ai manuali.
 
 ## Contesto / Problema
-Perche questo progetto e importante e quale problema risolve.
+L'applicazione aiuta sia a sviluppare il manuale di prodotto completo che poi andare a specializzare tale documento per ogni cliente sulla base della documentazione e delle configurazioni di progetto.
+Questa attività è ripetitiva, error prone e potrebbe essere automatizzata.
 
 ## Ambito V1 (MVP)
 - [ ] Funzionalita 1
@@ -56,3 +59,5 @@ Perche questo progetto e importante e quale problema risolve.
 
 ## Note Libere
 - 
+
+

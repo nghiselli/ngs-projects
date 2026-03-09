@@ -1,10 +1,10 @@
-# infinite-digital-twin
+# ngs-outlook2notion-syncronizer
 
 ## Snapshot
 - Path: $projectPath
-- Tipo progetto: Personale
-- Stato avanzamento: Da Pianificare
+- Stato avanzamento: Pianificato
 - Priorita: Bassa
+- Tipo progetto: Personale
 - Ultimo aggiornamento: $today
 - Owner: Nicola
 
@@ -56,3 +56,5 @@ Perche questo progetto e importante e quale problema risolve.
 
 ## Note Libere
 - 
+
+
