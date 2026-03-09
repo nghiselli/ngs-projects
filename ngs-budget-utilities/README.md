@@ -5,6 +5,7 @@
 - Path implementazione: D:\repos\NicolaGhiselliSolutions\ngs-budget-utilities
 - Stato avanzamento: In corso (foundation completata, sviluppo feature core in avvio)
 - Priorita: Media
+- Tipo progetto: Personale
 - Ultimo aggiornamento: 2026-03-09
 - Owner: Nicola
 

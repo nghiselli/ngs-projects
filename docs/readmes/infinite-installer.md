@@ -5,6 +5,7 @@
 - Path implementazione attuale: D:\repos\NicolaGhiselliSolutions\ngs-infinite-scripts
 - Stato avanzamento: In corso (implementazione PowerShell avanzata; distribuzione in ridefinizione con wrapper .NET 10)
 - Priorita: Media
+- Tipo progetto: Personale
 - Ultimo aggiornamento: 2026-03-08
 - Baseline implementazione: 2.10.2 (2025-11-12)
 - Owner: Nicola

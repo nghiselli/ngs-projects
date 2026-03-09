@@ -1,5 +1,5 @@
 (() => {
-  const STATUS_ORDER = ["Da iniziare", "In corso", "Completato"];
+  const STATUS_ORDER = ["Da pianificare", "Pianificato", "In corso", "In pausa", "Completato", "Archiviato"];
 
   const DEFAULT_BRAND = {
     companyName: "Nicola Ghiselli Solutions",
@@ -133,7 +133,7 @@
       return response.json();
     } catch (error) {
       if (window.location.protocol === "file:") {
-        throw new Error("Dati bloccati in file://. Avvia un server locale su docs (es. python -m http.server 5500 -d docs)." );
+        throw new Error("Dati bloccati in file://. Avvia un server locale su docs (es. python -m http.server 5500 -d docs).");
       }
 
       throw error;
@@ -145,7 +145,7 @@
       return status;
     }
 
-    return "Da iniziare";
+    return "Da pianificare";
   }
 
   function createCard(project) {
@@ -176,6 +176,37 @@
     return empty;
   }
 
+  function setupTabs() {
+    const tabs = Array.from(document.querySelectorAll("[data-tab-target]"));
+    const panels = Array.from(document.querySelectorAll("[data-tab-panel]"));
+
+    if (tabs.length === 0 || panels.length === 0) {
+      return;
+    }
+
+    const activate = (target) => {
+      tabs.forEach((tab) => {
+        const isActive = tab.dataset.tabTarget === target;
+        tab.classList.toggle("is-active", isActive);
+        tab.setAttribute("aria-selected", isActive ? "true" : "false");
+        tab.tabIndex = isActive ? 0 : -1;
+      });
+
+      panels.forEach((panel) => {
+        const isActive = panel.dataset.tabPanel === target;
+        panel.classList.toggle("is-active", isActive);
+        panel.hidden = !isActive;
+      });
+    };
+
+    tabs.forEach((tab) => {
+      tab.addEventListener("click", () => activate(tab.dataset.tabTarget || ""));
+    });
+
+    const initial = tabs.find((tab) => tab.classList.contains("is-active"));
+    activate(initial?.dataset.tabTarget || tabs[0].dataset.tabTarget || "");
+  }
+
   function renderStats(counts, total) {
     const host = document.getElementById("stats");
     if (!host) {
@@ -185,8 +216,11 @@
     host.innerHTML = "";
     const config = [
       { label: "Totale", value: total },
+      { label: "Da pianificare", value: counts["Da pianificare"] || 0 },
+      { label: "Pianificati", value: counts.Pianificato || 0 },
       { label: "In corso", value: counts["In corso"] || 0 },
-      { label: "Completati", value: counts.Completato || 0 }
+      { label: "Completati", value: counts.Completato || 0 },
+      { label: "Archiviati", value: counts.Archiviato || 0 }
     ];
 
     config.forEach((entry) => {
@@ -204,11 +238,7 @@
   }
 
   function renderColumns(projects) {
-    const grouped = {
-      "Da iniziare": [],
-      "In corso": [],
-      Completato: []
-    };
+    const grouped = Object.fromEntries(STATUS_ORDER.map((status) => [status, []]));
 
     projects.forEach((project) => {
       grouped[toStatusBucket(project.status)].push(project);
@@ -223,7 +253,7 @@
       }
 
       holder.innerHTML = "";
-      const items = grouped[status];
+      const items = grouped[status] || [];
       count.textContent = String(items.length);
 
       if (items.length === 0) {
@@ -292,18 +322,18 @@
           return true;
         }
 
-        return [project.name, project.statusRaw, project.objective]
+        return [project.name, project.statusRaw, project.projectType, project.objective]
           .filter(Boolean)
           .join(" ")
           .toLowerCase()
           .includes(query);
       });
 
-      const counts = {
-        "Da iniziare": filtered.filter((p) => toStatusBucket(p.status) === "Da iniziare").length,
-        "In corso": filtered.filter((p) => toStatusBucket(p.status) === "In corso").length,
-        Completato: filtered.filter((p) => toStatusBucket(p.status) === "Completato").length
-      };
+      const counts = Object.fromEntries(STATUS_ORDER.map((status) => [status, 0]));
+      filtered.forEach((project) => {
+        const bucket = toStatusBucket(project.status);
+        counts[bucket] += 1;
+      });
 
       renderStats(counts, filtered.length);
       renderColumns(filtered);
@@ -315,6 +345,7 @@
     }
 
     refresh();
+    setupTabs();
   }
 
   function renderSnapshot(project) {
@@ -327,6 +358,7 @@
 
     const entries = [
       { key: "Stato", value: project.statusRaw || project.status },
+      { key: "Tipo progetto", value: project.projectType || "Non specificato" },
       { key: "Priorita", value: project.priority || "N/D" },
       { key: "Ultimo aggiornamento", value: formatDate(project.lastUpdate) },
       { key: "Path repository", value: project.repositoryPath || "N/D" }
@@ -430,6 +462,7 @@
       metaHost.innerHTML = "";
       [
         project.status || "N/D",
+        `Tipo: ${project.projectType || "Non specificato"}`,
         `Priorita: ${project.priority || "N/D"}`,
         `Aggiornato: ${formatDate(project.lastUpdate)}`
       ].forEach((label) => {
@@ -465,4 +498,5 @@
 
   void main();
 })();
+
 

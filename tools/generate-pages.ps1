@@ -41,24 +41,36 @@ function Normalize-Status {
     param([string]$StatusRaw)
 
     if ([string]::IsNullOrWhiteSpace($StatusRaw)) {
-        return "Da iniziare"
+        return "Da pianificare"
     }
 
     $normalized = $StatusRaw.ToLowerInvariant()
 
-    if ($normalized -match 'da iniziare') {
-        return "Da iniziare"
-    }
-
-    if ($normalized -match 'in corso|discovery|pianificat|in pausa') {
-        return "In corso"
+    if ($normalized -match 'archiviat') {
+        return "Archiviato"
     }
 
     if ($normalized -match '^completat|\bcompletato\b') {
         return "Completato"
     }
 
-    return "Da iniziare"
+    if ($normalized -match 'in pausa') {
+        return "In pausa"
+    }
+
+    if ($normalized -match 'in corso|discovery|in definizione|avviat') {
+        return "In corso"
+    }
+
+    if ($normalized -match '^da pianificare\b|\bda pianificare\b') {
+        return "Da pianificare"
+    }
+
+    if ($normalized -match 'da iniziare|pianificato') {
+        return "Pianificato"
+    }
+
+    return "Da pianificare"
 }
 
 function Parse-IsoDate {
@@ -262,13 +274,18 @@ foreach ($projectDirectory in $projectDirectories) {
     $statusRaw = Clean-TemplateValue -Value (Get-SnapshotValue -Lines $readmeLines -Label "Stato avanzamento")
     $priorityRaw = Clean-TemplateValue -Value (Get-SnapshotValue -Lines $readmeLines -Label "Priorita")
     $lastUpdateRaw = Clean-TemplateValue -Value (Get-SnapshotValue -Lines $readmeLines -Label "Ultimo aggiornamento")
+    $projectTypeRaw = Clean-TemplateValue -Value (Get-SnapshotValue -Lines $readmeLines -Label "Tipo progetto")
 
     if ($statusRaw -match '\|') {
-        $statusRaw = "Da iniziare"
+        $statusRaw = "Da pianificare"
     }
 
     if ($priorityRaw -match '\|') {
         $priorityRaw = ""
+    }
+
+    if ($projectTypeRaw -match '\|') {
+        $projectTypeRaw = ""
     }
 
     $normalizedStatus = Normalize-Status -StatusRaw $statusRaw
@@ -314,6 +331,7 @@ foreach ($projectDirectory in $projectDirectories) {
         status         = $normalizedStatus
         statusRaw      = if ($statusRaw) { $statusRaw } else { "Non specificato" }
         priority       = if ($priorityRaw) { $priorityRaw } else { "N/D" }
+        projectType    = if ($projectTypeRaw) { $projectTypeRaw } else { "Non specificato" }
         lastUpdate     = if ($lastUpdateDate -ne $null) { $lastUpdateDate.ToString("yyyy-MM-dd") } elseif ($lastUpdateRaw) { $lastUpdateRaw } else { "N/D" }
         objective      = $objectiveSummary
         readmePath     = "readmes/$slug.md"
@@ -377,9 +395,12 @@ foreach ($entry in $sortedUpdates) {
 }
 
 $statusCounts = [ordered]@{
-    "Da iniziare" = @($projects | Where-Object { $_.status -eq "Da iniziare" }).Count
-    "In corso"    = @($projects | Where-Object { $_.status -eq "In corso" }).Count
-    "Completato"  = @($projects | Where-Object { $_.status -eq "Completato" }).Count
+    "Da pianificare" = @($projects | Where-Object { $_.status -eq "Da pianificare" }).Count
+    "Pianificato"    = @($projects | Where-Object { $_.status -eq "Pianificato" }).Count
+    "In corso"       = @($projects | Where-Object { $_.status -eq "In corso" }).Count
+    "In pausa"       = @($projects | Where-Object { $_.status -eq "In pausa" }).Count
+    "Completato"     = @($projects | Where-Object { $_.status -eq "Completato" }).Count
+    "Archiviato"     = @($projects | Where-Object { $_.status -eq "Archiviato" }).Count
 }
 
 $siteData = [ordered]@{
@@ -400,6 +421,8 @@ Set-Content -Path $jsDataFile -Value ("window.NGS_SITE_DATA = " + $jsonContent +
 Set-Content -Path $readmesJsFile -Value ("window.NGS_READMES = " + $readmesJson + ";") -Encoding utf8
 
 Write-Host ("Generated site data for {0} projects: {1}, {2}, {3}" -f @($projects).Count, $dataFile, $jsDataFile, $readmesJsFile)
+
+
 
 
 

@@ -5,6 +5,7 @@
 - Path implementazione: D:\repos\NicolaGhiselliSolutions\ngs-time-utilities
 - Stato avanzamento: In corso avanzato (v2.6.0 stabile, roadmap v3.0.0 avviata)
 - Priorita: Media
+- Tipo progetto: Personale
 - Ultimo aggiornamento: 2026-03-09
 - Owner: Nicola
 

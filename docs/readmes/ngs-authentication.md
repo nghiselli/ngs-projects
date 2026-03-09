@@ -5,6 +5,7 @@
 - Path implementazione corrente (spike): D:\repos\NicolaGhiselliSolutions\ngs-budget-utilities
 - Stato avanzamento: In discovery (PoC parziale disponibile in ngs-budget-utilities)
 - Priorita: Alta
+- Tipo progetto: Personale
 - Ultimo aggiornamento: 2026-03-09
 - Owner: Nicola
 

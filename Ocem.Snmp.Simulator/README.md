@@ -3,8 +3,9 @@
 ## Snapshot
 - Path progetto idee: D:\repos\NicolaGhiselliSolutions\ngs-project-ideas\Ocem.Snmp.Simulator
 - Path implementazione: D:\repos\OCEM\Ocem.Snmp.Simulator
-- Stato avanzamento: In corso (quasi completato, baseline v1.4.1)
+- Stato avanzamento: In corso
 - Priorita: Alta
+- Tipo progetto: Cliente
 - Ultimo aggiornamento: 2026-03-08
 - Owner: Nicola
 

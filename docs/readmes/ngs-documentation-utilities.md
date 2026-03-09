@@ -5,6 +5,7 @@
 - Path implementazione: D:\repos\NicolaGhiselliSolutions\ngs-documentation-utilities
 - Stato avanzamento: In corso (base completa, da consolidare su piu progetti target)
 - Priorita: Bassa
+- Tipo progetto: Personale
 - Ultimo aggiornamento: 2026-03-09
 - Owner: Nicola
 

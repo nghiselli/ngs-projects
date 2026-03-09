@@ -37,39 +37,77 @@
     </div>
   </header>
 
-  <main class="layout">
-    <section class="columns">
-      <article class="column" data-status="Da iniziare">
-        <header class="column-header">
-          <h2>Da iniziare</h2>
-          <span class="count" id="count-da-iniziare">0</span>
-        </header>
-        <div class="cards" id="cards-da-iniziare"></div>
-      </article>
+  <main class="home-tabs">
+    <nav class="tab-nav" role="tablist" aria-label="Board progetti">
+      <button class="tab-btn is-active" type="button" role="tab" aria-selected="true" data-tab-target="active">Da Pianificare a In Corso</button>
+      <button class="tab-btn" type="button" role="tab" aria-selected="false" data-tab-target="closed">In Pausa, Completato, Archiviato</button>
+      <button class="tab-btn" type="button" role="tab" aria-selected="false" data-tab-target="updates">Aggiornamenti</button>
+    </nav>
 
-      <article class="column" data-status="In corso">
-        <header class="column-header">
-          <h2>In corso</h2>
-          <span class="count" id="count-in-corso">0</span>
-        </header>
-        <div class="cards" id="cards-in-corso"></div>
-      </article>
+    <section class="tab-panel is-active" data-tab-panel="active">
+      <section class="columns">
+        <article class="column" data-status="Da pianificare">
+          <header class="column-header">
+            <h2>Da pianificare</h2>
+            <span class="count" id="count-da-pianificare">0</span>
+          </header>
+          <div class="cards" id="cards-da-pianificare"></div>
+        </article>
 
-      <article class="column" data-status="Completato">
-        <header class="column-header">
-          <h2>Completato</h2>
-          <span class="count" id="count-completato">0</span>
-        </header>
-        <div class="cards" id="cards-completato"></div>
-      </article>
+        <article class="column" data-status="Pianificato">
+          <header class="column-header">
+            <h2>Pianificato</h2>
+            <span class="count" id="count-pianificato">0</span>
+          </header>
+          <div class="cards" id="cards-pianificato"></div>
+        </article>
+
+        <article class="column" data-status="In corso">
+          <header class="column-header">
+            <h2>In corso</h2>
+            <span class="count" id="count-in-corso">0</span>
+          </header>
+          <div class="cards" id="cards-in-corso"></div>
+        </article>
+      </section>
     </section>
 
-    <aside class="updates">
-      <header class="updates-header">
-        <h2>Ultimi aggiornamenti</h2>
-      </header>
-      <ol id="updates-list" class="updates-list"></ol>
-    </aside>
+    <section class="tab-panel" data-tab-panel="closed" hidden>
+      <section class="columns">
+        <article class="column" data-status="In pausa">
+          <header class="column-header">
+            <h2>In pausa</h2>
+            <span class="count" id="count-in-pausa">0</span>
+          </header>
+          <div class="cards" id="cards-in-pausa"></div>
+        </article>
+
+        <article class="column" data-status="Completato">
+          <header class="column-header">
+            <h2>Completato</h2>
+            <span class="count" id="count-completato">0</span>
+          </header>
+          <div class="cards" id="cards-completato"></div>
+        </article>
+
+        <article class="column" data-status="Archiviato">
+          <header class="column-header">
+            <h2>Archiviato</h2>
+            <span class="count" id="count-archiviato">0</span>
+          </header>
+          <div class="cards" id="cards-archiviato"></div>
+        </article>
+      </section>
+    </section>
+
+    <section class="tab-panel" data-tab-panel="updates" hidden>
+      <aside class="updates updates-full">
+        <header class="updates-header">
+          <h2>Ultimi aggiornamenti</h2>
+        </header>
+        <ol id="updates-list" class="updates-list"></ol>
+      </aside>
+    </section>
   </main>
 
   <footer class="site-footer">

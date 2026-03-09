@@ -1,17 +1,50 @@
 # ngs-projects
 
-Repository portfolio dei progetti Nicola Ghiselli Solutions.
+Portfolio repository dei progetti di Nicola Ghiselli Solutions.
 
-Questo repository contiene una cartella per ogni progetto e una GitHub Pages che mostra:
-- home con card per stato (`Da iniziare`, `In corso`, `Completato`),
-- pagina dettaglio progetto generata dai README,
-- blocco "Ultimi aggiornamenti".
+## Cosa contiene
 
-## Struttura
+Questo repository include:
+- una cartella per ogni progetto (`/<nome-progetto>/README.md`),
+- una GitHub Pages in `docs/` generata dai README dei progetti,
+- script di generazione dati in `tools/generate-pages.ps1`.
 
-- `/<nome-progetto>/README.md`: fonte principale di stato, obiettivi e decision log.
-- `/docs`: sito statico GitHub Pages.
-- `/tools/generate-pages.ps1`: genera i dati della Pages da tutti i README progetto.
+## GitHub Pages (struttura Home)
+
+La Home e organizzata in 3 tab:
+1. `Da Pianificare a In Corso` con board: `Da pianificare`, `Pianificato`, `In corso`
+2. `In Pausa, Completato, Archiviato` con board: `In pausa`, `Completato`, `Archiviato`
+3. `Aggiornamenti` con lista degli ultimi aggiornamenti (Decision Log / Snapshot)
+
+Ogni card progetto mostra:
+- nome progetto,
+- priorita,
+- stato,
+- sintesi obiettivo,
+- ultimo aggiornamento.
+
+La pagina dettaglio progetto mostra anche lo snapshot, incluso:
+- stato,
+- tipo progetto,
+- priorita,
+- ultimo aggiornamento,
+- path repository.
+
+## Convenzioni README progetto
+
+Ogni progetto deve avere `README.md` con sezione `## Snapshot` e almeno questi campi:
+- `Stato avanzamento`
+- `Priorita`
+- `Tipo progetto`
+- `Ultimo aggiornamento`
+
+Valori stato supportati dalla Pages:
+- `Da pianificare`
+- `Pianificato`
+- `In corso`
+- `In pausa`
+- `Completato`
+- `Archiviato`
 
 ## Come aggiornare la Pages
 
@@ -27,9 +60,11 @@ Questo repository contiene una cartella per ogni progetto e una GitHub Pages che
 
 ## Nuovo progetto
 
-Per aggiungere un progetto al sito:
+Per aggiungere un nuovo progetto al sito:
 1. Crea una nuova cartella in root (es. `my-new-project`).
-2. Aggiungi `README.md` nella cartella.
-3. Esegui `./tools/generate-pages.ps1` oppure fai push su `main` (CI lo rigenera).
+2. Aggiungi `README.md` nella cartella con `## Snapshot`.
+3. Esegui `./tools/generate-pages.ps1` oppure fai push su `main`.
 
-Nota: il `README.md` di root (questo file) e il `CHANGELOG.md` di root non vengono usati dalla GitHub Pages dei progetti.
+## Nota
+
+Il `README.md` di root (questo file) e il `CHANGELOG.md` di root sono documentazione del repository e non vengono mostrati come card progetto nella Pages.

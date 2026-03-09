@@ -2,8 +2,9 @@
 
 ## Snapshot
 - Path progetto idee: D:\repos\NicolaGhiselliSolutions\ngs-project-ideas\infinite-installer-cli
-- Stato avanzamento: Da iniziare
+- Stato avanzamento: Pianificato
 - Priorita: Media
+- Tipo progetto: Personale
 - Ultimo aggiornamento: 2026-03-08
 - Owner: Nicola
 - Progetto seed/template di riferimento: D:\repos\NicolaGhiselliSolutions\ngs-time-utilities-cli
@@ -72,3 +73,4 @@ Il wizard attuale copre bene il flusso GUI, ma serve un canale CLI robusto per o
 - Repo seed corrente: `D:\repos\NicolaGhiselliSolutions\ngs-time-utilities-cli`
 - Repo implementazione installazione attuale: `D:\repos\NicolaGhiselliSolutions\ngs-infinite-scripts`
 - Coordinare naming/comandi con il progetto principale `infinite-installer`
+

@@ -5,6 +5,7 @@
 - Path implementazione: D:\repos\NicolaGhiselliSolutions\ngs-time-utilities-cli
 - Stato avanzamento: In corso avanzato (MVP operativo, versione corrente 1.3.0)
 - Priorita: Media
+- Tipo progetto: Personale
 - Ultimo aggiornamento: 2026-03-09
 - Owner: Nicola
 
