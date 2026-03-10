@@ -6,7 +6,7 @@
 - Stato avanzamento: In pausa (foundation completata, sviluppo feature core in avvio)
 - Priorita: Media
 
-- Progresso: 100%
+- Progresso: 5%
 - Tipo progetto: Personale
 
 - Includi nel portfolio: Si
