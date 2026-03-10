@@ -1,10 +1,11 @@
 # ngs-authentication
 
 ## Snapshot
-- Path progetto idee: D:\repos\NicolaGhiselliSolutions\ngs-project-ideas\ngs-authentication
+- Path progetto idee: D:\repos\NicolaGhiselliSolutions\ngs-projects\ngs-authentication
 - Path implementazione corrente (spike): D:\repos\NicolaGhiselliSolutions\ngs-budget-utilities
 - Stato avanzamento: In pausa (PoC parziale disponibile in ngs-budget-utilities)
-- Priorita: Alta
+- Priorita: Alta
+
 - Progresso: 65%
 - Tipo progetto: Personale
 

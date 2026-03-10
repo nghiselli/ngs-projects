@@ -1,12 +1,14 @@
 # ngs-time-utilities
 
 ## Snapshot
-- Path progetto idee: D:\repos\NicolaGhiselliSolutions\ngs-project-ideas\ngs-time-utilities
+- Path progetto idee: D:\repos\NicolaGhiselliSolutions\ngs-projects\ngs-time-utilities
 - Path implementazione: D:\repos\NicolaGhiselliSolutions\ngs-time-utilities
 - Stato avanzamento: In corso avanzato (v2.6.0 stabile, roadmap v3.0.0 avviata)
-- Priorita: Media
+- Priorita: Media
+
 - Progresso: 55%
-- Tipo progetto: Personale
+- Tipo progetto: Personale
+
 - Includi nel portfolio: Si
 - Ultimo aggiornamento: 2026-03-09
 - Owner: Nicola

@@ -1,12 +1,14 @@
 # infinite-installer
 
 ## Snapshot
-- Path progetto idee: D:\repos\NicolaGhiselliSolutions\ngs-project-ideas\infinite-installer
+- Path progetto idee: D:\repos\NicolaGhiselliSolutions\ngs-projects\infinite-installer
 - Path implementazione attuale: D:\repos\NicolaGhiselliSolutions\ngs-infinite-scripts
 - Stato avanzamento: In Pausa (implementazione PowerShell avanzata; distribuzione in ridefinizione con wrapper .NET 10)
-- Priorita: Media
+- Priorita: Media
+
 - Progresso: 65%
-- Tipo progetto: Personale
+- Tipo progetto: Personale
+
 - Includi nel portfolio: Si
 - Ultimo aggiornamento: 2026-03-08
 - Baseline implementazione: 2.10.2 (2025-11-12)
@@ -81,7 +83,7 @@ Le funzionalita installative sono implementate in `D:\repos\NicolaGhiselliSoluti
 - Complessita di packaging/signing/licensing enterprise
 - Feature WIP ancora aperte in `ngs-infinite-scripts` prima del rilascio cliente
 - Dipendenza dalla qualita del template CLI per accelerare il progetto duale
-
+ngs-projects
 ## Note Libere
 - Progetto duale CLI: `D:\repos\NicolaGhiselliSolutions\ngs-project-ideas\infinite-installer-cli`
 - Seed/template CLI attuale: `D:\repos\NicolaGhiselliSolutions\ngs-time-utilities-cli`

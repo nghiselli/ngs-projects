@@ -1,12 +1,14 @@
 # ngs-time-utilities-cli
 
 ## Snapshot
-- Path progetto idee: D:\repos\NicolaGhiselliSolutions\ngs-project-ideas\ngs-time-utilities-cli
+- Path progetto idee: D:\repos\NicolaGhiselliSolutions\ngs-projects\ngs-time-utilities-cli
 - Path implementazione: D:\repos\NicolaGhiselliSolutions\ngs-time-utilities-cli
 - Stato avanzamento: In corso avanzato (MVP operativo, versione corrente 1.3.0)
-- Priorita: Media
+- Priorita: Media
+
 - Progresso: 55%
-- Tipo progetto: Personale
+- Tipo progetto: Personale
+
 - Includi nel portfolio: Si
 - Ultimo aggiornamento: 2026-03-09
 - Owner: Nicola
@@ -96,7 +98,7 @@ Inoltre questo progetto e un pilota per costruire un template di NGS interactive
 - Possibili divergenze tra documentazione release e workflow effettivo di publish/versioning.
 - Dipendenza forte da API esterne (variazioni endpoint, limiti, downtime).
 - Comandi distruttivi richiedono protezioni chiare per ridurre errore umano.
-
+ngs-projects
 ## Note Libere
 - Questo progetto e un acceleratore diretto per `ngs-cli-template` (gia presente in `ngs-project-ideas`).
 - Buon candidato per trasferire pattern anche su `infinite-installer-cli` quando si passa all'implementazione.

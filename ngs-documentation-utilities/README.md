@@ -1,10 +1,11 @@
 # ngs-documentation-utilities
 
 ## Snapshot
-- Path progetto idee: D:\repos\NicolaGhiselliSolutions\ngs-project-ideas\ngs-documentation-utilities
+- Path progetto idee: D:\repos\NicolaGhiselliSolutions\ngs-projects\ngs-documentation-utilities
 - Path implementazione: D:\repos\NicolaGhiselliSolutions\ngs-documentation-utilities
 - Stato avanzamento: In pausa (base completa, da consolidare su piu progetti target)
-- Priorita: Bassa
+- Priorita: Bassa
+
 - Progresso: 65%
 - Tipo progetto: Personale
 

@@ -1,10 +1,11 @@
 # ngs-budget-utilities
 
 ## Snapshot
-- Path progetto idee: D:\repos\NicolaGhiselliSolutions\ngs-project-ideas\ngs-budget-utilities
+- Path progetto idee: D:\repos\NicolaGhiselliSolutions\ngs-projects\ngs-budget-utilities
 - Path implementazione: D:\repos\NicolaGhiselliSolutions\ngs-budget-utilities
 - Stato avanzamento: In pausa (foundation completata, sviluppo feature core in avvio)
-- Priorita: Media
+- Priorita: Media
+
 - Progresso: 100%
 - Tipo progetto: Personale
 

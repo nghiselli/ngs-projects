@@ -1,11 +1,13 @@
 # infinite-installer-cli
 
 ## Snapshot
-- Path progetto idee: D:\repos\NicolaGhiselliSolutions\ngs-project-ideas\infinite-installer-cli
+- Path progetto idee: D:\repos\NicolaGhiselliSolutions\ngs-projects\infinite-installer-cli
 - Stato avanzamento: Pianificato
-- Priorita: Media
+- Priorita: Media
+
 - Progresso: 20%
-- Tipo progetto: Personale
+- Tipo progetto: Personale
+
 - Includi nel portfolio: Si
 - Ultimo aggiornamento: 2026-03-08
 - Owner: Nicola
