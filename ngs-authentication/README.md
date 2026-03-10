@@ -6,7 +6,7 @@
 - Stato avanzamento: In pausa (PoC parziale disponibile in ngs-budget-utilities)
 - Priorita: Alta
 
-- Progresso: 65%
+- Progresso: 45%
 - Tipo progetto: Personale
 
 - Includi nel portfolio: Si

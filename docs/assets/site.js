@@ -165,6 +165,38 @@
 
     return 0;
   }
+
+  function getPriorityRank(priority) {
+    const normalized = String(priority || "").trim().toLowerCase();
+    if (normalized === "alta" || normalized === "high" || normalized === "urgent" || normalized === "urgente") {
+      return 3;
+    }
+
+    if (normalized === "media" || normalized === "medium") {
+      return 2;
+    }
+
+    if (normalized === "bassa" || normalized === "low") {
+      return 1;
+    }
+
+    return 0;
+  }
+
+  function compareProjectsForBoard(a, b) {
+    const progressDelta = getProgressPercent(b) - getProgressPercent(a);
+    if (progressDelta !== 0) {
+      return progressDelta;
+    }
+
+    const priorityDelta = getPriorityRank(b?.priority) - getPriorityRank(a?.priority);
+    if (priorityDelta !== 0) {
+      return priorityDelta;
+    }
+
+    return String(a?.name || "").localeCompare(String(b?.name || ""), "it");
+  }
+
   function createCard(project) {
     const template = document.getElementById("project-card-template");
     const fragment = template.content.cloneNode(true);
@@ -294,7 +326,7 @@
         return;
       }
 
-      items.sort((a, b) => a.name.localeCompare(b.name, "it"));
+      items.sort(compareProjectsForBoard);
       items.forEach((project) => holder.appendChild(createCard(project)));
     });
   }
@@ -533,8 +565,4 @@
 
   void main();
 })();
-
-
-
-
 

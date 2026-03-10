@@ -1,5 +1,5 @@
 window.NGS_SITE_DATA = {
-  "generatedAt": "2026-03-10T06:46:17+01:00",
+  "generatedAt": "2026-03-10T18:06:33+01:00",
   "totalProjects": 29,
   "statusCounts": {
     "Da pianificare": 7,
@@ -264,23 +264,23 @@ window.NGS_SITE_DATA = {
       "latestDecision": null
     },
     {
-      "name": "Ocem.Snmp.Simulator",
+      "name": "ocem.snmp.simulator",
       "slug": "ocem.snmp.simulator",
       "status": "In corso",
       "statusRaw": "In corso",
       "priority": "Alta",
       "projectType": "Cliente",
       "includeInPortfolio": "Si",
-      "progressPercent": 55,
-      "progressText": "55%",
-      "lastUpdate": "2026-03-08",
+      "progressPercent": 75,
+      "progressText": "75%",
+      "lastUpdate": "2026-03-10",
       "objective": "Costruire un simulatore SNMP affidabile e configurabile per emulare device INFINITE (UPS, host, switch, NTP, printer), supportare test di integrazione senza hardware reale, e permettere verifica visuale/runtime del co...",
       "readmePath": "readmes/ocem.snmp.simulator.md",
-      "repositoryPath": "Ocem.Snmp.Simulator",
+      "repositoryPath": "ocem.snmp.simulator",
       "latestDecision": {
-        "date": "2026-03-08",
-        "decision": "Riorganizzata GUI con tab e visual topology (v1.4.0)",
-        "reason": "Migliorare usabilita operativa durante i test"
+        "date": "2026-03-10",
+        "decision": "Implementata feature trap v1.5 con sender SNMPv1 e parser config dedicato",
+        "reason": "Coprire scenari event-driven verso NMS senza hardware reale"
       }
     },
     {
@@ -642,6 +642,14 @@ window.NGS_SITE_DATA = {
       "source": "decision-log"
     },
     {
+      "date": "2026-03-10",
+      "project": "ocem.snmp.simulator",
+      "slug": "ocem.snmp.simulator",
+      "status": "In corso",
+      "summary": "Implementata feature trap v1.5 con sender SNMPv1 e parser config dedicato",
+      "source": "decision-log"
+    },
+    {
       "date": "2026-03-09",
       "project": "ngs-authentication",
       "slug": "ngs-authentication",
@@ -695,14 +703,6 @@ window.NGS_SITE_DATA = {
       "slug": "infinite-installer-cli",
       "status": "Pianificato",
       "summary": "`infinite-installer-cli` dichiarato progetto duale del wizard",
-      "source": "decision-log"
-    },
-    {
-      "date": "2026-03-08",
-      "project": "Ocem.Snmp.Simulator",
-      "slug": "ocem.snmp.simulator",
-      "status": "In corso",
-      "summary": "Riorganizzata GUI con tab e visual topology (v1.4.0)",
       "source": "decision-log"
     },
     {
