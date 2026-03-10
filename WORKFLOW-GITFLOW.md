@@ -1,184 +1,184 @@
-# Workflow: Chiusura Feature e Release
+# Workflow: Chiusura Feature, Release e Hotfix (Standard)
 
-> Guida operativa per il processo GitFlow di `Ocem.Snmp.Simulator`.  
-> Seguire i passi nell'ordine indicato.
+> Template operativo GitFlow riusabile su tutti i progetti.
+> Modificare solo il blocco variabili e seguire i passi in ordine.
 
 ---
 
-## Parte 1 — Chiusura Feature
+## Variabili (modificare solo queste)
+Usa un unico blocco strutturato:
 
-Da eseguire al termine dello sviluppo di una feature su branch `feature/nghiselli/<nome>`.
+```powershell
+$CurrentProject = '<CURRENT_PROJECT_NAME>'
+$Version = '<X.Y.Z>'
+$FeatureBranch = 'feature/<OWNER>/<FEATURE_NAME>'
+$ReleaseBranch = "release-$Version"
+$HotfixBranch = "hotfix-$Version"
+$TagName = "v$Version"
+$BuildCommand = 'dotnet build <SOLUTION_OR_PROJECT> -c Release --nologo'
+$QuickRunCommand = 'dotnet run --project <APP_PROJECT_FILE> -c Release'
+$VersionFilePath = '<PATH_TO_VERSION_FILE>'
+$MainBranch = 'main'
+$DevelopBranch = 'develop'
+$ChangelogPath = 'CHANGELOG.md'
+$ReadmePath = 'README.md'
+$NgsProjectsUpdatePath = 'NGS-PROJECTS-UPDATE.md'
+```
+
+Nota importante:
+- I token `${...}` e `<...>` sono placeholder testuali del documento, non espansione automatica.
+- Prima di eseguire i comandi, valorizza il blocco variabili con i valori reali del progetto.
+- Se il repository non usa `develop`, impostare `DevelopBranch = MainBranch` e adattare i merge.
+
+---
+
+## Pre-check locale (obbligatorio)
+Eseguire prima di qualsiasi push/merge:
+
+```powershell
+if (-not (Test-Path $VersionFilePath)) { throw "Version file non trovato: $VersionFilePath" }
+if (-not (Test-Path $ChangelogPath)) { throw "Changelog non trovato: $ChangelogPath" }
+if (-not (Test-Path $ReadmePath)) { throw "README non trovato: $ReadmePath" }
+
+if (git rev-parse --is-inside-work-tree 2>$null) {
+  git branch --show-current
+} else {
+  throw 'Directory corrente non e un repository git.'
+}
+```
+
+---
+
+## Parte 1 - Chiusura Feature
+Da eseguire al termine dello sviluppo su branch feature.
 
 ### Checklist
 
 #### Codice
-- [ ] Build senza errori: `dotnet build Ocem.Snmp.Simulator.slnx -c Release --nologo`
-- [ ] Nessun `TODO:` o `FIXME:` non intenzionale rimasto nel codice
+- [ ] Build senza errori con il comando definito in `$BuildCommand`.
+- [ ] Nessun `TODO:` o `FIXME:` non intenzionale rimasto nel codice.
 
-#### Test manuale ← **da fare prima di qualsiasi push/merge**
-
-> ⚠️ **Non pushare e non mergere su `develop` senza aver eseguito i test manuali e aver ricevuto ok.**
-
-Metodo rapido per testare senza installare:
-```powershell
-dotnet run --project src/Ocem.Snmp.Simulator.Web/Ocem.Snmp.Simulator.Web.csproj -c Release
-```
-
-Checklist test minima:
-- [ ] Smoke test: `dotnet run ... ` → chiedere all'utente di fare i test necessari
-- [ ] Test della nuova funzionalità (flusso principale)
-- [ ] Test edge case ovvio (input mancante, flag errato, ecc.)
-- [ ] Verificare che le funzionalità preesistenti non siano stati rotti (regressione)
+#### Test manuale (obbligatorio prima di push/merge)
+- [ ] Avvio locale con il comando definito in `$QuickRunCommand`.
+- [ ] Test del flusso principale della feature.
+- [ ] Test edge case ovvio (input mancante, flag errato, timeout, ecc.).
+- [ ] Smoke regressione sulle funzionalita preesistenti.
 
 #### Documentazione
-- [ ] `README.md` aggiornato se sono stati aggiunti nuovi comandi o cambiati comportamenti
-- [ ] `CHANGELOG.md` — sezione `[Unreleased]` aggiornata con le modifiche della feature
+- [ ] `README.md` aggiornato se sono cambiati comandi o comportamenti.
+- [ ] `CHANGELOG.md` aggiornato in `[Unreleased]`.
 
-#### Commit e push
+#### Commit e push branch feature
+- [ ] Tutti i file modificati committati sul branch feature.
+- [ ] Push branch feature su origin.
 
-> ⚠️ **Eseguire i test manuali prima di questo step.**
-
-- [ ] Tutti i file modificati committati sul branch feature
-- [ ] Push del branch su origin: `git push origin feature/nghiselli/<nome>`
-
-#### Merge su develop (procedura manuale — editor gitflow non funziona in PS)
+Esempio comandi:
 
 ```powershell
-# 1. Vai su develop
-git checkout develop
-
-# 2. Merge del branch feature
-git merge --no-ff feature/nghiselli/<nome> -m "Merge branch 'feature/nghiselli/<nome>' into develop"
-
-# 3. Elimina il branch feature
-git branch -d feature/nghiselli/<nome>
-
-# 4. Push develop
-git push origin develop
+git push origin $FeatureBranch
 ```
 
-> ⚠️ **Nota:** `git flow feature finish` si blocca sull'editor interattivo in PowerShell.
-> Usare la procedura manuale sopra.
+#### Merge su develop/main (procedura manuale, non interattiva)
+
+```powershell
+git checkout $DevelopBranch
+git merge --no-ff $FeatureBranch -m "Merge branch '$FeatureBranch' into $DevelopBranch"
+git branch -d $FeatureBranch
+git push origin $DevelopBranch
+```
+
+Regola:
+- Non usare comandi gitflow interattivi (`git flow ... finish`) in shell che possono bloccarsi sull'editor.
 
 ---
 
-## Parte 2 — Release
-
-Da eseguire quando `develop` è stabile e si vuole pubblicare una nuova versione.
+## Parte 2 - Release
+Da eseguire quando il branch di integrazione e stabile e pronto per rilascio.
 
 ### Checklist pre-release
 
 #### Versione
-- [ ] Aggiornare `<Version>` in `src\Ocem.Snmp.Simulator.Web\Ocem.Snmp.Simulator.Web.csproj` alla nuova versione
+- [ ] Aggiornare la versione in `$VersionFilePath` a `$Version`.
 
 #### CHANGELOG
-- [ ] Promuovere `[Unreleased]` → `[X.Y.Z] — YYYY-MM-DD`
-- [ ] Aggiungere nuova sezione `[Unreleased]` vuota in cima
-- [ ] Aggiornare i link in fondo al file:
-  ```
-  [Unreleased]: .../compare/vX.Y.Z...HEAD
-  [X.Y.Z]: .../compare/vPREV...vX.Y.Z
-  ```
-- [ ] Commit: `chore: promote [Unreleased] to [X.Y.Z] in CHANGELOG`
+- [ ] Promuovere `[Unreleased]` -> `[$Version] - YYYY-MM-DD`.
+- [ ] Aggiungere una nuova sezione `[Unreleased]` vuota in cima.
+- [ ] Aggiornare i link confronto in fondo al file.
+- [ ] Commit documentazione/versioning eseguito.
 
-#### Procedura release (manuale — editor gitflow non funziona in PS)
+#### Procedura release (manuale, non interattiva)
 
 ```powershell
-# 1. Crea branch release da develop
-git checkout -b release-X.Y.Z develop
+git checkout $DevelopBranch
+git checkout -b $ReleaseBranch
 
-# 2. Eventuali last-minute fixes qui (se necessari)
-# git add . && git commit -m "fix: ..."
+# Eventuali fix finali su release branch
+# git add .
+# git commit -m "fix: release hardening"
 
-# 3. Merge su main
-git checkout main
-git merge --no-ff release-X.Y.Z -m "Merge branch 'release-X.Y.Z' into main"
+git checkout $MainBranch
+git merge --no-ff $ReleaseBranch -m "Merge branch '$ReleaseBranch' into $MainBranch"
+git tag -a $TagName -m "Release $TagName"
 
-# 4. Crea il tag annotato
-git tag -a vX.Y.Z -m "Release vX.Y.Z"
+git checkout $DevelopBranch
+git merge --no-ff $ReleaseBranch -m "Merge branch '$ReleaseBranch' into $DevelopBranch"
+git branch -d $ReleaseBranch
 
-# 5. Merge back su develop
-git checkout develop
-git merge --no-ff release-X.Y.Z -m "Merge branch 'release-X.Y.Z' into develop"
-
-# 6. Elimina il branch release
-git branch -d release-X.Y.Z
-
-# 7. Push tutto
-git push origin main
-git push origin develop
-git push origin vX.Y.Z
+git push origin $MainBranch
+git push origin $DevelopBranch
+git push origin $TagName
 ```
 
-> ⚠️ **Nota:** `git flow release finish` si blocca sull'editor interattivo in PowerShell.
-> Usare la procedura manuale sopra.
+---
+
+## Parte 3 - Checkpoint di sessione (opzionale ma consigliato)
+Da fare a fine sessione significativa.
+
+- [ ] Se esiste la cartella `checkpoints/`, creare `checkpoints/YYYY-MM-DD_XXX/checkpoint.md`.
+- [ ] Documentare: contesto, branch, lavoro completato, stato task, note tecniche.
+- [ ] Aggiornare eventuale indice `checkpoints/README.md`.
+- [ ] Commit documentale della sessione.
 
 ---
 
-## Parte 3 — Checkpoint di sessione
-
-Da fare alla fine di ogni sessione di lavoro significativa.
-
-- [ ] Creare cartella `checkpoints\YYYY-MM-DD_XXX\` (XXX = numero progressivo)
-- [ ] Creare `checkpoint.md` con:
-  - Contesto e branch corrente
-  - Lavoro completato (con dettagli su file modificati)
-  - Stato task (tabella ✅/❌)
-  - Note tecniche rilevanti scoperte durante la sessione
-- [ ] Aggiornare `checkpoints\README.md` con la nuova riga nell'indice e con i riferimenti alla sessione copilot
-- [ ] Committare: `docs: add checkpoint XXX — <titolo breve>`
-
----
-
-## Parte 4 — Hot-fix
-
-Da eseguire per correzioni urgenti in produzione (partendo da `main`).
+## Parte 4 - Hotfix
+Da eseguire per correzioni urgenti in produzione (partendo da `$MainBranch`).
 
 ### Checklist pre-hotfix
 
 #### Base branch
-- [ ] Assicurarsi che `main` sia aggiornata: `git checkout main` + `git pull origin main`
-- [ ] Creare branch hot-fix da `main`: `git checkout -b hotfix-X.Y.Z`
+- [ ] Allineare `main`: checkout + pull.
+- [ ] Creare branch hotfix da main.
 
 #### Fix e validazione
-- [ ] Applicare solo la correzione urgente (scope minimo)
-- [ ] Build senza errori: `dotnet build Ocem.Snmp.Simulator.slnx -c Release --nologo`
-- [ ] Test manuale mirato al bug + smoke regressione base prima di push/merge
+- [ ] Applicare solo la correzione urgente (scope minimo).
+- [ ] Build senza errori con `$BuildCommand`.
+- [ ] Test manuale mirato al bug + smoke regressione.
 
 #### Versione e changelog
-- [ ] Aggiornare `<Version>` in `src\Ocem.Snmp.Simulator.Web\Ocem.Snmp.Simulator.Web.csproj` alla patch `X.Y.Z`
-- [ ] Aggiornare `CHANGELOG.md` con la nuova versione hot-fix `[X.Y.Z] — YYYY-MM-DD`
-- [ ] Commit sul branch hot-fix: `fix: hotfix X.Y.Z <descrizione breve>`
+- [ ] Aggiornare versione patch in `$VersionFilePath`.
+- [ ] Aggiornare `$ChangelogPath` con release hotfix.
+- [ ] Commit sul branch hotfix.
 
-#### Chiusura hot-fix (procedura manuale — editor gitflow non funziona in PS)
+#### Chiusura hotfix (manuale, non interattiva)
 
 ```powershell
-# 1. Merge su main
-git checkout main
-git merge --no-ff hotfix-X.Y.Z -m "Merge branch 'hotfix-X.Y.Z' into main"
+git checkout $MainBranch
+git merge --no-ff $HotfixBranch -m "Merge branch '$HotfixBranch' into $MainBranch"
+git tag -a $TagName -m "Hotfix $TagName"
 
-# 2. Tag della patch
-git tag -a vX.Y.Z -m "Hotfix vX.Y.Z"
+git checkout $DevelopBranch
+git merge --no-ff $HotfixBranch -m "Merge branch '$HotfixBranch' into $DevelopBranch"
+git branch -d $HotfixBranch
 
-# 3. Merge back su develop
-git checkout develop
-git merge --no-ff hotfix-X.Y.Z -m "Merge branch 'hotfix-X.Y.Z' into develop"
-
-# 4. Elimina branch hot-fix
-git branch -d hotfix-X.Y.Z
-
-# 5. Push
-git push origin main
-git push origin develop
-git push origin vX.Y.Z
+git push origin $MainBranch
+git push origin $DevelopBranch
+git push origin $TagName
 ```
 
-> ⚠️ **Nota:** `git flow hotfix finish` si blocca sull'editor interattivo in PowerShell.
-> Usare la procedura manuale sopra.
-
 ---
-## Parte 5 — Aggiornamento tracking su `ngs-projects`
 
+## Parte 5 - Aggiornamento tracking su ngs-projects
 Da eseguire a fine:
 - feature
 - release
@@ -186,21 +186,26 @@ Da eseguire a fine:
 - milestone tecnica
 
 ### Checklist
-- [ ] Seguire integralmente la procedura in `NGS-PROJECTS-UPDATE.md`
-- [ ] Mostrare il diff delle modifiche applicate al README tracking
-- [ ] Se richiesto nel flusso sessione, committare e pushare sul repository `ngs-projects`
+- [ ] Seguire integralmente la procedura in `$NgsProjectsUpdatePath`.
+- [ ] Mostrare il diff delle modifiche applicate al README tracking.
+- [ ] Se richiesto, rigenerare dati pages e committare nel repository `ngs-projects`.
 
 ---
-## Riferimenti
 
+## Parte 6 - Regole standard per AI agent
+- [ ] Non pushare o mergere senza test manuale completato e confermato.
+- [ ] Preferire sempre comandi git non interattivi.
+- [ ] Prima del push, mostrare `git status` e diff sintetico delle modifiche.
+- [ ] Aggiornare sempre `README.md`/`CHANGELOG.md` quando impatta il comportamento.
+- [ ] Se un prerequisito manca (path, branch, permessi), fermarsi e chiedere conferma.
+
+---
+
+## Riferimenti minimi
 | Documento | Descrizione |
 |-----------|-------------|
-| `CHANGELOG.md` | Storico versioni |
-| `README.md` | Documentazione del progetto |
-| `NGS-PROJECTS-UPDATE.md` | Procedura per aggiornare il README di tracking in `ngs-projects` |
-| `docs/topology-configuration-guide.md` | Regole per la configurazione della topoloiga |
-| `docs/v1.0.0-simulator-specification.md` | Specifica iniziale del progetto |
-| `docs/v1.1.0-simulator-behavior-specification.md` | Specifica del comportamento simulato dei dispositivi |
-| `docs/v1.2.0-simulator-device-actions-topology-specification.md` | Specifica per introdurre delle relazioni tra i dispositivi |
-| `docs/v1.3.0-simulator-interstation-topology-specification.MD` | Specifica per introdurre delle relazioni tra le stazioni |
-| `docs/v1.4.0-simulator-gui-enhancement-specification.MD` | Specifica per migliorare aspetti grafici secondari |
+| `README.md` | Documentazione tecnica del progetto |
+| `CHANGELOG.md` | Storico versioni e release |
+| `NGS-PROJECTS-UPDATE.md` | Procedura di aggiornamento tracking portfolio |
+| `docs/` | Specifiche funzionali/tecniche (se presenti) |
+| `checkpoints/` | Salvataggio dei checkpoint dell'agent ai (se presenti) |
