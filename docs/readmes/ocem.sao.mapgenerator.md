@@ -45,7 +45,7 @@ La funzionalita SAO richiede mappe SVG coerenti, con naming standardizzato e ger
 ## Decision Log
 | Data | Decisione | Motivazione |
 |---|---|---|
-| 2026-03-10 | Inserito SAO MapGenerator nel portfolio come utility dedicata | Evidenziare la pipeline di generazione mappe a supporto SAO |
+| 2026-03-10T09:00:00+01:00 | Inserito SAO MapGenerator nel portfolio come utility dedicata | Evidenziare la pipeline di generazione mappe a supporto SAO |
 
 ## Rischi / Note
 - Flusso dipendente da Adobe Illustrator e disciplina di naming nei file sorgente.

@@ -99,8 +99,19 @@ function Parse-IsoDate {
         return $null
     }
 
-    $text = $Value.Trim()
-    if ($text -match '^(\d{4}-\d{2}-\d{2})') {
+    $text = $Value.Trim().Trim('`')
+
+    $dateTimeOffset = [datetimeoffset]::MinValue
+    if ([datetimeoffset]::TryParse(
+            $text,
+            [System.Globalization.CultureInfo]::InvariantCulture,
+            [System.Globalization.DateTimeStyles]::AllowWhiteSpaces -bor [System.Globalization.DateTimeStyles]::AssumeLocal,
+            [ref]$dateTimeOffset
+        )) {
+        return $dateTimeOffset.LocalDateTime
+    }
+
+    if ($text -match '^(\d{4}-\d{2}-\d{2})$') {
         return [datetime]::ParseExact(
             $Matches[1],
             "yyyy-MM-dd",
@@ -257,7 +268,8 @@ function Select-LatestDecision {
         return $null
     }
 
-    $datedRows = @()
+    # Regola: data piu recente; a parita di data vince l'ultima riga nel Decision Log.
+    $latestDated = $null
     foreach ($row in $rows) {
         $dateValue = $null
         try {
@@ -267,13 +279,17 @@ function Select-LatestDecision {
             $dateValue = $null
         }
 
-        if ($dateValue -ne $null) {
-            $datedRows += $row
+        if ($dateValue -eq $null) {
+            continue
+        }
+
+        if ($latestDated -eq $null -or $dateValue -gt $latestDated.DateParsed -or $dateValue -eq $latestDated.DateParsed) {
+            $latestDated = $row
         }
     }
 
-    if ($datedRows.Count -gt 0) {
-        return ($datedRows | Sort-Object DateParsed -Descending | Select-Object -First 1)
+    if ($latestDated -ne $null) {
+        return $latestDated
     }
 
     $fallback = $null
@@ -378,7 +394,12 @@ foreach ($projectDirectory in $projectDirectories) {
 
     if ($latestDecision -ne $null) {
         if ($latestDecision.DateParsed -ne $null) {
-            $latestDecisionDateText = $latestDecision.DateParsed.ToString("yyyy-MM-dd")
+            if (-not [string]::IsNullOrWhiteSpace($latestDecision.DateRaw)) {
+                $latestDecisionDateText = $latestDecision.DateRaw
+            }
+            else {
+                $latestDecisionDateText = $latestDecision.DateParsed.ToString("yyyy-MM-dd")
+            }
             $latestDecisionSortDate = $latestDecision.DateParsed
         }
         elseif (-not [string]::IsNullOrWhiteSpace($latestDecision.DateRaw)) {

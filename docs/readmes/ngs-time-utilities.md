@@ -1,12 +1,14 @@
 # ngs-time-utilities
 
 ## Snapshot
-- Path progetto idee: D:\repos\NicolaGhiselliSolutions\ngs-project-ideas\ngs-time-utilities
+- Path progetto idee: D:\repos\NicolaGhiselliSolutions\ngs-projects\ngs-time-utilities
 - Path implementazione: D:\repos\NicolaGhiselliSolutions\ngs-time-utilities
 - Stato avanzamento: In corso avanzato (v2.6.0 stabile, roadmap v3.0.0 avviata)
-- Priorita: Media
+- Priorita: Media
+
 - Progresso: 55%
-- Tipo progetto: Personale
+- Tipo progetto: Personale
+
 - Includi nel portfolio: Si
 - Ultimo aggiornamento: 2026-03-09
 - Owner: Nicola
@@ -82,11 +84,11 @@ Il progetto automatizza task giornalieri ad alto impatto (import dati, confronto
 ## Decision Log
 | Data | Decisione | Motivazione |
 |---|---|---|
-| 2025-12-08 | Adozione import API-first Asana/Clockify con batch management | Ridurre lavoro manuale e aumentare affidabilita operativa |
-| 2026-02-18 | Introduzione caching DB task mapping e filtro multi-homing | Migliorare performance export e precisione task |
-| 2026-02-22 | Adozione logs viewer config-driven con diagnostica NLog | Ridurre tempo di troubleshooting |
-| 2026-02-26 | Definizione roadmap v3 (`tenant = team`, auth, RBAC, provisioning) | Evolvere verso prodotto multi-team commercializzabile |
-| 2026-03-09 | Priorita a hardening/test prima del refactor strutturale v3 | Ridurre regressioni sui flussi gia stabili |
+| 2025-12-08T09:00:00+01:00 | Adozione import API-first Asana/Clockify con batch management | Ridurre lavoro manuale e aumentare affidabilita operativa |
+| 2026-02-18T09:00:00+01:00 | Introduzione caching DB task mapping e filtro multi-homing | Migliorare performance export e precisione task |
+| 2026-02-22T09:00:00+01:00 | Adozione logs viewer config-driven con diagnostica NLog | Ridurre tempo di troubleshooting |
+| 2026-02-26T09:00:00+01:00 | Definizione roadmap v3 (`tenant = team`, auth, RBAC, provisioning) | Evolvere verso prodotto multi-team commercializzabile |
+| 2026-03-09T09:00:00+01:00 | Priorita a hardening/test prima del refactor strutturale v3 | Ridurre regressioni sui flussi gia stabili |
 
 ## Rischi / Blocchi
 - Copertura test quasi nulla (presente solo `UnitTest1` placeholder).

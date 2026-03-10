@@ -39,8 +39,8 @@ Il repository e il punto unico di visibilita su roadmap, stato e decisioni dei p
 ## Decision Log
 | Data | Decisione | Motivazione |
 |---|---|---|
-| 2026-03-10 | Classificare `ngs-projects` come progetto in manutenzione | Rappresentare correttamente natura attiva ma non greenfield |
-| 2026-03-10 | Mostrare tutti gli aggiornamenti senza limite hardcoded | Aumentare visibilita storica nel tab Aggiornamenti |
+| 2026-03-10T09:00:00+01:00 | Classificare `ngs-projects` come progetto in manutenzione | Rappresentare correttamente natura attiva ma non greenfield |
+| 2026-03-10T09:01:00+01:00 | Mostrare tutti gli aggiornamenti senza limite hardcoded | Aumentare visibilita storica nel tab Aggiornamenti |
 
 ## Rischi / Note
 - La qualita della board dipende dalla disciplina di aggiornamento README dei singoli progetti.

@@ -48,7 +48,7 @@ Il progetto frontend richiede gestione di viste e build differenziate, integrazi
 ## Decision Log
 | Data | Decisione | Motivazione |
 |---|---|---|
-| 2024-03-09 | Classificato progetto Siboni frontend come completato nel portfolio NGS | Uniformare monitoraggio e report dei progetti cliente |
+| 2024-03-09T09:00:00+01:00 | Classificato progetto Siboni frontend come completato nel portfolio NGS | Uniformare monitoraggio e report dei progetti cliente |
 
 ## Rischi / Note
 - Documentazione funzionale limitata nel repository sorgente.

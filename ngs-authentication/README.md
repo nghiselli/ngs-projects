@@ -1,11 +1,12 @@
 # ngs-authentication
 
 ## Snapshot
-- Path progetto idee: D:\repos\NicolaGhiselliSolutions\ngs-project-ideas\ngs-authentication
+- Path progetto idee: D:\repos\NicolaGhiselliSolutions\ngs-projects\ngs-authentication
 - Path implementazione corrente (spike): D:\repos\NicolaGhiselliSolutions\ngs-budget-utilities
 - Stato avanzamento: In pausa (PoC parziale disponibile in ngs-budget-utilities)
-- Priorita: Alta
-- Progresso: 65%
+- Priorita: Alta
+
+- Progresso: 45%
 - Tipo progetto: Personale
 
 - Includi nel portfolio: Si
@@ -76,9 +77,9 @@ I progetti sono separati ma hanno bisogni simili (login, utenti, ruoli, sicurezz
 ## Decision Log
 | Data | Decisione | Motivazione |
 |---|---|---|
-| 2026-01-12 | Primo spike auth in ngs-budget-utilities (AuthKit RCL) | Validare rapidamente approccio riusabile |
-| 2026-03-09 | Trattare ngs-budget-utilities come PoC, non implementazione shared definitiva | Ridurre coupling dominio-specifico |
-| 2026-03-09 | Strategia in due fasi: modulo riusabile prima, auth server dopo | Ridurre rischio e consegnare valore prima |
+| 2026-01-12T09:00:00+01:00 | Primo spike auth in ngs-budget-utilities (AuthKit RCL) | Validare rapidamente approccio riusabile |
+| 2026-03-09T09:00:00+01:00 | Trattare ngs-budget-utilities come PoC, non implementazione shared definitiva | Ridurre coupling dominio-specifico |
+| 2026-03-09T09:01:00+01:00 | Strategia in due fasi: modulo riusabile prima, auth server dopo | Ridurre rischio e consegnare valore prima |
 
 ## Rischi / Blocchi
 - Divergenza tra documentazione spike e stato codice reale.

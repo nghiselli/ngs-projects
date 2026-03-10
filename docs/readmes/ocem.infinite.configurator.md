@@ -43,7 +43,7 @@ Il configuratore supporta le fasi di setup e manutenzione configurativa della pi
 ## Decision Log
 | Data | Decisione | Motivazione |
 |---|---|---|
-| 2026-03-10 | Progetto configurator incluso nel portfolio come In corso | Evidenziare il ruolo del modulo nel setup dell'ecosistema Infinite |
+| 2026-03-10T09:00:00+01:00 | Progetto configurator incluso nel portfolio come In corso | Evidenziare il ruolo del modulo nel setup dell'ecosistema Infinite |
 
 ## Rischi / Note
 - Efficacia del modulo legata alla stabilita dei contratti API backend.

@@ -1,11 +1,12 @@
 # ngs-budget-utilities
 
 ## Snapshot
-- Path progetto idee: D:\repos\NicolaGhiselliSolutions\ngs-project-ideas\ngs-budget-utilities
+- Path progetto idee: D:\repos\NicolaGhiselliSolutions\ngs-projects\ngs-budget-utilities
 - Path implementazione: D:\repos\NicolaGhiselliSolutions\ngs-budget-utilities
 - Stato avanzamento: In pausa (foundation completata, sviluppo feature core in avvio)
-- Priorita: Media
-- Progresso: 100%
+- Priorita: Media
+
+- Progresso: 5%
 - Tipo progetto: Personale
 
 - Includi nel portfolio: Si
@@ -78,10 +79,10 @@ E importante per monitorare entrate/uscite con frizione minima, normalizzare mov
 ## Decision Log
 | Data | Decisione | Motivazione |
 |---|---|---|
-| 2026-01-12 | Completata Milestone 0 (v0.1.0) | Stabilizzare foundation prima delle feature business |
-| 2026-01-12 | Adozione AuthKit riusabile + Identity | Evitare lock-in e accelerare riuso in altri progetti |
-| 2026-01-12 | CI locale unificata con `tools/build.ps1` | Rendere veloce validazione build/test ad ogni iterazione |
-| 2026-03-09 | Priorita su feature core M1/M2/M3 prima di analytics avanzate | Consegnare rapidamente valore pratico nel flusso quotidiano |
+| 2026-01-12T09:00:00+01:00 | Completata Milestone 0 (v0.1.0) | Stabilizzare foundation prima delle feature business |
+| 2026-01-12T09:01:00+01:00 | Adozione AuthKit riusabile + Identity | Evitare lock-in e accelerare riuso in altri progetti |
+| 2026-01-12T09:02:00+01:00 | CI locale unificata con `tools/build.ps1` | Rendere veloce validazione build/test ad ogni iterazione |
+| 2026-03-09T09:00:00+01:00 | Priorita su feature core M1/M2/M3 prima di analytics avanzate | Consegnare rapidamente valore pratico nel flusso quotidiano |
 
 ## Rischi / Blocchi
 - Eterogeneita formati import (CSV/PDF/XLSX) con alta variabilita semantica.

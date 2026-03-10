@@ -1,14 +1,16 @@
 # Ocem.Snmp.Simulator
 
 ## Snapshot
-- Path progetto idee: D:\repos\NicolaGhiselliSolutions\ngs-project-ideas\Ocem.Snmp.Simulator
+- Path progetto idee: D:\repos\NicolaGhiselliSolutions\ngs-projects\ocem.snmp.simulator
 - Path implementazione: D:\repos\OCEM\Ocem.Snmp.Simulator
 - Stato avanzamento: In corso
-- Priorita: Alta
-- Progresso: 55%
-- Tipo progetto: Cliente
+- Priorita: Alta
+
+- Progresso: 90%
+- Tipo progetto: Personale
+
 - Includi nel portfolio: Si
-- Ultimo aggiornamento: 2026-03-08
+- Ultimo aggiornamento: 2026-03-10
 - Owner: Nicola
 
 ## Obiettivo
@@ -25,6 +27,13 @@ Documenti principali di riferimento:
 | `D:\repos\OCEM\Ocem.Snmp.Simulator\docs\v1.2.0-simulator-device-actions-topology-specification.md` | Specifica azioni device e topologia |
 | `D:\repos\OCEM\Ocem.Snmp.Simulator\docs\v1.3.0-simulator-interstation-topology-specification.md` | Specifica topologia inter-station |
 | `D:\repos\OCEM\Ocem.Snmp.Simulator\docs\v1.4.0-simulator-gui-enhancement-specification.md` | Specifica miglioramenti GUI |
+| `D:\repos\OCEM\Ocem.Snmp.Simulator\docs\v1.5.0-trap-specification.md` | Specifica trap SNMPv1 + gap closure |
+| `D:\repos\OCEM\Ocem.Snmp.Simulator\docs\v1.6.0-simulator-snmp-set-specification.md` | Specifica SNMP v1 SET |
+| `D:\repos\OCEM\Ocem.Snmp.Simulator\docs\v1.7.0-simulator-management-api-specification.md` | Specifica roadmap Management API |
+| `D:\repos\OCEM\Ocem.Snmp.Simulator\docs\HTTPS-CONFIGURATION-GUIDE.md` | Guida operativa configurazione HTTPS (dev cert e certificati custom) |
+| `D:\repos\OCEM\Ocem.Snmp.Simulator\docs\v1.8.0-simulator-snmp-v2c-v3-specification.md` | Specifica roadmap SNMP v2c/v3 |
+| `D:\repos\OCEM\Ocem.Snmp.Simulator\docs\v1.9.0-simulator-trap-inform-v2c-v3-specification.md` | Specifica roadmap Trap/Inform v2c/v3 |
+| `D:\repos\OCEM\Ocem.Snmp.Simulator\docs\TRAP-MANAGEMENT.md` | Linee guida operative trap lato agent .NET 8+ |
 | `D:\repos\OCEM\Ocem.Snmp.Simulator\docs\topology-configuration-guide.md` | Guida configurazione topologia |
 
 ## Contesto / Problema
@@ -32,19 +41,20 @@ Il progetto riduce dipendenze da ambienti fisici per validare integrazioni SNMP 
 
 ## Ambito V1 (MVP)
 - [x] Supporto SNMP v1 `GET` multi-device (listener UDP per device)
-- [x] Configurazioni JSONC separate (`devices-config`, `devices-behavior`, `devices-topology`)
+- [x] Supporto SNMP v1 `SET` atomico multi-varbind con validazione da MIB e `error-index` coerente
+- [x] Configurazioni JSONC separate (`devices-config`, `devices-behavior`, `devices-topology`, `devices-traps`)
 - [x] Validazioni fail-fast su config/OID/unicita/binding runtime
 - [x] Tick engine e behavior dinamici per categorie device
 - [x] GUI Blazor con modifica variabili SNMP e azioni runtime per device
 - [x] Topologia runtime con propagazione stato link, viewpoint e pagina `/topology`
-- [x] Tooling operativo: `tools/test-snmp-matrix.ps1` e `tools/add-mib-absolute-oid-comments.ps1`
-- [ ] Hardening finale pre-release (regressione completa e allineamento documentazione finale)
+- [x] Invio trap SNMPv1 con sender asincrono, mapping eventi runtime e rate-limit
+- [x] Management API v1 (/api/v1) con endpoint read/command runtime, sicurezza HTTPS+API key, CORS e rate limiting
+- [x] Tooling operativo: `tools/test-snmp-matrix.ps1`, `tools/test-snmp-set-single.ps1`, `tools/add-mib-absolute-oid-comments.ps1`
+- [x] Release `v1.7.0` chiusa su `main` (merge release + tag locale `v1.7.0`)
 
 ## Fuori Ambito (Per Ora)
-- [ ] Gestion invio Trap
-- [ ] Supporto operazioni SNMP `SET` complete lato simulator
-- [ ] Esposizione API per applicazione preset, lettura stato dispositivi
 - [ ] Supporto SNMP v2c/v3
+- [ ] Supporto Trap/Inform v2c/v3
 - [ ] Distribuzione multi-istanza/orchestrazione cluster
 
 ## Stack e Architettura Ipotizzata
@@ -53,10 +63,10 @@ Il progetto riduce dipendenze da ambienti fisici per validare integrazioni SNMP 
 - Stack SNMP: Lextm.SharpSnmpLib
 - Logging: NLog
 - Storage/configurazione: file JSONC + libreria MIB su filesystem
-- Integrazioni esterne: strumenti SNMP (`snmpget`, `snmpwalk`, matrix test script)
+- Integrazioni esterne: strumenti SNMP (`snmpget`, `snmpwalk`, matrix test script, trap receiver)
 - Vincoli tecnici:
   - coerenza stretta tra OID configurati e MIB caricati
-  - una porta UDP univoca per ogni device simulato
+  - una porta UDP univoca per ogni device simulato lato agent SNMP
   - startup fail-fast su errori di configurazione
 
 ## Milestone
@@ -65,40 +75,53 @@ Il progetto riduce dipendenze da ambienti fisici per validare integrazioni SNMP 
 | Discovery + specifiche v1.0/v1.1 | 2026-03-07 | Completata | Modello simulatore e behavior definiti |
 | MVP runtime/topologia v1.2.0 | 2026-03-07 | Completata | Device actions + topology runtime introdotti |
 | Inter-station topology v1.3.0 | 2026-03-07 | Completata | Viewpoint e reachability per componenti connesse |
-| GUI enhancement v1.4.x | 2026-03-08 | In corso avanzato | v1.4.0/v1.4.1 rilasciate; rifiniture finali in `Unreleased` |
+| GUI enhancement v1.4.x | 2026-03-08 | Completata | v1.4.0/v1.4.1 chiuse |
+| Trap + gap closure v1.5.0 | 2026-03-10 | Completata | Parser/sender trap, metadata runtime, test trap UI, documentazione |
+| SNMP SET + release v1.6.0 | 2026-03-10 | Completata | Supporto `SET` v1, validazione MIB, release/tag `v1.6.0` |
+| Management API v1.7.0 | 2026-03-10 | Completata | Endpoint runtime, sicurezza HTTPS+API key, Swagger e tooling curl |
+| Release v1.7.0 | 2026-03-10 | Completata | Merge su main completato; publish tag remoto in corso per credenziali locali |
 
 ## Next Steps (2-4 Settimane)
-1. Chiudere backlog `Unreleased` e definire scope della prossima release (v1.5.0).
-2. Eseguire regressione completa su matrix SNMP (tutte le categorie + topologie inter-station).
-3. Consolidare checklist UAT con scenari runtime (power toggle, porte, UPS flags, viewpoint filtering).
-4. Allineare README/specifiche al comportamento finale e congelare baseline di configurazioni esempio.
+1. Eseguire regressione completa SNMP `GET`/`SET` + trap + Management API su matrix device/topologia.
+2. Pianificare estensione protocollo `v1.8.0` (`v2c/v3`) mantenendo retrocompatibilita v1.
+3. Pianificare estensione `v1.9.0` (Trap/Inform `v2c/v3`) con strategia di rollout progressivo.
+4. Valutare introduzione varbind identificativo `UnitId` nelle trap per scenari NAT/IP condivisi.
 
 ## Prompt / Specifiche da Preparare
-- [ ] Spec 01 - Release v1.5.0 (scope, acceptance criteria, regression matrix)
-- [ ] Prompt 01 - Automazione test SNMP estesi con report unico (pass/fail per category/unit)
-- [ ] Prompt 02 - Hardening GUI runtime e validazioni topology-driven
+- [x] Spec 01 - Release v1.5.0 (scope, acceptance criteria, regression matrix)
+- [x] Spec 02 - SNMP SET v1.6.0 (policy write, validazioni MIB, error mapping)
+- [ ] Prompt 01 - Automazione test regressione SNMP `GET`/`SET` + trap con report unico
+- [x] Prompt 02 - Hardening v1.7.0 Management API (scaffold endpoint + smoke test)
 
 ## Decision Log
 | Data | Decisione | Motivazione |
 |---|---|---|
-| 2026-03-07 | Introdotte azioni runtime + topology engine (v1.2.0) | Rendere il simulatore utilizzabile in test end-to-end realistici |
-| 2026-03-07 | Introdotta topologia inter-station con viewpoint (v1.3.0) | Simulare reachability SNMP dipendente dalla connettivita |
-| 2026-03-08 | Riorganizzata GUI con tab e visual topology (v1.4.0) | Migliorare usabilita operativa durante i test |
-| 2026-03-08 | Aggiunta tab Interactive Device con SVG e azioni click-driven (v1.4.1) | Ridurre frizione nella simulazione manuale dei guasti/stati |
-| 2026-03-08 | Allineato README progetto-idee con stato reale implementazione | Tenere sincronizzato backlog/roadmap tra idea e repo tecnico |
+| 2026-03-07T09:00:00+01:00 | Introdotte azioni runtime + topology engine (v1.2.0) | Rendere il simulatore utilizzabile in test end-to-end realistici |
+| 2026-03-07T09:01:00+01:00 | Introdotta topologia inter-station con viewpoint (v1.3.0) | Simulare reachability SNMP dipendente dalla connettivita |
+| 2026-03-08T09:00:00+01:00 | Riorganizzata GUI con tab e visual topology (v1.4.0) | Migliorare usabilita operativa durante i test |
+| 2026-03-08T09:01:00+01:00 | Aggiunta tab Interactive Device con SVG e azioni click-driven (v1.4.1) | Ridurre frizione nella simulazione manuale dei guasti/stati |
+| 2026-03-08T09:02:00+01:00 | Allineato README progetto-idee con stato reale implementazione | Tenere sincronizzato backlog/roadmap tra idea e repo tecnico |
+| 2026-03-10T09:00:00+01:00 | Implementata feature trap v1.5 con sender SNMPv1 e parser config dedicato | Coprire scenari event-driven verso NMS senza hardware reale |
+| 2026-03-10T09:01:00+01:00 | Introdotto pulsante UI `Invia trap test` + documento `TRAP-MANAGEMENT.md` | Ridurre tempo di test manuale e chiarire strategia identificazione device da IP |
+| 2026-03-10T09:02:00+01:00 | Implementato supporto SNMP v1 `SET` con gating `WriteObjIds` e validazione derivata da MIB | Consentire scritture controllate senza introdurre regole custom in config |
+| 2026-03-10T09:03:00+01:00 | Chiusa release `v1.6.0` su `main` con tag `v1.6.0` e merge-back su `develop` | Stabilizzare baseline GET/SET/trap e allineare versionamento semantico |
+| 2026-03-10T09:04:00+01:00 | Implementata Management API v1.7 (/api/v1) con enforcement HTTPS+API key e integrazione Swagger | Abilitare controllo runtime via API mantenendo sicurezza e riuso della logica esistente |
+| 2026-03-10T09:05:00+01:00 | Chiusa release `v1.7.0` su `main` con merge branch `release-1.7.0` | Consolidare baseline Management API e preparare publish del tag remoto |
 
 ## Rischi / Blocchi
 - Errori di configurazione JSONC/MIB bloccano startup (fail-fast): alto impatto operativo se i file non sono versionati con disciplina.
 - Copertura regressione ancora in parte manuale su scenari topologici complessi.
 - Compatibilita con tool SNMP terzi da verificare in modo sistematico su tutte le categorie device.
-- Crescita numero device => aumento listener/rumore log e possibile impatto performance.
+- Identificazione trap in ambienti NAT/IP condivisi richiede metadati aggiuntivi (varbind identificativo).
 
+- Push tag remoto `v1.7.0` bloccato da credenziali locali (`SEC_E_NO_CREDENTIALS`): da ripetere con sessione Git autenticata.
 ## Note Libere
 - Comandi rapidi utili:
   - `dotnet build Ocem.Snmp.Simulator.slnx`
   - `dotnet run --project src/Ocem.Snmp.Simulator.Web/Ocem.Snmp.Simulator.Web.csproj`
   - `./tools/test-snmp-matrix.ps1`
-- Versione applicativa corrente in `csproj`: `1.4.1`.
-- Il file `CHANGELOG.md` indica una sezione `Unreleased` ancora aperta.
+  - `./tools/test-snmp-set-single.ps1`
+- Versione applicativa corrente in `csproj`: `1.7.0`.
+- `CHANGELOG.md`: release `1.7.0` promossa, sezione `[Unreleased]` nuovamente aperta.
 
 

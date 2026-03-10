@@ -1,12 +1,14 @@
 # ngs-time-utilities-cli
 
 ## Snapshot
-- Path progetto idee: D:\repos\NicolaGhiselliSolutions\ngs-project-ideas\ngs-time-utilities-cli
+- Path progetto idee: D:\repos\NicolaGhiselliSolutions\ngs-projects\ngs-time-utilities-cli
 - Path implementazione: D:\repos\NicolaGhiselliSolutions\ngs-time-utilities-cli
 - Stato avanzamento: In corso avanzato (MVP operativo, versione corrente 1.3.0)
-- Priorita: Media
+- Priorita: Media
+
 - Progresso: 55%
-- Tipo progetto: Personale
+- Tipo progetto: Personale
+
 - Includi nel portfolio: Si
 - Ultimo aggiornamento: 2026-03-09
 - Owner: Nicola
@@ -84,11 +86,11 @@ Inoltre questo progetto e un pilota per costruire un template di NGS interactive
 ## Decision Log
 | Data | Decisione | Motivazione |
 |---|---|---|
-| 2026-03-06 | Adozione CLI .NET 9 come dotnet global tool (`ngstime`) | Distribuzione semplice e veloce in ambiente dev/cliente |
-| 2026-03-07 | Estensione comandi Clockify/Asana orientati a operativita quotidiana | Ridurre operazioni manuali ripetitive |
-| 2026-03-07 | Adozione approccio dual-mode + PrettyPrompt per shell interattiva | Migliorare UX mantenendo compatibilita batch |
-| 2026-03-07 | Setup guidato (`config setup`) con validazione token prima del salvataggio | Ridurre errori in onboarding e troubleshooting |
-| 2026-03-09 | Posizionare `ngs-time-utilities-cli` come PoC per template CLI riusabile | Abilitare riuso su `infinite-installer-cli` e progetti futuri |
+| 2026-03-06T09:00:00+01:00 | Adozione CLI .NET 9 come dotnet global tool (`ngstime`) | Distribuzione semplice e veloce in ambiente dev/cliente |
+| 2026-03-07T09:00:00+01:00 | Estensione comandi Clockify/Asana orientati a operativita quotidiana | Ridurre operazioni manuali ripetitive |
+| 2026-03-07T09:01:00+01:00 | Adozione approccio dual-mode + PrettyPrompt per shell interattiva | Migliorare UX mantenendo compatibilita batch |
+| 2026-03-07T09:02:00+01:00 | Setup guidato (`config setup`) con validazione token prima del salvataggio | Ridurre errori in onboarding e troubleshooting |
+| 2026-03-09T09:00:00+01:00 | Posizionare `ngs-time-utilities-cli` come PoC per template CLI riusabile | Abilitare riuso su `infinite-installer-cli` e progetti futuri |
 
 ## Rischi / Blocchi
 - Copertura test quasi nulla: rischio regressioni su comandi critici.
@@ -96,7 +98,7 @@ Inoltre questo progetto e un pilota per costruire un template di NGS interactive
 - Possibili divergenze tra documentazione release e workflow effettivo di publish/versioning.
 - Dipendenza forte da API esterne (variazioni endpoint, limiti, downtime).
 - Comandi distruttivi richiedono protezioni chiare per ridurre errore umano.
-
+ngs-projects
 ## Note Libere
 - Questo progetto e un acceleratore diretto per `ngs-cli-template` (gia presente in `ngs-project-ideas`).
 - Buon candidato per trasferire pattern anche su `infinite-installer-cli` quando si passa all'implementazione.

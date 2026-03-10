@@ -1,11 +1,13 @@
 # infinite-installer-cli
 
 ## Snapshot
-- Path progetto idee: D:\repos\NicolaGhiselliSolutions\ngs-project-ideas\infinite-installer-cli
+- Path progetto idee: D:\repos\NicolaGhiselliSolutions\ngs-projects\infinite-installer-cli
 - Stato avanzamento: Pianificato
-- Priorita: Media
+- Priorita: Media
+
 - Progresso: 20%
-- Tipo progetto: Personale
+- Tipo progetto: Personale
+
 - Includi nel portfolio: Si
 - Ultimo aggiornamento: 2026-03-08
 - Owner: Nicola
@@ -63,8 +65,8 @@ Il wizard attuale copre bene il flusso GUI, ma serve un canale CLI robusto per o
 ## Decision Log
 | Data | Decisione | Motivazione |
 |---|---|---|
-| 2026-03-08 | `infinite-installer-cli` dichiarato progetto duale del wizard | Separare flusso CLI da percorso GUI/wrapper |
-| 2026-03-08 | Avvio posticipato finche non e pronto il template da `ngs-time-utilities-cli` | Ridurre rischio e tempi di bootstrap |
+| 2026-03-08T09:00:00+01:00 | `infinite-installer-cli` dichiarato progetto duale del wizard | Separare flusso CLI da percorso GUI/wrapper |
+| 2026-03-08T09:01:00+01:00 | Avvio posticipato finche non e pronto il template da `ngs-time-utilities-cli` | Ridurre rischio e tempi di bootstrap |
 
 ## Rischi / Blocchi
 - Il progetto dipende dalla maturazione del template CLI nel repo seed

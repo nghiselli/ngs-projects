@@ -45,7 +45,7 @@ Il frontend deve coprire domini applicativi differenti mantenendo UX coerente e 
 ## Decision Log
 | Data | Decisione | Motivazione |
 |---|---|---|
-| 2026-03-10 | Inserita suite frontend OCEM Infinite nel portfolio come progetto in corso | Tracciare chiaramente il perimetro multi-modulo del prodotto |
+| 2026-03-10T09:00:00+01:00 | Inserita suite frontend OCEM Infinite nel portfolio come progetto in corso | Tracciare chiaramente il perimetro multi-modulo del prodotto |
 
 ## Rischi / Note
 - Coordinamento continuo richiesto tra moduli UI e servizi backend.

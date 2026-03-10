@@ -48,7 +48,7 @@ Nel ciclo quotidiano di progetto emergono task ripetitivi che richiedono tool ra
 ## Decision Log
 | Data | Decisione | Motivazione |
 |---|---|---|
-| 2026-03-10 | Inserito `ngs-infinite-utilities` nel portfolio | Rendere visibile il toolkit operativo trasversale per Infinite |
+| 2026-03-10T09:00:00+01:00 | Inserito `ngs-infinite-utilities` nel portfolio | Rendere visibile il toolkit operativo trasversale per Infinite |
 
 ## Rischi / Note
 - Repository eterogeneo per natura (tool con stack diversi): va mantenuta chiarezza sui confini dei moduli.

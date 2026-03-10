@@ -44,7 +44,7 @@ Il modulo abilita un PC di frontiera tra due reti, in modo da pubblicare in sicu
 ## Decision Log
 | Data | Decisione | Motivazione |
 |---|---|---|
-| 2026-03-10 | Progetto marcato In pausa nel portfolio pur mantenendolo visibile | Stato reale del piano rilasci e dipendenze di suite |
+| 2026-03-10T09:00:00+01:00 | Progetto marcato In pausa nel portfolio pur mantenendolo visibile | Stato reale del piano rilasci e dipendenze di suite |
 
 ## Rischi / Note
 - Forte dipendenza dal contesto infrastrutturale di rete e policy cliente.

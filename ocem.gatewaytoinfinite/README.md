@@ -45,7 +45,7 @@ In scenari operativi dedicati e necessario vincolare il comportamento UI dell'am
 ## Decision Log
 | Data | Decisione | Motivazione |
 |---|---|---|
-| 2026-03-10 | Inserita app GatewayToInfinite nel portfolio come modulo attivo | Rappresentare il layer desktop operativo della suite |
+| 2026-03-10T09:00:00+01:00 | Inserita app GatewayToInfinite nel portfolio come modulo attivo | Rappresentare il layer desktop operativo della suite |
 
 ## Rischi / Note
 - Comportamento runtime legato a ambiente Windows, WebView2 e policy stazione.

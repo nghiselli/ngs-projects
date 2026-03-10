@@ -44,7 +44,7 @@ Per ridurre dipendenza dall'hardware reale durante sviluppo e collaudo, il simul
 ## Decision Log
 | Data | Decisione | Motivazione |
 |---|---|---|
-| 2026-03-10 | Inserito simulatore ILCMS nel portfolio della suite Infinite | Rendere visibile la componente test fondamentale |
+| 2026-03-10T09:00:00+01:00 | Inserito simulatore ILCMS nel portfolio della suite Infinite | Rendere visibile la componente test fondamentale |
 
 ## Rischi / Note
 - Rappresentativita rispetto all'hardware reale da verificare continuamente.

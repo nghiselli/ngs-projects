@@ -1,12 +1,14 @@
 # infinite-installer
 
 ## Snapshot
-- Path progetto idee: D:\repos\NicolaGhiselliSolutions\ngs-project-ideas\infinite-installer
+- Path progetto idee: D:\repos\NicolaGhiselliSolutions\ngs-projects\infinite-installer
 - Path implementazione attuale: D:\repos\NicolaGhiselliSolutions\ngs-infinite-scripts
 - Stato avanzamento: In Pausa (implementazione PowerShell avanzata; distribuzione in ridefinizione con wrapper .NET 10)
-- Priorita: Media
+- Priorita: Media
+
 - Progresso: 65%
-- Tipo progetto: Personale
+- Tipo progetto: Personale
+
 - Includi nel portfolio: Si
 - Ultimo aggiornamento: 2026-03-08
 - Baseline implementazione: 2.10.2 (2025-11-12)
@@ -68,12 +70,12 @@ Le funzionalita installative sono implementate in `D:\repos\NicolaGhiselliSoluti
 ## Decision Log
 | Data | Decisione | Motivazione |
 |---|---|---|
-| 2025-11-08 | Fix gestione boolean in `StepExecutor` | Evitare perdita valori `false` nella risoluzione parametri |
-| 2025-11-12 | Baseline funzionale v2.10.2 consolidata | Moduli principali e fix recenti integrati |
-| 2025-11-12 | File licenza (`templates/licenses/*.lic`) esclusi da Git | Evitare esposizione di licenze customer-specific |
-| 2025-11-12 | Strategia distribuzione documentata in `context/notes/wizard-distribution.md` | Formalizzare opzioni e tradeoff per packaging |
-| 2026-03-08 | Direzione tecnica aggiornata: wrapper/conversione con .NET 10 | Migliorare distribuibilita e protezione IP |
-| 2026-03-08 | Progetto CLI separato mantenuto come stream duale (`infinite-installer-cli`) | Distinguere percorso GUI/wrapper da UX CLI interattiva |
+| 2025-11-08T09:00:00+01:00 | Fix gestione boolean in `StepExecutor` | Evitare perdita valori `false` nella risoluzione parametri |
+| 2025-11-12T09:00:00+01:00 | Baseline funzionale v2.10.2 consolidata | Moduli principali e fix recenti integrati |
+| 2025-11-12T09:01:00+01:00 | File licenza (`templates/licenses/*.lic`) esclusi da Git | Evitare esposizione di licenze customer-specific |
+| 2025-11-12T09:02:00+01:00 | Strategia distribuzione documentata in `context/notes/wizard-distribution.md` | Formalizzare opzioni e tradeoff per packaging |
+| 2026-03-08T09:00:00+01:00 | Direzione tecnica aggiornata: wrapper/conversione con .NET 10 | Migliorare distribuibilita e protezione IP |
+| 2026-03-08T09:01:00+01:00 | Progetto CLI separato mantenuto come stream duale (`infinite-installer-cli`) | Distinguere percorso GUI/wrapper da UX CLI interattiva |
 
 ## Rischi / Blocchi
 - Scelta architetturale wrapper non ancora validata end-to-end su target reali
@@ -81,7 +83,7 @@ Le funzionalita installative sono implementate in `D:\repos\NicolaGhiselliSoluti
 - Complessita di packaging/signing/licensing enterprise
 - Feature WIP ancora aperte in `ngs-infinite-scripts` prima del rilascio cliente
 - Dipendenza dalla qualita del template CLI per accelerare il progetto duale
-
+ngs-projects
 ## Note Libere
 - Progetto duale CLI: `D:\repos\NicolaGhiselliSolutions\ngs-project-ideas\infinite-installer-cli`
 - Seed/template CLI attuale: `D:\repos\NicolaGhiselliSolutions\ngs-time-utilities-cli`
