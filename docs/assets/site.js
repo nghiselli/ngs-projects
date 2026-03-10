@@ -28,12 +28,25 @@
     }
 
     const parsed = new Date(value);
-    if (!Number.isNaN(parsed.getTime()) && /^\d{4}-\d{2}-\d{2}/.test(value)) {
-      return parsed.toLocaleDateString("it-IT", {
-        year: "numeric",
-        month: "2-digit",
-        day: "2-digit"
-      });
+    if (!Number.isNaN(parsed.getTime())) {
+      if (/^\d{4}-\d{2}-\d{2}T/.test(value)) {
+        return parsed.toLocaleString("it-IT", {
+          year: "numeric",
+          month: "2-digit",
+          day: "2-digit",
+          hour: "2-digit",
+          minute: "2-digit",
+          second: "2-digit"
+        });
+      }
+
+      if (/^\d{4}-\d{2}-\d{2}$/.test(value)) {
+        return parsed.toLocaleDateString("it-IT", {
+          year: "numeric",
+          month: "2-digit",
+          day: "2-digit"
+        });
+      }
     }
 
     return value;

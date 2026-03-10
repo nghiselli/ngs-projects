@@ -56,8 +56,8 @@ Punti chiave emersi dalla documentazione:
 ## Decision Log
 | Data | Decisione | Motivazione |
 |---|---|---|
-| 2023-03-09 | Consolidata documentazione portfolio del progetto completato | Mantenere uno storico uniforme nel repository NGS |
-| 2023-10-11 | Prioritizzate estensioni sicurezza e semplificazione installazioni | Rispondere ai feedback dei clienti e alla compliance richiesta |
+| 2023-03-09T09:00:00+01:00 | Consolidata documentazione portfolio del progetto completato | Mantenere uno storico uniforme nel repository NGS |
+| 2023-10-11T09:00:00+01:00 | Prioritizzate estensioni sicurezza e semplificazione installazioni | Rispondere ai feedback dei clienti e alla compliance richiesta |
 
 ## Rischi / Note
 - README sorgente molto sintetico, con documentazione funzionale principalmente esterna.

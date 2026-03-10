@@ -43,7 +43,7 @@ Il plugin e un sottomodulo comune presente nei principali repository di suite. S
 ## Decision Log
 | Data | Decisione | Motivazione |
 |---|---|---|
-| 2026-03-10 | Inserito `ocem.plugin.dds` come progetto portfolio dedicato | Rendere visibile il componente shared critico della suite |
+| 2026-03-10T09:00:00+01:00 | Inserito `ocem.plugin.dds` come progetto portfolio dedicato | Rendere visibile il componente shared critico della suite |
 
 ## Rischi / Note
 - Necessario allineare costantemente versioni del plugin tra repository differenti.

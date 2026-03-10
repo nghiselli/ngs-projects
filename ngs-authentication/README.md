@@ -77,9 +77,9 @@ I progetti sono separati ma hanno bisogni simili (login, utenti, ruoli, sicurezz
 ## Decision Log
 | Data | Decisione | Motivazione |
 |---|---|---|
-| 2026-01-12 | Primo spike auth in ngs-budget-utilities (AuthKit RCL) | Validare rapidamente approccio riusabile |
-| 2026-03-09 | Trattare ngs-budget-utilities come PoC, non implementazione shared definitiva | Ridurre coupling dominio-specifico |
-| 2026-03-09 | Strategia in due fasi: modulo riusabile prima, auth server dopo | Ridurre rischio e consegnare valore prima |
+| 2026-01-12T09:00:00+01:00 | Primo spike auth in ngs-budget-utilities (AuthKit RCL) | Validare rapidamente approccio riusabile |
+| 2026-03-09T09:00:00+01:00 | Trattare ngs-budget-utilities come PoC, non implementazione shared definitiva | Ridurre coupling dominio-specifico |
+| 2026-03-09T09:01:00+01:00 | Strategia in due fasi: modulo riusabile prima, auth server dopo | Ridurre rischio e consegnare valore prima |
 
 ## Rischi / Blocchi
 - Divergenza tra documentazione spike e stato codice reale.

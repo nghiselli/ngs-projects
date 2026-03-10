@@ -49,7 +49,7 @@ Usare questa procedura a fine:
 ## Regole obbligatorie
 1. Non cambiare struttura del README (`## Snapshot`, sezioni principali, tabelle) salvo richiesta esplicita.
 2. Mantenere cronologia in `Decision Log` (append, non overwrite).
-3. Usare date ISO `yyyy-MM-dd`.
+3. Usare date ISO con timestamp `yyyy-MM-ddTHH:mm:ss+01:00` nelle righe del `Decision Log`.
 4. Valorizzare `Progresso` con percentuale `0-100%`.
 5. Non cambiare `Includi nel portfolio` senza richiesta esplicita.
 
@@ -89,7 +89,7 @@ Regole:
 - Aggiorna Snapshot: Stato avanzamento, Progresso, Ultimo aggiornamento.
 - Aggiorna Ambito attuale (o sezione equivalente), Milestone, Next Steps e aggiungi una riga in Decision Log.
 - Non rimuovere storico esistente.
-- Usa data formato yyyy-MM-dd.
+- Usa data formato yyyy-MM-ddTHH:mm:ss+01:00 nelle righe del Decision Log.
 
 Dopo la modifica, rigenera i dati pages con:
 ${NgsProjectsRoot}\tools\generate-pages.ps1

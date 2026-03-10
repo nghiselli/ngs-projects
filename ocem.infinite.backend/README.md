@@ -47,7 +47,7 @@ OCEM Infinite richiede un backend modulare e scalabile capace di separare respon
 ## Decision Log
 | Data | Decisione | Motivazione |
 |---|---|---|
-| 2026-03-10 | Tracciata la suite backend OCEM Infinite nel portfolio NGS come progetto in corso | Rendere visibile il perimetro architetturale e lo stato reale del lavoro |
+| 2026-03-10T09:00:00+01:00 | Tracciata la suite backend OCEM Infinite nel portfolio NGS come progetto in corso | Rendere visibile il perimetro architetturale e lo stato reale del lavoro |
 
 ## Rischi / Note
 - Condivisione di librerie e contratti tra servizi da mantenere allineata nel tempo.

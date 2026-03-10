@@ -1,5 +1,5 @@
 window.NGS_SITE_DATA = {
-  "generatedAt": "2026-03-10T20:33:22+01:00",
+  "generatedAt": "2026-03-10T22:31:30+01:00",
   "totalProjects": 29,
   "statusCounts": {
     "Da pianificare": 7,
@@ -26,7 +26,7 @@ window.NGS_SITE_DATA = {
       "readmePath": "readmes/cae-sentry-backend.md",
       "repositoryPath": "cae-sentry-backend",
       "latestDecision": {
-        "date": "2023-10-11",
+        "date": "2023-10-11T09:00:00+01:00",
         "decision": "Consolidato pacchetto estensioni/finalizzazioni richieste da CAE",
         "reason": "Ridurre effort installativo e migliorare affidabilita operativa"
       }
@@ -46,7 +46,7 @@ window.NGS_SITE_DATA = {
       "readmePath": "readmes/ocem.snmp.gateway.md",
       "repositoryPath": "ocem.snmp.gateway",
       "latestDecision": {
-        "date": "2026-03-10",
+        "date": "2026-03-10T09:00:00+01:00",
         "decision": "Inserito gateway SNMP nel portfolio come iniziativa dedicata",
         "reason": "Rendere esplicita la base tecnica della feature SAO"
       }
@@ -66,7 +66,7 @@ window.NGS_SITE_DATA = {
       "readmePath": "readmes/ocem.sao.mapgenerator.md",
       "repositoryPath": "ocem.sao.mapgenerator",
       "latestDecision": {
-        "date": "2026-03-10",
+        "date": "2026-03-10T09:00:00+01:00",
         "decision": "Inserito SAO MapGenerator nel portfolio come utility dedicata",
         "reason": "Evidenziare la pipeline di generazione mappe a supporto SAO"
       }
@@ -86,7 +86,7 @@ window.NGS_SITE_DATA = {
       "readmePath": "readmes/ocem.plugin.dds.md",
       "repositoryPath": "ocem.plugin.dds",
       "latestDecision": {
-        "date": "2026-03-10",
+        "date": "2026-03-10T09:00:00+01:00",
         "decision": "Inserito `ocem.plugin.dds` come progetto portfolio dedicato",
         "reason": "Rendere visibile il componente shared critico della suite"
       }
@@ -106,7 +106,7 @@ window.NGS_SITE_DATA = {
       "readmePath": "readmes/ocem.modbus.simulator.md",
       "repositoryPath": "ocem.modbus.simulator",
       "latestDecision": {
-        "date": "2026-03-10",
+        "date": "2026-03-10T09:00:00+01:00",
         "decision": "Inserito simulatore Modbus nel portfolio come modulo attivo",
         "reason": "Tracciare chiaramente il supporto testing hardware-like"
       }
@@ -126,7 +126,7 @@ window.NGS_SITE_DATA = {
       "readmePath": "readmes/ocem.infinite.proxy.md",
       "repositoryPath": "ocem.infinite.proxy",
       "latestDecision": {
-        "date": "2026-03-10",
+        "date": "2026-03-10T09:00:00+01:00",
         "decision": "Progetto marcato In pausa nel portfolio pur mantenendolo visibile",
         "reason": "Stato reale del piano rilasci e dipendenze di suite"
       }
@@ -146,7 +146,7 @@ window.NGS_SITE_DATA = {
       "readmePath": "readmes/ocem.infinite.frontend.md",
       "repositoryPath": "ocem.infinite.frontend",
       "latestDecision": {
-        "date": "2026-03-10",
+        "date": "2026-03-10T09:00:00+01:00",
         "decision": "Inserita suite frontend OCEM Infinite nel portfolio come progetto in corso",
         "reason": "Tracciare chiaramente il perimetro multi-modulo del prodotto"
       }
@@ -166,7 +166,7 @@ window.NGS_SITE_DATA = {
       "readmePath": "readmes/ocem.infinite.configurator.md",
       "repositoryPath": "ocem.infinite.configurator",
       "latestDecision": {
-        "date": "2026-03-10",
+        "date": "2026-03-10T09:00:00+01:00",
         "decision": "Progetto configurator incluso nel portfolio come In corso",
         "reason": "Evidenziare il ruolo del modulo nel setup dell'ecosistema Infinite"
       }
@@ -186,7 +186,7 @@ window.NGS_SITE_DATA = {
       "readmePath": "readmes/ocem.ilcms.simulator.md",
       "repositoryPath": "ocem.ilcms.simulator",
       "latestDecision": {
-        "date": "2026-03-10",
+        "date": "2026-03-10T09:00:00+01:00",
         "decision": "Inserito simulatore ILCMS nel portfolio della suite Infinite",
         "reason": "Rendere visibile la componente test fondamentale"
       }
@@ -222,7 +222,7 @@ window.NGS_SITE_DATA = {
       "readmePath": "readmes/ngs-time-utilities-cli.md",
       "repositoryPath": "ngs-time-utilities-cli",
       "latestDecision": {
-        "date": "2026-03-09",
+        "date": "2026-03-09T09:00:00+01:00",
         "decision": "Posizionare `ngs-time-utilities-cli` come PoC per template CLI riusabile",
         "reason": "Abilitare riuso su `infinite-installer-cli` e progetti futuri"
       }
@@ -242,7 +242,7 @@ window.NGS_SITE_DATA = {
       "readmePath": "readmes/ngs-time-utilities.md",
       "repositoryPath": "ngs-time-utilities",
       "latestDecision": {
-        "date": "2026-03-09",
+        "date": "2026-03-09T09:00:00+01:00",
         "decision": "Priorita a hardening/test prima del refactor strutturale v3",
         "reason": "Ridurre regressioni sui flussi gia stabili"
       }
@@ -269,7 +269,7 @@ window.NGS_SITE_DATA = {
       "status": "In corso",
       "statusRaw": "In corso",
       "priority": "Alta",
-      "projectType": "Cliente",
+      "projectType": "Personale",
       "includeInPortfolio": "Si",
       "progressPercent": 90,
       "progressText": "90%",
@@ -278,9 +278,9 @@ window.NGS_SITE_DATA = {
       "readmePath": "readmes/ocem.snmp.simulator.md",
       "repositoryPath": "ocem.snmp.simulator",
       "latestDecision": {
-        "date": "2026-03-10",
-        "decision": "Implementata feature trap v1.5 con sender SNMPv1 e parser config dedicato",
-        "reason": "Coprire scenari event-driven verso NMS senza hardware reale"
+        "date": "2026-03-10T09:05:00+01:00",
+        "decision": "Chiusa release `v1.7.0` su `main` con merge branch `release-1.7.0`",
+        "reason": "Consolidare baseline Management API e preparare publish del tag remoto"
       }
     },
     {
@@ -298,9 +298,9 @@ window.NGS_SITE_DATA = {
       "readmePath": "readmes/ngs-projects.md",
       "repositoryPath": "ngs-projects",
       "latestDecision": {
-        "date": "2026-03-10",
-        "decision": "Classificare `ngs-projects` come progetto in manutenzione",
-        "reason": "Rappresentare correttamente natura attiva ma non greenfield"
+        "date": "2026-03-10T09:01:00+01:00",
+        "decision": "Mostrare tutti gli aggiornamenti senza limite hardcoded",
+        "reason": "Aumentare visibilita storica nel tab Aggiornamenti"
       }
     },
     {
@@ -318,7 +318,7 @@ window.NGS_SITE_DATA = {
       "readmePath": "readmes/ngs-infinite-utilities.md",
       "repositoryPath": "ngs-infinite-utilities",
       "latestDecision": {
-        "date": "2026-03-10",
+        "date": "2026-03-10T09:00:00+01:00",
         "decision": "Inserito `ngs-infinite-utilities` nel portfolio",
         "reason": "Rendere visibile il toolkit operativo trasversale per Infinite"
       }
@@ -338,9 +338,9 @@ window.NGS_SITE_DATA = {
       "readmePath": "readmes/ngs-documentation-utilities.md",
       "repositoryPath": "ngs-documentation-utilities",
       "latestDecision": {
-        "date": "2026-03-09",
-        "decision": "Priorita su Mermaid e XML Documentation bulk",
-        "reason": "Aumentare qualita e completezza output sui progetti target"
+        "date": "2026-03-09T09:01:00+01:00",
+        "decision": "README progetto-idee allineato a stato reale implementazione",
+        "reason": "Tenere roadmap e backlog coerenti con il repository tecnico"
       }
     },
     {
@@ -374,7 +374,7 @@ window.NGS_SITE_DATA = {
       "readmePath": "readmes/ngs-budget-utilities.md",
       "repositoryPath": "ngs-budget-utilities",
       "latestDecision": {
-        "date": "2026-03-09",
+        "date": "2026-03-09T09:00:00+01:00",
         "decision": "Priorita su feature core M1/M2/M3 prima di analytics avanzate",
         "reason": "Consegnare rapidamente valore pratico nel flusso quotidiano"
       }
@@ -394,9 +394,9 @@ window.NGS_SITE_DATA = {
       "readmePath": "readmes/ngs-authentication.md",
       "repositoryPath": "ngs-authentication",
       "latestDecision": {
-        "date": "2026-03-09",
-        "decision": "Trattare ngs-budget-utilities come PoC, non implementazione shared definitiva",
-        "reason": "Ridurre coupling dominio-specifico"
+        "date": "2026-03-09T09:01:00+01:00",
+        "decision": "Strategia in due fasi: modulo riusabile prima, auth server dopo",
+        "reason": "Ridurre rischio e consegnare valore prima"
       }
     },
     {
@@ -462,9 +462,9 @@ window.NGS_SITE_DATA = {
       "readmePath": "readmes/infinite-installer-cli.md",
       "repositoryPath": "infinite-installer-cli",
       "latestDecision": {
-        "date": "2026-03-08",
-        "decision": "`infinite-installer-cli` dichiarato progetto duale del wizard",
-        "reason": "Separare flusso CLI da percorso GUI/wrapper"
+        "date": "2026-03-08T09:01:00+01:00",
+        "decision": "Avvio posticipato finche non e pronto il template da `ngs-time-utilities-cli`",
+        "reason": "Ridurre rischio e tempi di bootstrap"
       }
     },
     {
@@ -482,9 +482,9 @@ window.NGS_SITE_DATA = {
       "readmePath": "readmes/infinite-installer.md",
       "repositoryPath": "infinite-installer",
       "latestDecision": {
-        "date": "2026-03-08",
-        "decision": "Direzione tecnica aggiornata: wrapper/conversione con .NET 10",
-        "reason": "Migliorare distribuibilita e protezione IP"
+        "date": "2026-03-08T09:01:00+01:00",
+        "decision": "Progetto CLI separato mantenuto come stream duale (`infinite-installer-cli`)",
+        "reason": "Distinguere percorso GUI/wrapper da UX CLI interattiva"
       }
     },
     {
@@ -518,7 +518,7 @@ window.NGS_SITE_DATA = {
       "readmePath": "readmes/cae-sentry-frontend.md",
       "repositoryPath": "cae-sentry-frontend",
       "latestDecision": {
-        "date": "2023-10-11",
+        "date": "2023-10-11T09:00:00+01:00",
         "decision": "Prioritizzate estensioni sicurezza e semplificazione installazioni",
         "reason": "Rispondere ai feedback dei clienti e alla compliance richiesta"
       }
@@ -554,7 +554,7 @@ window.NGS_SITE_DATA = {
       "readmePath": "readmes/siboni-frontend.md",
       "repositoryPath": "siboni-frontend",
       "latestDecision": {
-        "date": "2024-03-09",
+        "date": "2024-03-09T09:00:00+01:00",
         "decision": "Classificato progetto Siboni frontend come completato nel portfolio NGS",
         "reason": "Uniformare monitoraggio e report dei progetti cliente"
       }
@@ -562,7 +562,23 @@ window.NGS_SITE_DATA = {
   ],
   "updates": [
     {
-      "date": "2026-03-10",
+      "date": "2026-03-10T09:05:00+01:00",
+      "project": "ocem.snmp.simulator",
+      "slug": "ocem.snmp.simulator",
+      "status": "In corso",
+      "summary": "Chiusa release `v1.7.0` su `main` con merge branch `release-1.7.0`",
+      "source": "decision-log"
+    },
+    {
+      "date": "2026-03-10T09:01:00+01:00",
+      "project": "ngs-projects",
+      "slug": "ngs-projects",
+      "status": "In manutenzione",
+      "summary": "Mostrare tutti gli aggiornamenti senza limite hardcoded",
+      "source": "decision-log"
+    },
+    {
+      "date": "2026-03-10T09:00:00+01:00",
       "project": "ngs-infinite-utilities",
       "slug": "ngs-infinite-utilities",
       "status": "In corso",
@@ -570,15 +586,7 @@ window.NGS_SITE_DATA = {
       "source": "decision-log"
     },
     {
-      "date": "2026-03-10",
-      "project": "ngs-projects",
-      "slug": "ngs-projects",
-      "status": "In manutenzione",
-      "summary": "Classificare `ngs-projects` come progetto in manutenzione",
-      "source": "decision-log"
-    },
-    {
-      "date": "2026-03-10",
+      "date": "2026-03-10T09:00:00+01:00",
       "project": "ocem.ilcms.simulator",
       "slug": "ocem.ilcms.simulator",
       "status": "In corso",
@@ -586,7 +594,7 @@ window.NGS_SITE_DATA = {
       "source": "decision-log"
     },
     {
-      "date": "2026-03-10",
+      "date": "2026-03-10T09:00:00+01:00",
       "project": "ocem.infinite.configurator",
       "slug": "ocem.infinite.configurator",
       "status": "Archiviato",
@@ -594,7 +602,7 @@ window.NGS_SITE_DATA = {
       "source": "decision-log"
     },
     {
-      "date": "2026-03-10",
+      "date": "2026-03-10T09:00:00+01:00",
       "project": "ocem.infinite.frontend",
       "slug": "ocem.infinite.frontend",
       "status": "In corso",
@@ -602,7 +610,7 @@ window.NGS_SITE_DATA = {
       "source": "decision-log"
     },
     {
-      "date": "2026-03-10",
+      "date": "2026-03-10T09:00:00+01:00",
       "project": "ocem.infinite.proxy",
       "slug": "ocem.infinite.proxy",
       "status": "In pausa",
@@ -610,7 +618,7 @@ window.NGS_SITE_DATA = {
       "source": "decision-log"
     },
     {
-      "date": "2026-03-10",
+      "date": "2026-03-10T09:00:00+01:00",
       "project": "ocem.modbus.simulator",
       "slug": "ocem.modbus.simulator",
       "status": "In corso",
@@ -618,7 +626,7 @@ window.NGS_SITE_DATA = {
       "source": "decision-log"
     },
     {
-      "date": "2026-03-10",
+      "date": "2026-03-10T09:00:00+01:00",
       "project": "ocem.plugin.dds",
       "slug": "ocem.plugin.dds",
       "status": "In corso",
@@ -626,7 +634,7 @@ window.NGS_SITE_DATA = {
       "source": "decision-log"
     },
     {
-      "date": "2026-03-10",
+      "date": "2026-03-10T09:00:00+01:00",
       "project": "ocem.sao.mapgenerator",
       "slug": "ocem.sao.mapgenerator",
       "status": "In corso",
@@ -634,7 +642,7 @@ window.NGS_SITE_DATA = {
       "source": "decision-log"
     },
     {
-      "date": "2026-03-10",
+      "date": "2026-03-10T09:00:00+01:00",
       "project": "ocem.snmp.gateway",
       "slug": "ocem.snmp.gateway",
       "status": "In corso",
@@ -642,23 +650,23 @@ window.NGS_SITE_DATA = {
       "source": "decision-log"
     },
     {
-      "date": "2026-03-10",
-      "project": "ocem.snmp.simulator",
-      "slug": "ocem.snmp.simulator",
-      "status": "In corso",
-      "summary": "Implementata feature trap v1.5 con sender SNMPv1 e parser config dedicato",
-      "source": "decision-log"
-    },
-    {
-      "date": "2026-03-09",
+      "date": "2026-03-09T09:01:00+01:00",
       "project": "ngs-authentication",
       "slug": "ngs-authentication",
       "status": "In pausa",
-      "summary": "Trattare ngs-budget-utilities come PoC, non implementazione shared definitiva",
+      "summary": "Strategia in due fasi: modulo riusabile prima, auth server dopo",
       "source": "decision-log"
     },
     {
-      "date": "2026-03-09",
+      "date": "2026-03-09T09:01:00+01:00",
+      "project": "ngs-documentation-utilities",
+      "slug": "ngs-documentation-utilities",
+      "status": "In pausa",
+      "summary": "README progetto-idee allineato a stato reale implementazione",
+      "source": "decision-log"
+    },
+    {
+      "date": "2026-03-09T09:00:00+01:00",
       "project": "ngs-budget-utilities",
       "slug": "ngs-budget-utilities",
       "status": "In pausa",
@@ -666,15 +674,7 @@ window.NGS_SITE_DATA = {
       "source": "decision-log"
     },
     {
-      "date": "2026-03-09",
-      "project": "ngs-documentation-utilities",
-      "slug": "ngs-documentation-utilities",
-      "status": "In pausa",
-      "summary": "Priorita su Mermaid e XML Documentation bulk",
-      "source": "decision-log"
-    },
-    {
-      "date": "2026-03-09",
+      "date": "2026-03-09T09:00:00+01:00",
       "project": "ngs-time-utilities",
       "slug": "ngs-time-utilities",
       "status": "In corso",
@@ -682,7 +682,7 @@ window.NGS_SITE_DATA = {
       "source": "decision-log"
     },
     {
-      "date": "2026-03-09",
+      "date": "2026-03-09T09:00:00+01:00",
       "project": "ngs-time-utilities-cli",
       "slug": "ngs-time-utilities-cli",
       "status": "In corso",
@@ -690,23 +690,23 @@ window.NGS_SITE_DATA = {
       "source": "decision-log"
     },
     {
-      "date": "2026-03-08",
+      "date": "2026-03-08T09:01:00+01:00",
       "project": "infinite-installer",
       "slug": "infinite-installer",
       "status": "In pausa",
-      "summary": "Direzione tecnica aggiornata: wrapper/conversione con .NET 10",
+      "summary": "Progetto CLI separato mantenuto come stream duale (`infinite-installer-cli`)",
       "source": "decision-log"
     },
     {
-      "date": "2026-03-08",
+      "date": "2026-03-08T09:01:00+01:00",
       "project": "infinite-installer-cli",
       "slug": "infinite-installer-cli",
       "status": "Pianificato",
-      "summary": "`infinite-installer-cli` dichiarato progetto duale del wizard",
+      "summary": "Avvio posticipato finche non e pronto il template da `ngs-time-utilities-cli`",
       "source": "decision-log"
     },
     {
-      "date": "2024-03-09",
+      "date": "2024-03-09T09:00:00+01:00",
       "project": "siboni-frontend",
       "slug": "siboni-frontend",
       "status": "Completato",
@@ -714,7 +714,7 @@ window.NGS_SITE_DATA = {
       "source": "decision-log"
     },
     {
-      "date": "2023-10-11",
+      "date": "2023-10-11T09:00:00+01:00",
       "project": "cae-sentry-backend",
       "slug": "cae-sentry-backend",
       "status": "Completato",
@@ -722,7 +722,7 @@ window.NGS_SITE_DATA = {
       "source": "decision-log"
     },
     {
-      "date": "2023-10-11",
+      "date": "2023-10-11T09:00:00+01:00",
       "project": "cae-sentry-frontend",
       "slug": "cae-sentry-frontend",
       "status": "Completato",

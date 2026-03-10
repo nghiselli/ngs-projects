@@ -44,7 +44,7 @@ Per abilitare SAO servono pipeline affidabili di raccolta dati SNMP, normalizzaz
 ## Decision Log
 | Data | Decisione | Motivazione |
 |---|---|---|
-| 2026-03-10 | Inserito gateway SNMP nel portfolio come iniziativa dedicata | Rendere esplicita la base tecnica della feature SAO |
+| 2026-03-10T09:00:00+01:00 | Inserito gateway SNMP nel portfolio come iniziativa dedicata | Rendere esplicita la base tecnica della feature SAO |
 
 ## Rischi / Note
 - Profili SNMP eterogenei tra vendor richiedono continua estensione/validazione.

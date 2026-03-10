@@ -197,6 +197,7 @@ Da eseguire a fine:
 - [ ] Preferire sempre comandi git non interattivi.
 - [ ] Prima del push, mostrare `git status` e diff sintetico delle modifiche.
 - [ ] Aggiornare sempre `README.md`/`CHANGELOG.md` quando impatta il comportamento.
+- [ ] Nel Decision Log usare timestamp ISO yyyy-MM-ddTHH:mm:ss+01:00; a parita di giorno mantenere ordine crescente dell'orario.
 - [ ] Se un prerequisito manca (path, branch, permessi), fermarsi e chiedere conferma.
 
 ---
@@ -209,3 +210,4 @@ Da eseguire a fine:
 | `NGS-PROJECTS-UPDATE.md` | Procedura di aggiornamento tracking portfolio |
 | `docs/` | Specifiche funzionali/tecniche (se presenti) |
 | `checkpoints/` | Salvataggio dei checkpoint dell'agent ai (se presenti) |
+

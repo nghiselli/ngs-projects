@@ -56,8 +56,8 @@ Elementi funzionali ricorrenti nelle specifiche:
 ## Decision Log
 | Data | Decisione | Motivazione |
 |---|---|---|
-| 2023-03-09 | Documentazione progetto allineata nel portfolio NGS come progetto completato | Centralizzare storico e stato avanzamento |
-| 2023-10-11 | Consolidato pacchetto estensioni/finalizzazioni richieste da CAE | Ridurre effort installativo e migliorare affidabilita operativa |
+| 2023-03-09T09:00:00+01:00 | Documentazione progetto allineata nel portfolio NGS come progetto completato | Centralizzare storico e stato avanzamento |
+| 2023-10-11T09:00:00+01:00 | Consolidato pacchetto estensioni/finalizzazioni richieste da CAE | Ridurre effort installativo e migliorare affidabilita operativa |
 
 ## Rischi / Note
 - Repository originale con documentazione tecnica parziale nel README.

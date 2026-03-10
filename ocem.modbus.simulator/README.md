@@ -43,7 +43,7 @@ Il simulatore consente prove realistiche senza infrastruttura completa di campo,
 ## Decision Log
 | Data | Decisione | Motivazione |
 |---|---|---|
-| 2026-03-10 | Inserito simulatore Modbus nel portfolio come modulo attivo | Tracciare chiaramente il supporto testing hardware-like |
+| 2026-03-10T09:00:00+01:00 | Inserito simulatore Modbus nel portfolio come modulo attivo | Tracciare chiaramente il supporto testing hardware-like |
 
 ## Rischi / Note
 - Accuratezza simulazione da mantenere allineata con firmware/device reali.

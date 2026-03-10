@@ -65,8 +65,8 @@ Il wizard attuale copre bene il flusso GUI, ma serve un canale CLI robusto per o
 ## Decision Log
 | Data | Decisione | Motivazione |
 |---|---|---|
-| 2026-03-08 | `infinite-installer-cli` dichiarato progetto duale del wizard | Separare flusso CLI da percorso GUI/wrapper |
-| 2026-03-08 | Avvio posticipato finche non e pronto il template da `ngs-time-utilities-cli` | Ridurre rischio e tempi di bootstrap |
+| 2026-03-08T09:00:00+01:00 | `infinite-installer-cli` dichiarato progetto duale del wizard | Separare flusso CLI da percorso GUI/wrapper |
+| 2026-03-08T09:01:00+01:00 | Avvio posticipato finche non e pronto il template da `ngs-time-utilities-cli` | Ridurre rischio e tempi di bootstrap |
 
 ## Rischi / Blocchi
 - Il progetto dipende dalla maturazione del template CLI nel repo seed

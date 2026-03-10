@@ -45,7 +45,7 @@ Il repository non include documentazione funzionale estesa, ma dalla struttura e
 ## Decision Log
 | Data | Decisione | Motivazione |
 |---|---|---|
-| 2024-03-09 | Classificato progetto Siboni backend come completato nel portfolio NGS | Consolidare lo storico progetti cliente con metadati uniformi |
+| 2024-03-09T09:00:00+01:00 | Classificato progetto Siboni backend come completato nel portfolio NGS | Consolidare lo storico progetti cliente con metadati uniformi |
 
 ## Rischi / Note
 - Assenza di documentazione funzionale dettagliata nel repository sorgente.

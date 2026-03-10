@@ -45,7 +45,7 @@ Il modulo rappresenta il ponte tra dispositivi Modbus e bus DDS di sistema. Oltr
 ## Decision Log
 | Data | Decisione | Motivazione |
 |---|---|---|
-| 2026-03-10 | Tracciato il gateway Modbus come progetto portfolio autonomo | Evidenziare il ruolo gateway nella catena dati Infinite |
+| 2026-03-10T09:00:00+01:00 | Tracciato il gateway Modbus come progetto portfolio autonomo | Evidenziare il ruolo gateway nella catena dati Infinite |
 
 ## Rischi / Note
 - Mix di framework/versioni da gestire con attenzione tra progetti della soluzione.

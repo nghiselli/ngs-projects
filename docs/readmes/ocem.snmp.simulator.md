@@ -7,7 +7,7 @@
 - Priorita: Alta
 
 - Progresso: 90%
-- Tipo progetto: Cliente
+- Tipo progetto: Personale
 
 - Includi nel portfolio: Si
 - Ultimo aggiornamento: 2026-03-10
@@ -96,17 +96,17 @@ Il progetto riduce dipendenze da ambienti fisici per validare integrazioni SNMP 
 ## Decision Log
 | Data | Decisione | Motivazione |
 |---|---|---|
-| 2026-03-07 | Introdotte azioni runtime + topology engine (v1.2.0) | Rendere il simulatore utilizzabile in test end-to-end realistici |
-| 2026-03-07 | Introdotta topologia inter-station con viewpoint (v1.3.0) | Simulare reachability SNMP dipendente dalla connettivita |
-| 2026-03-08 | Riorganizzata GUI con tab e visual topology (v1.4.0) | Migliorare usabilita operativa durante i test |
-| 2026-03-08 | Aggiunta tab Interactive Device con SVG e azioni click-driven (v1.4.1) | Ridurre frizione nella simulazione manuale dei guasti/stati |
-| 2026-03-08 | Allineato README progetto-idee con stato reale implementazione | Tenere sincronizzato backlog/roadmap tra idea e repo tecnico |
-| 2026-03-10 | Implementata feature trap v1.5 con sender SNMPv1 e parser config dedicato | Coprire scenari event-driven verso NMS senza hardware reale |
-| 2026-03-10 | Introdotto pulsante UI `Invia trap test` + documento `TRAP-MANAGEMENT.md` | Ridurre tempo di test manuale e chiarire strategia identificazione device da IP |
-| 2026-03-10 | Implementato supporto SNMP v1 `SET` con gating `WriteObjIds` e validazione derivata da MIB | Consentire scritture controllate senza introdurre regole custom in config |
-| 2026-03-10 | Chiusa release `v1.6.0` su `main` con tag `v1.6.0` e merge-back su `develop` | Stabilizzare baseline GET/SET/trap e allineare versionamento semantico |
-| 2026-03-10 | Implementata Management API v1.7 (/api/v1) con enforcement HTTPS+API key e integrazione Swagger | Abilitare controllo runtime via API mantenendo sicurezza e riuso della logica esistente |
-| 2026-03-10 | Chiusa release `v1.7.0` su `main` con merge branch `release-1.7.0` | Consolidare baseline Management API e preparare publish del tag remoto |
+| 2026-03-07T09:00:00+01:00 | Introdotte azioni runtime + topology engine (v1.2.0) | Rendere il simulatore utilizzabile in test end-to-end realistici |
+| 2026-03-07T09:01:00+01:00 | Introdotta topologia inter-station con viewpoint (v1.3.0) | Simulare reachability SNMP dipendente dalla connettivita |
+| 2026-03-08T09:00:00+01:00 | Riorganizzata GUI con tab e visual topology (v1.4.0) | Migliorare usabilita operativa durante i test |
+| 2026-03-08T09:01:00+01:00 | Aggiunta tab Interactive Device con SVG e azioni click-driven (v1.4.1) | Ridurre frizione nella simulazione manuale dei guasti/stati |
+| 2026-03-08T09:02:00+01:00 | Allineato README progetto-idee con stato reale implementazione | Tenere sincronizzato backlog/roadmap tra idea e repo tecnico |
+| 2026-03-10T09:00:00+01:00 | Implementata feature trap v1.5 con sender SNMPv1 e parser config dedicato | Coprire scenari event-driven verso NMS senza hardware reale |
+| 2026-03-10T09:01:00+01:00 | Introdotto pulsante UI `Invia trap test` + documento `TRAP-MANAGEMENT.md` | Ridurre tempo di test manuale e chiarire strategia identificazione device da IP |
+| 2026-03-10T09:02:00+01:00 | Implementato supporto SNMP v1 `SET` con gating `WriteObjIds` e validazione derivata da MIB | Consentire scritture controllate senza introdurre regole custom in config |
+| 2026-03-10T09:03:00+01:00 | Chiusa release `v1.6.0` su `main` con tag `v1.6.0` e merge-back su `develop` | Stabilizzare baseline GET/SET/trap e allineare versionamento semantico |
+| 2026-03-10T09:04:00+01:00 | Implementata Management API v1.7 (/api/v1) con enforcement HTTPS+API key e integrazione Swagger | Abilitare controllo runtime via API mantenendo sicurezza e riuso della logica esistente |
+| 2026-03-10T09:05:00+01:00 | Chiusa release `v1.7.0` su `main` con merge branch `release-1.7.0` | Consolidare baseline Management API e preparare publish del tag remoto |
 
 ## Rischi / Blocchi
 - Errori di configurazione JSONC/MIB bloccano startup (fail-fast): alto impatto operativo se i file non sono versionati con disciplina.

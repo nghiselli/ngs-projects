@@ -76,11 +76,11 @@ La documentazione tecnica tende a essere incompleta o non allineata al codice. Q
 ## Decision Log
 | Data | Decisione | Motivazione |
 |---|---|---|
-| 2025-12-13 | Avvio progetto e baseline v0.1.0 | Creare fondazione pipeline documentazione riusabile |
+| 2025-12-13T09:00:00+01:00 | Avvio progetto e baseline v0.1.0 | Creare fondazione pipeline documentazione riusabile |
 | 2025-Q4 | Adozione pipeline ibrida Roslyn + LLM + DocFX | Bilanciare accuratezza strutturale e spiegazione semantica |
 | 2025-Q4 | Introduzione auth wrapper per publish sicuro | Proteggere consultazione documentazione interna |
-| 2026-03-09 | Priorita su Mermaid e XML Documentation bulk | Aumentare qualita e completezza output sui progetti target |
-| 2026-03-09 | README progetto-idee allineato a stato reale implementazione | Tenere roadmap e backlog coerenti con il repository tecnico |
+| 2026-03-09T09:00:00+01:00 | Priorita su Mermaid e XML Documentation bulk | Aumentare qualita e completezza output sui progetti target |
+| 2026-03-09T09:01:00+01:00 | README progetto-idee allineato a stato reale implementazione | Tenere roadmap e backlog coerenti con il repository tecnico |
 
 ## Rischi / Blocchi
 - Qualita documentazione variabile se i repository target non hanno naming/convenzioni coerenti.
