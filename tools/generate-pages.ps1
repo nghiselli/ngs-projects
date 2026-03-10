@@ -65,6 +65,10 @@ function Normalize-Status {
         return "Archiviato"
     }
 
+    if ($normalized -match 'manutenz|maintenance|mantenut') {
+        return "In manutenzione"
+    }
+
     if ($normalized -match '^completat|\bcompletato\b') {
         return "Completato"
     }
@@ -105,6 +109,38 @@ function Parse-IsoDate {
     }
 
     return $null
+}
+
+function Parse-ProgressPercent {
+    param(
+        [string]$Value,
+        [string]$NormalizedStatus
+    )
+
+    if (-not [string]::IsNullOrWhiteSpace($Value)) {
+        $normalizedValue = $Value.Trim()
+        if ($normalizedValue -match '(\d{1,3}(?:[\.,]\d+)?)') {
+            $numeric = $Matches[1].Replace(',', '.')
+            $parsed = 0.0
+            if ([double]::TryParse($numeric, [System.Globalization.NumberStyles]::Float, [System.Globalization.CultureInfo]::InvariantCulture, [ref]$parsed)) {
+                $rounded = [int][math]::Round($parsed)
+                if ($rounded -lt 0) { return 0 }
+                if ($rounded -gt 100) { return 100 }
+                return $rounded
+            }
+        }
+    }
+
+    switch ($NormalizedStatus) {
+        "Da pianificare" { return 0 }
+        "Pianificato" { return 20 }
+        "In corso" { return 55 }
+        "In pausa" { return 65 }
+        "In manutenzione" { return 100 }
+        "Completato" { return 100 }
+        "Archiviato" { return 100 }
+        default { return 0 }
+    }
 }
 
 function Get-SectionText {
@@ -291,6 +327,10 @@ foreach ($projectDirectory in $projectDirectories) {
     $lastUpdateRaw = Clean-TemplateValue -Value (Get-SnapshotValue -Lines $readmeLines -Label "Ultimo aggiornamento")
     $projectTypeRaw = Clean-TemplateValue -Value (Get-SnapshotValue -Lines $readmeLines -Label "Tipo progetto")
     $includeInPortfolioRaw = Clean-TemplateValue -Value (Get-SnapshotValue -Lines $readmeLines -Label "Includi nel portfolio")
+    $progressRaw = Clean-TemplateValue -Value (Get-SnapshotValue -Lines $readmeLines -Label "Progresso")
+    if ([string]::IsNullOrWhiteSpace($progressRaw)) {
+        $progressRaw = Clean-TemplateValue -Value (Get-SnapshotValue -Lines $readmeLines -Label "Progresso (%)")
+    }
 
     if ($statusRaw -match '\|') {
         $statusRaw = "Da pianificare"
@@ -307,6 +347,10 @@ foreach ($projectDirectory in $projectDirectories) {
     if ($includeInPortfolioRaw -match '\|') {
         $includeInPortfolioRaw = ""
     }
+    
+    if ($progressRaw -match '\|') {
+        $progressRaw = ""
+    }
 
     $includeInPortfolio = Resolve-IncludeInPortfolio -IncludeRaw $includeInPortfolioRaw
     if (-not $includeInPortfolio) {
@@ -314,6 +358,8 @@ foreach ($projectDirectory in $projectDirectories) {
     }
 
     $normalizedStatus = Normalize-Status -StatusRaw $statusRaw
+    $progressPercent = Parse-ProgressPercent -Value $progressRaw -NormalizedStatus $normalizedStatus
+    $progressText = "{0}%" -f $progressPercent
     $lastUpdateDate = Parse-IsoDate -Value $lastUpdateRaw
 
     $objectiveSection = Get-SectionText -Lines $readmeLines -Header "Obiettivo"
@@ -358,6 +404,8 @@ foreach ($projectDirectory in $projectDirectories) {
         priority       = if ($priorityRaw) { $priorityRaw } else { "N/D" }
         projectType    = if ($projectTypeRaw) { $projectTypeRaw } else { "Non specificato" }
         includeInPortfolio = "Si"
+        progressPercent = $progressPercent
+        progressText   = $progressText
         lastUpdate     = if ($lastUpdateDate -ne $null) { $lastUpdateDate.ToString("yyyy-MM-dd") } elseif ($lastUpdateRaw) { $lastUpdateRaw } else { "N/D" }
         objective      = $objectiveSummary
         readmePath     = "readmes/$slug.md"
@@ -405,8 +453,7 @@ Sort-Object @{
             }
         }
         Descending = $true
-    }, project |
-Select-Object -First 12
+    }, project
 
 $updatesOutput = @()
 foreach ($entry in $sortedUpdates) {
@@ -425,6 +472,7 @@ $statusCounts = [ordered]@{
     "Pianificato"    = @($projects | Where-Object { $_.status -eq "Pianificato" }).Count
     "In corso"       = @($projects | Where-Object { $_.status -eq "In corso" }).Count
     "In pausa"       = @($projects | Where-Object { $_.status -eq "In pausa" }).Count
+    "In manutenzione" = @($projects | Where-Object { $_.status -eq "In manutenzione" }).Count
     "Completato"     = @($projects | Where-Object { $_.status -eq "Completato" }).Count
     "Archiviato"     = @($projects | Where-Object { $_.status -eq "Archiviato" }).Count
 }
@@ -447,6 +495,10 @@ Set-Content -Path $jsDataFile -Value ("window.NGS_SITE_DATA = " + $jsonContent +
 Set-Content -Path $readmesJsFile -Value ("window.NGS_READMES = " + $readmesJson + ";") -Encoding utf8
 
 Write-Host ("Generated site data for {0} projects: {1}, {2}, {3}" -f @($projects).Count, $dataFile, $jsDataFile, $readmesJsFile)
+
+
+
+
 
 
 

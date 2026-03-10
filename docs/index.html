@@ -39,8 +39,8 @@
 
   <main class="home-tabs">
     <nav class="tab-nav" role="tablist" aria-label="Board progetti">
-      <button class="tab-btn is-active" type="button" role="tab" aria-selected="true" data-tab-target="active">Da Pianificare a In Corso</button>
-      <button class="tab-btn" type="button" role="tab" aria-selected="false" data-tab-target="closed">In Pausa, Completato, Archiviato</button>
+      <button class="tab-btn is-active" type="button" role="tab" aria-selected="true" data-tab-target="active">Da Pianificare, Pianificato, In Corso</button>
+      <button class="tab-btn" type="button" role="tab" aria-selected="false" data-tab-target="closed">In Pausa, In manutenzione, Completato, Archiviato</button>
       <button class="tab-btn" type="button" role="tab" aria-selected="false" data-tab-target="updates">Aggiornamenti</button>
     </nav>
 
@@ -73,13 +73,21 @@
     </section>
 
     <section class="tab-panel" data-tab-panel="closed" hidden>
-      <section class="columns">
+      <section class="columns columns-closed">
         <article class="column" data-status="In pausa">
           <header class="column-header">
             <h2>In pausa</h2>
             <span class="count" id="count-in-pausa">0</span>
           </header>
           <div class="cards" id="cards-in-pausa"></div>
+        </article>
+
+        <article class="column" data-status="In manutenzione">
+          <header class="column-header">
+            <h2>In manutenzione</h2>
+            <span class="count" id="count-in-manutenzione">0</span>
+          </header>
+          <div class="cards" id="cards-in-manutenzione"></div>
         </article>
 
         <article class="column" data-status="Completato">
@@ -123,6 +131,15 @@
       </div>
       <p class="project-status"></p>
       <p class="project-objective"></p>
+      <div class="project-progress">
+        <div class="project-progress-head">
+          <span class="project-progress-title">Progresso</span>
+          <span class="mono project-progress-label">0%</span>
+        </div>
+        <div class="project-progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+          <span class="project-progress-value" style="width: 0%"></span>
+        </div>
+      </div>
       <div class="project-bottom">
         <span class="mono project-date"></span>
       </div>

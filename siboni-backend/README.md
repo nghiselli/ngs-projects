@@ -4,6 +4,7 @@
 - Path implementazione: Z:\Stoorm5\Projects\Siboni\siboni.backend
 - Stato avanzamento: Completato
 - Priorita: Alta
+- Progresso: 100%
 - Tipo progetto: Cliente
 - Includi nel portfolio: No
 - Cliente: Siboni S.r.l.
@@ -44,9 +45,10 @@ Il repository non include documentazione funzionale estesa, ma dalla struttura e
 ## Decision Log
 | Data | Decisione | Motivazione |
 |---|---|---|
-| 2026-03-09 | Classificato progetto Siboni backend come completato nel portfolio NGS | Consolidare lo storico progetti cliente con metadati uniformi |
+| 2024-03-09 | Classificato progetto Siboni backend come completato nel portfolio NGS | Consolidare lo storico progetti cliente con metadati uniformi |
 
 ## Rischi / Note
 - Assenza di documentazione funzionale dettagliata nel repository sorgente.
 - Presenza nel `build.gradle` di riferimenti infrastrutturali interni storici da considerare solo come contesto tecnico.
+
 

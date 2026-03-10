@@ -4,6 +4,7 @@
 - Path implementazione: Z:\Stoorm5\Projects\CAE\sentry-backend
 - Stato avanzamento: Completato
 - Priorita: Alta
+- Progresso: 100%
 - Tipo progetto: Cliente
 - Includi nel portfolio: Si
 - Cliente: CAE S.p.A.
@@ -55,10 +56,11 @@ Elementi funzionali ricorrenti nelle specifiche:
 ## Decision Log
 | Data | Decisione | Motivazione |
 |---|---|---|
+| 2023-03-09 | Documentazione progetto allineata nel portfolio NGS come progetto completato | Centralizzare storico e stato avanzamento |
 | 2023-10-11 | Consolidato pacchetto estensioni/finalizzazioni richieste da CAE | Ridurre effort installativo e migliorare affidabilita operativa |
-| 2026-03-09 | Documentazione progetto allineata nel portfolio NGS come progetto completato | Centralizzare storico e stato avanzamento |
 
 ## Rischi / Note
 - Repository originale con documentazione tecnica parziale nel README.
 - Alcune scelte architetturali e di deployment dipendono dal contesto cliente e dalle installazioni.
+
 

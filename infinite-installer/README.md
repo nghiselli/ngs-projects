@@ -4,7 +4,8 @@
 - Path progetto idee: D:\repos\NicolaGhiselliSolutions\ngs-project-ideas\infinite-installer
 - Path implementazione attuale: D:\repos\NicolaGhiselliSolutions\ngs-infinite-scripts
 - Stato avanzamento: In Pausa (implementazione PowerShell avanzata; distribuzione in ridefinizione con wrapper .NET 10)
-- Priorita: Media
+- Priorita: Media
+- Progresso: 65%
 - Tipo progetto: Personale
 - Includi nel portfolio: Si
 - Ultimo aggiornamento: 2026-03-08
@@ -91,4 +92,5 @@ Le funzionalita installative sono implementate in `D:\repos\NicolaGhiselliSoluti
   - `D:\repos\NicolaGhiselliSolutions\ngs-infinite-scripts\context\notes\functionalities-notes-wip.txt`
   - `D:\repos\NicolaGhiselliSolutions\ngs-infinite-scripts\context\notes\funtionalities-notes-future.txt`
   - `D:\repos\NicolaGhiselliSolutions\ngs-infinite-scripts\context\notes\wizard-distribution.md`
+
 

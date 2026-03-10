@@ -4,7 +4,8 @@
 - Path progetto idee: D:\repos\NicolaGhiselliSolutions\ngs-project-ideas\ngs-budget-utilities
 - Path implementazione: D:\repos\NicolaGhiselliSolutions\ngs-budget-utilities
 - Stato avanzamento: In pausa (foundation completata, sviluppo feature core in avvio)
-- Priorita: Media
+- Priorita: Media
+- Progresso: 100%
 - Tipo progetto: Personale
 
 - Includi nel portfolio: Si
@@ -92,5 +93,6 @@ E importante per monitorare entrate/uscite con frizione minima, normalizzare mov
 - Roadmap v0.4 e gia dettagliata fino a milestone avanzate (ricorrenze, reconciliation, alert, backup/restore, open banking).
 - Il progetto e partito bene tecnicamente; ora il valore dipende dall'accelerazione dei casi d'uso reali (import + categorizzazione + report).
 - La struttura `docs/imports` contiene esempi utili per testare rapidamente pipeline di import.
+
 
 

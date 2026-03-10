@@ -3,7 +3,8 @@
 ## Snapshot
 - Path: $projectPath
 - Stato avanzamento: Da Pianificare
-- Priorita: Bassa
+- Priorita: Bassa
+- Progresso: 0%
 - Tipo progetto: Personale
 - Includi nel portfolio: Si
 - Ultimo aggiornamento: $today
@@ -60,5 +61,6 @@ Questa attività è ripetitiva, error prone e potrebbe essere automatizzata.
 
 ## Note Libere
 - 
+
 
 

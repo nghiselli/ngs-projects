@@ -4,6 +4,7 @@
 - Path implementazione: Z:\Stoorm5\Projects\Siboni\stoorm5.siboni.frontend
 - Stato avanzamento: Completato
 - Priorita: Alta
+- Progresso: 100%
 - Tipo progetto: Cliente
 - Includi nel portfolio: Si
 - Cliente: Siboni S.r.l.
@@ -47,10 +48,11 @@ Il progetto frontend richiede gestione di viste e build differenziate, integrazi
 ## Decision Log
 | Data | Decisione | Motivazione |
 |---|---|---|
-| 2026-03-09 | Classificato progetto Siboni frontend come completato nel portfolio NGS | Uniformare monitoraggio e report dei progetti cliente |
+| 2024-03-09 | Classificato progetto Siboni frontend come completato nel portfolio NGS | Uniformare monitoraggio e report dei progetti cliente |
 
 ## Rischi / Note
 - Documentazione funzionale limitata nel repository sorgente.
 - Alcuni dettagli di business flow sono legati a conoscenza di dominio interna al cliente.
+
 
 

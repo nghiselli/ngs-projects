@@ -3,7 +3,8 @@
 ## Snapshot
 - Path: $projectPath
 - Stato avanzamento: Pianificato
-- Priorita: Media
+- Priorita: Media
+- Progresso: 20%
 - Tipo progetto: Personale
 - Includi nel portfolio: Si
 - Ultimo aggiornamento: $today
@@ -57,6 +58,7 @@ Perche questo progetto e importante e quale problema risolve.
 
 ## Note Libere
 - 
+
 
 
 

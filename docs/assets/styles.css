@@ -128,7 +128,7 @@ a {
 
 .hero {
   display: grid;
-  grid-template-columns: minmax(260px, 1.5fr) minmax(260px, 1fr);
+  grid-template-columns: minmax(280px, 1fr) minmax(620px, 1.45fr);
   gap: 22px;
   margin-bottom: 22px;
 }
@@ -177,9 +177,11 @@ h1 {
 }
 
 .stats {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  display: flex;
+  flex-wrap: nowrap;
   gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 2px;
 }
 
 .stat-chip {
@@ -187,18 +189,30 @@ h1 {
   border-radius: 10px;
   background: #ffffff;
   padding: 9px 10px;
+  min-width: 108px;
+  min-height: 74px;
+  flex: 1 0 108px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .stat-label {
   display: block;
   font-size: 0.74rem;
   color: var(--ink-soft);
+  text-align: center;
 }
 
 .stat-value {
   display: block;
-  margin-top: 4px;
+  margin-top: 6px;
   font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 1;
+  text-align: center;
 }
 
 .home-tabs {
@@ -255,6 +269,10 @@ h1 {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 14px;
+}
+
+.columns-closed {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 .updates-full {
@@ -353,6 +371,41 @@ h1 {
 
 .project-objective {
   color: var(--ink);
+}
+
+.project-progress {
+  display: grid;
+  gap: 4px;
+}
+
+.project-progress-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.project-progress-title {
+  font-size: 0.76rem;
+  color: var(--ink-soft);
+}
+
+.project-progress-label {
+  color: var(--ink-soft);
+}
+
+.project-progress-bar {
+  height: 7px;
+  border-radius: 999px;
+  background: rgba(7, 155, 157, 0.16);
+  border: 1px solid rgba(7, 155, 157, 0.24);
+  overflow: hidden;
+}
+
+.project-progress-value {
+  display: block;
+  height: 100%;
+  width: 0;
+  background: var(--brand-color);
 }
 
 .project-bottom {
@@ -637,6 +690,9 @@ h1 {
     flex-direction: column;
   }
 }
+
+
+
 
 
 

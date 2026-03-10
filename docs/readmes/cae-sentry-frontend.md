@@ -4,6 +4,7 @@
 - Path implementazione: Z:\Stoorm5\Projects\CAE\sentry-frontend
 - Stato avanzamento: Completato
 - Priorita: Alta
+- Progresso: 100%
 - Tipo progetto: Cliente
 - Includi nel portfolio: Si
 - Cliente: CAE S.p.A.
@@ -55,11 +56,12 @@ Punti chiave emersi dalla documentazione:
 ## Decision Log
 | Data | Decisione | Motivazione |
 |---|---|---|
+| 2023-03-09 | Consolidata documentazione portfolio del progetto completato | Mantenere uno storico uniforme nel repository NGS |
 | 2023-10-11 | Prioritizzate estensioni sicurezza e semplificazione installazioni | Rispondere ai feedback dei clienti e alla compliance richiesta |
-| 2026-03-09 | Consolidata documentazione portfolio del progetto completato | Mantenere uno storico uniforme nel repository NGS |
 
 ## Rischi / Note
 - README sorgente molto sintetico, con documentazione funzionale principalmente esterna.
 - Parte delle decisioni UX dipende da linee guida visuali del cliente e dal contesto di deploy.
+
 
 
