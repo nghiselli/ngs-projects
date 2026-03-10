@@ -1,5 +1,5 @@
 (() => {
-  const STATUS_ORDER = ["Da pianificare", "Pianificato", "In corso", "In pausa", "Completato", "Archiviato"];
+  const STATUS_ORDER = ["Da pianificare", "Pianificato", "In corso", "In pausa", "In manutenzione", "Completato", "Archiviato"];
 
   const DEFAULT_BRAND = {
     companyName: "Nicola Ghiselli Solutions",
@@ -148,6 +148,23 @@
     return "Da pianificare";
   }
 
+  function getProgressPercent(project) {
+    const direct = Number(project?.progressPercent);
+    if (Number.isFinite(direct)) {
+      return Math.max(0, Math.min(100, Math.round(direct)));
+    }
+
+    const raw = String(project?.progressText || "");
+    const match = raw.match(/(\d{1,3})/);
+    if (match) {
+      const parsed = Number(match[1]);
+      if (Number.isFinite(parsed)) {
+        return Math.max(0, Math.min(100, Math.round(parsed)));
+      }
+    }
+
+    return 0;
+  }
   function createCard(project) {
     const template = document.getElementById("project-card-template");
     const fragment = template.content.cloneNode(true);
@@ -157,6 +174,10 @@
     const status = fragment.querySelector(".project-status");
     const objective = fragment.querySelector(".project-objective");
     const date = fragment.querySelector(".project-date");
+    const progressLabel = fragment.querySelector(".project-progress-label");
+    const progressBar = fragment.querySelector(".project-progress-value");
+    const progressHost = fragment.querySelector(".project-progress-bar");
+    const progress = getProgressPercent(project);
 
     link.href = `./project.html?slug=${encodeURIComponent(project.slug)}`;
     link.setAttribute("aria-label", `Apri il progetto ${project.name}`);
@@ -166,9 +187,20 @@
     objective.textContent = project.objective || "Obiettivo non definito.";
     date.textContent = formatDate(project.lastUpdate);
 
+    if (progressLabel) {
+      progressLabel.textContent = `${progress}%`;
+    }
+
+    if (progressBar) {
+      progressBar.style.width = `${progress}%`;
+    }
+
+    if (progressHost) {
+      progressHost.setAttribute("aria-valuenow", String(progress));
+    }
+
     return fragment;
   }
-
   function createEmpty(message) {
     const empty = document.createElement("div");
     empty.className = "empty";
@@ -219,6 +251,7 @@
       { label: "Da pianificare", value: counts["Da pianificare"] || 0 },
       { label: "Pianificati", value: counts.Pianificato || 0 },
       { label: "In corso", value: counts["In corso"] || 0 },
+      { label: "In manutenzione", value: counts["In manutenzione"] || 0 },
       { label: "Completati", value: counts.Completato || 0 },
       { label: "Archiviati", value: counts.Archiviato || 0 }
     ];
@@ -275,7 +308,7 @@
     list.innerHTML = "";
 
     const slugSet = new Set(allowedSlugs);
-    const scoped = updates.filter((update) => slugSet.has(update.slug)).slice(0, 12);
+    const scoped = updates.filter((update) => slugSet.has(update.slug));
 
     if (scoped.length === 0) {
       list.appendChild(createEmpty("Nessun aggiornamento per il filtro corrente."));
@@ -322,7 +355,7 @@
           return true;
         }
 
-        return [project.name, project.statusRaw, project.projectType, project.objective]
+        return [project.name, project.statusRaw, project.projectType, project.objective, project.progressText]
           .filter(Boolean)
           .join(" ")
           .toLowerCase()
@@ -360,6 +393,7 @@
       { key: "Stato", value: project.statusRaw || project.status },
       { key: "Tipo progetto", value: project.projectType || "Non specificato" },
       { key: "Priorita", value: project.priority || "N/D" },
+      { key: "Progresso", value: `${getProgressPercent(project)}%` },
       { key: "Ultimo aggiornamento", value: formatDate(project.lastUpdate) },
       { key: "Path repository", value: project.repositoryPath || "N/D" }
     ];
@@ -464,6 +498,7 @@
         project.status || "N/D",
         `Tipo: ${project.projectType || "Non specificato"}`,
         `Priorita: ${project.priority || "N/D"}`,
+        `Progresso: ${getProgressPercent(project)}%`,
         `Aggiornato: ${formatDate(project.lastUpdate)}`
       ].forEach((label) => {
         const pill = document.createElement("span");
@@ -498,5 +533,8 @@
 
   void main();
 })();
+
+
+
 
 

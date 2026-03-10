@@ -4,8 +4,10 @@
 - Path progetto idee: D:\repos\NicolaGhiselliSolutions\ngs-project-ideas\ngs-time-utilities
 - Path implementazione: D:\repos\NicolaGhiselliSolutions\ngs-time-utilities
 - Stato avanzamento: In corso avanzato (v2.6.0 stabile, roadmap v3.0.0 avviata)
-- Priorita: Media
-- Tipo progetto: Personale
+- Priorita: Media
+- Progresso: 55%
+- Tipo progetto: Personale
+- Includi nel portfolio: Si
 - Ultimo aggiornamento: 2026-03-09
 - Owner: Nicola
 
@@ -97,4 +99,6 @@ Il progetto automatizza task giornalieri ad alto impatto (import dati, confronto
 - Nei riferimenti documentali usare i nomi file reali: `v3.0.0-specification.md` e `v4.0.0-analysis-wizard-idea.md`.
 - Progetto correlato: `D:\repos\NicolaGhiselliSolutions\ngs-time-utilities-cli` (esperienza CLI interattiva).
 - Quando pronto, `ngs-time-utilities` puo riusare il modulo condiviso `ngs-authentication` per la fase v3.
+
+
 

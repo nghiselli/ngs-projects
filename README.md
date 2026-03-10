@@ -5,7 +5,7 @@ Portfolio repository dei progetti di Nicola Ghiselli Solutions.
 ## Cosa contiene
 
 Questo repository include:
-- una cartella per ogni progetto (`/<nome-progetto>/README.md`),
+- una cartella per ogni progetto monitorato (`/<nome-progetto>/README.md`),
 - una GitHub Pages in `docs/` generata dai README dei progetti,
 - script di generazione dati in `tools/generate-pages.ps1`.
 
@@ -13,13 +13,14 @@ Questo repository include:
 
 La Home e organizzata in 3 tab:
 1. `Da Pianificare a In Corso` con board: `Da pianificare`, `Pianificato`, `In corso`
-2. `In Pausa, Completato, Archiviato` con board: `In pausa`, `Completato`, `Archiviato`
-3. `Aggiornamenti` con lista degli ultimi aggiornamenti (Decision Log / Snapshot)
+2. `In Pausa, In manutenzione, Completato, Archiviato` con board: `In pausa`, `In manutenzione`, `Completato`, `Archiviato`
+3. `Aggiornamenti` con tutte le voci aggiornamento (Decision Log / Snapshot), ordinate per data e filtrate dalla ricerca.
 
 Ogni card progetto mostra:
 - nome progetto,
 - priorita,
 - stato,
+- progresso (% + barra),
 - sintesi obiettivo,
 - ultimo aggiornamento.
 
@@ -27,6 +28,7 @@ La pagina dettaglio progetto mostra anche lo snapshot, incluso:
 - stato,
 - tipo progetto,
 - priorita,
+- progresso,
 - ultimo aggiornamento,
 - path repository.
 
@@ -35,7 +37,9 @@ La pagina dettaglio progetto mostra anche lo snapshot, incluso:
 Ogni progetto deve avere `README.md` con sezione `## Snapshot` e almeno questi campi:
 - `Stato avanzamento`
 - `Priorita`
+- `Progresso` (es. `95%`)
 - `Tipo progetto`
+- `Includi nel portfolio` (`Si`/`No`)
 - `Ultimo aggiornamento`
 
 Valori stato supportati dalla Pages:
@@ -43,6 +47,7 @@ Valori stato supportati dalla Pages:
 - `Pianificato`
 - `In corso`
 - `In pausa`
+- `In manutenzione`
 - `Completato`
 - `Archiviato`
 
@@ -67,4 +72,5 @@ Per aggiungere un nuovo progetto al sito:
 
 ## Nota
 
-Il `README.md` di root (questo file) e il `CHANGELOG.md` di root sono documentazione del repository e non vengono mostrati come card progetto nella Pages.
+Il `README.md` di root (questo file) e il `CHANGELOG.md` di root sono documentazione del repository.
+Il progetto corrente `ngs-projects` e tracciato come progetto portfolio nella cartella dedicata `ngs-projects/README.md`.
