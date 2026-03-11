@@ -1,12 +1,12 @@
 window.NGS_SITE_DATA = {
-  "generatedAt": "2026-03-10T22:31:30+01:00",
+  "generatedAt": "2026-03-11T09:15:34+01:00",
   "totalProjects": 29,
   "statusCounts": {
     "Da pianificare": 7,
     "Pianificato": 2,
-    "In corso": 10,
+    "In corso": 9,
     "In pausa": 5,
-    "In manutenzione": 1,
+    "In manutenzione": 2,
     "Completato": 3,
     "Archiviato": 1
   },
@@ -266,21 +266,21 @@ window.NGS_SITE_DATA = {
     {
       "name": "ocem.snmp.simulator",
       "slug": "ocem.snmp.simulator",
-      "status": "In corso",
-      "statusRaw": "In corso",
+      "status": "In manutenzione",
+      "statusRaw": "In manutenzione",
       "priority": "Alta",
       "projectType": "Personale",
       "includeInPortfolio": "Si",
-      "progressPercent": 90,
-      "progressText": "90%",
-      "lastUpdate": "2026-03-10",
+      "progressPercent": 100,
+      "progressText": "100%",
+      "lastUpdate": "2026-03-11",
       "objective": "Costruire un simulatore SNMP affidabile e configurabile per emulare device INFINITE (UPS, host, switch, NTP, printer), supportare test di integrazione senza hardware reale, e permettere verifica visuale/runtime del co...",
       "readmePath": "readmes/ocem.snmp.simulator.md",
       "repositoryPath": "ocem.snmp.simulator",
       "latestDecision": {
-        "date": "2026-03-10T09:05:00+01:00",
-        "decision": "Chiusa release `v1.7.0` su `main` con merge branch `release-1.7.0`",
-        "reason": "Consolidare baseline Management API e preparare publish del tag remoto"
+        "date": "2026-03-11T09:03:00+01:00",
+        "decision": "Chiusa release \u000b1.9.0 su main con tag \u000b1.9.0 e merge-back su develop",
+        "reason": "Consolidare baseline notifiche SNMP multi-versione e pubblicare versione stabile"
       }
     },
     {
@@ -562,11 +562,11 @@ window.NGS_SITE_DATA = {
   ],
   "updates": [
     {
-      "date": "2026-03-10T09:05:00+01:00",
+      "date": "2026-03-11T09:03:00+01:00",
       "project": "ocem.snmp.simulator",
       "slug": "ocem.snmp.simulator",
-      "status": "In corso",
-      "summary": "Chiusa release `v1.7.0` su `main` con merge branch `release-1.7.0`",
+      "status": "In manutenzione",
+      "summary": "Chiusa release \u000b1.9.0 su main con tag \u000b1.9.0 e merge-back su develop",
       "source": "decision-log"
     },
     {
