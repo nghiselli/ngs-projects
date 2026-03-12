@@ -211,23 +211,32 @@ if ! echo "$MSG" | grep -qE "$PATTERN"; then
 fi
 ```
 
-```bash
-# Rendere eseguibile (Linux/macOS)
-chmod +x .git/hooks/commit-msg
+**Windows:** Git for Windows include Git Bash, che esegue automaticamente gli hook `#!/bin/sh`. Non serve `chmod` né configurazioni aggiuntive — basta copiare il file in `.git/hooks/commit-msg`.
 
-# Windows (PowerShell) — alternativa: usare huskyJS o git config core.hooksPath
+```bash
+# Linux/macOS — rendere eseguibile dopo la copia
+chmod +x .git/hooks/commit-msg
 ```
 
 ### Installazione condivisa via script (raccomandato)
 
-Aggiungere al repository un file `scripts/install-hooks.ps1`:
+Aggiungere al repository i file dal boilerplate:
+
+```
+scripts/
+  hooks/
+    commit-msg          ← copia da boilerplate/project-standard/tools/hooks/commit-msg
+  install-hooks.ps1     ← copia da boilerplate/project-standard/tools/install-hooks.ps1
+```
+
+Eseguire dalla root del progetto (Windows, Linux, macOS):
 
 ```powershell
-# Installa i git hooks del progetto
-$hooksDir = ".git/hooks"
-Copy-Item "scripts/hooks/commit-msg" "$hooksDir/commit-msg"
-Write-Host "+ Hook commit-msg installato"
+# PowerShell (Windows / cross-platform)
+.\scripts\install-hooks.ps1
 ```
+
+Lo script individua automaticamente la root git, copia tutti i file da `scripts/hooks/` in `.git/hooks/`, e supporta hook aggiuntivi futuri senza modifiche.
 
 ---
 
@@ -237,7 +246,7 @@ Write-Host "+ Hook commit-msg installato"
 [ ] git checkout -b feature/<owner>/<nome> develop
 [ ] Creare FEATURE.md dalla sezione Template qui sopra
 [ ] git add FEATURE.md && git commit -m "docs: add FEATURE.md for <nome-feature>"
-[ ] (opzionale) Installare commit-msg hook: scripts/install-hooks.ps1
+[ ] (opzionale) Installare commit-msg hook: .\scripts\install-hooks.ps1
 ```
 
 ## Checklist chiusura feature

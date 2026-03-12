@@ -1,0 +1,17 @@
+#!/bin/sh
+# Valida il formato Conventional Commits
+# Compatibile con Git for Windows (Git Bash), Linux e macOS
+MSG=$(head -1 "$1")
+PATTERN="^(feat|fix|docs|chore|refactor|perf|test|style|ci|revert|security)(\(.+\))?!?: .{10,}"
+
+if ! echo "$MSG" | grep -qE "$PATTERN"; then
+  echo ""
+  echo "ERROR: Commit message non segue il formato Conventional Commits."
+  echo ""
+  echo "  Formato: <type>[(<scope>)]: <description>"
+  echo "  Esempio: feat(ccr-alarm-converter): add batch decode mode"
+  echo ""
+  echo "  Tipi validi: feat fix docs chore refactor perf test style ci revert security"
+  echo ""
+  exit 1
+fi
