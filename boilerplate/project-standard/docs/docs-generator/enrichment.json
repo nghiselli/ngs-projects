@@ -1,0 +1,445 @@
+{
+  "_instructions": "Fill the 'description' field for each commit (plain text, no markdown headers). For 'versions', fill the Added/Changed/Fixed/etc. lists based on commits in that version range. For 'features', fill 'summary' with a narrative description. Fields starting with '_' are read-only context — do not remove them but they will be ignored by the generator.",
+  "_format_version": "1.0",
+  "_repository": "ngs-infinite-utilities",
+  "commits": {
+    "b6060d7": {
+      "_date": "2025-05-21",
+      "_message": "- dotnet-script collection",
+      "_files_changed": [
+        "(merge commit — no direct file changes)"
+      ],
+      "description": "Merge del branch iniziale della collezione dotnet-script nel branch principale. Nessuna modifica diretta ai file — integrazione della cronologia del branch."
+    },
+    "e5ab84d": {
+      "_date": "2025-05-21",
+      "_message": "- added debug launch.json",
+      "_files_changed": [
+        "- `.vscode/launch.json` (Added)"
+      ],
+      "description": "Aggiunta la configurazione di debug per VS Code tramite il file `.vscode/launch.json`. Questo permette agli sviluppatori di avviare e debuggare gli script C# direttamente dall'IDE senza configurazione manuale."
+    },
+    "13fa4e1": {
+      "_date": "2025-05-24",
+      "_message": "- added system2infinite",
+      "_files_changed": [
+        "- `.vscode/launch.json` (Modified)",
+        "- `ilcms/ECB_A-lampgroups-config.json` (Deleted)",
+        "- `ilcms/ECB_A-lamps-config.json` (Deleted)",
+        "- `ilcms/ECB_A-mccs-config.json` (Deleted)",
+        "- `ilcms/ECB_B-lampgroups-config.json` (Deleted)",
+        "- `ilcms/ECB_B-lamps-config.json` (Deleted)",
+        "- `ilcms/ECB_B-mccs-config.json` (Deleted)",
+        "- `ilcms/ECB_C-lampgroups-config.json` (Deleted)",
+        "- `ilcms/ECB_C-lamps-config.json` (Deleted)",
+        "- `ilcms/ECB_C-mccs-config.json` (Deleted)",
+        "- `ilcms/ECB_D-lampgroups-config.json` (Deleted)",
+        "- `ilcms/ECB_D-lamps-config.json` (Deleted)",
+        "- `ilcms/ECB_D-mccs-config.json` (Deleted)",
+        "- `ilcms/EcbConfigGenerator.csx` (Deleted)",
+        "- `ilcms/EcbManager.csx` (Deleted)",
+        "- `ilcms/EcbModel.csx` (Deleted)",
+        "- `ilcms/ecbSimulator2infinite/ECB_A-lampgroups-config.json` (Added)",
+        "- `ilcms/ecbSimulator2infinite/ECB_A-lamps-config.json` (Added)",
+        "- `ilcms/ecbSimulator2infinite/ECB_A-mccs-config.json` (Added)",
+        "- `ilcms/ecbSimulator2infinite/ECB_B-lampgroups-config.json` (Added)",
+        "- `ilcms/ecbSimulator2infinite/ECB_B-lamps-config.json` (Added)",
+        "- `ilcms/ecbSimulator2infinite/ECB_B-mccs-config.json` (Added)",
+        "- `ilcms/ecbSimulator2infinite/ECB_C-lampgroups-config.json` (Added)",
+        "- `ilcms/ecbSimulator2infinite/ECB_C-lamps-config.json` (Added)",
+        "- `ilcms/ecbSimulator2infinite/ECB_C-mccs-config.json` (Added)",
+        "- `ilcms/ecbSimulator2infinite/ECB_D-lampgroups-config.json` (Added)",
+        "- `ilcms/ecbSimulator2infinite/ECB_D-lamps-config.json` (Added)",
+        "- `ilcms/ecbSimulator2infinite/ECB_D-mccs-config.json` (Added)",
+        "- `ilcms/ecbSimulator2infinite/EcbConfigGenerator.csx` (Added)",
+        "- `ilcms/ecbSimulator2infinite/EcbManager.csx` (Added)",
+        "- `ilcms/ecbSimulator2infinite/EcbModel.csx` (Added)",
+        "- `ilcms/system2infinite/ConfigurationManager.csx` (Added)",
+        "- `ilcms/system2infinite/EcbModel.csx` (Added)",
+        "- `ilcms/system2infinite/SystemConfigConverter.csx` (Added)",
+        "- `ilcms/system2infinite/inputs/TWYABC1.csv` (Added)",
+        "- `ilcms/system2infinite/inputs/TWYABC2.csv` (Added)",
+        "- `ilcms/system2infinite/outputs/OverallEcbs.json` (Added)",
+        "- `ilcms/system2infinite/outputs/TWYABC1.json` (Added)",
+        "- `ilcms/system2infinite/outputs/TWYABC2.json` (Added)"
+      ],
+      "description": "Introdotto il modulo `system2infinite` per la conversione delle configurazioni ILCMS nel formato Infinite, con gli script `ConfigurationManager.csx`, `EcbModel.csx` e `SystemConfigConverter.csx`. I file ECB precedentemente nella root di `ilcms/` sono stati riorganizzati nella sottocartella `ecbSimulator2infinite/`. Aggiunti i file di input TWYABC in CSV e i relativi output JSON come primo esempio di conversione."
+    },
+    "ae7ad7b": {
+      "_date": "2025-06-05",
+      "_message": "- added version manager",
+      "_files_changed": [
+        "- `.vscode/launch.json` (Modified)",
+        "- `SoftwareVersionManager/SoftwareVersionManager.csx` (Added)"
+      ],
+      "description": "Aggiunto lo script base `SoftwareVersionManager.csx` per la gestione delle versioni software del sistema Infinite. La configurazione di debug VS Code è stata aggiornata per includere il nuovo script tra i target avviabili."
+    },
+    "13b6f0c": {
+      "_date": "2025-06-05",
+      "_message": "- added excel parser",
+      "_files_changed": [
+        "- `ilcms/system2infinite/ExcelParser.csx` (Added)",
+        "- `ilcms/system2infinite/inputs/TWYABC_V01 - Notes.xlsx` (Added)",
+        "- `ilcms/system2infinite/inputs/TWYABC_V01.xlsx` (Added)",
+        "- `ilcms/system2infinite/outputs/TWYABC1.csv` (Added)",
+        "- `ilcms/system2infinite/outputs/TWYABC2.csv` (Added)"
+      ],
+      "description": "Aggiunto `ExcelParser.csx` al modulo `system2infinite` per la lettura e conversione di file Excel in CSV. Inclusi i file sorgente TWYABC in formato Excel e i corrispondenti output CSV generati, necessari come input intermedio per il convertitore di configurazione."
+    },
+    "8d7d6a8": {
+      "_date": "2025-07-07",
+      "_message": "- added ccr alarm converter - added infinte stress test - added powershell to exe converter",
+      "_files_changed": [
+        "- `ccr-alarm-converter/BitFieldUtils.csx` (Added)",
+        "- `ccr-alarm-converter/CcrAlarmConverter.csx` (Added)",
+        "- `ccr-alarm-converter/CcrAlarmConverter.exe` (Added)",
+        "- `ccr-alarm-converter/CcrAlarmConverter.ps1` (Added)",
+        "- `ccr-alarm-converter/CcrAlarmConverter.zip` (Added)",
+        "- `ccr-alarm-converter/CcrAlarmConverterGUI.ps1` (Added)",
+        "- `ccr-alarm-converter/CcrBitfieldAlarms.csx` (Added)",
+        "- `mouse-manager/Infintie-Stress-Test.ps1` (Added)",
+        "- `powershell2exe/ps2exe-converter.ps1` (Added)",
+        "- `svg/SvgGenerator.csx` (Modified)",
+        "- `svg/inputs/ocem_stopbar_F.svg` (Added)",
+        "- `svg/outputs/stopbar_F.svg` (Added)"
+      ],
+      "description": "Aggiunti tre nuovi moduli: `ccr-alarm-converter` per la decodifica di allarmi CCR da bitfield (con versione CLI, GUI PowerShell ed eseguibile), `mouse-manager` con lo script di stress test automatizzato per l'interfaccia Infinite, e `powershell2exe` per la compilazione di script PowerShell in eseguibili Windows. Aggiornato anche `SvgGenerator.csx` con il supporto per la stopbar F."
+    },
+    "ac5ac2a": {
+      "_date": "2025-07-07",
+      "_message": "Merge branch 'tmp' into feature/nghiselli/ngs-workstation",
+      "_files_changed": [
+        "(merge commit — no direct file changes)"
+      ],
+      "description": "Merge del branch temporaneo `tmp` nel branch `feature/nghiselli/ngs-workstation`. Nessuna modifica diretta ai file — integrazione della cronologia."
+    },
+    "e77e374": {
+      "_date": "2025-07-07",
+      "_message": "- system to infinite parser - software versioning utility",
+      "_files_changed": [
+        "- `SoftwareVersionManager/InfiniteVersionCalculator.csx` (Added)",
+        "- `SoftwareVersionManager/InfiniteVersionManager.csx` (Added)",
+        "- `SoftwareVersionManager/InfiniteVersionModel.csx` (Added)",
+        "- `ilcms/system2infinite/ConfigurationManager.csx` (Modified)",
+        "- `ilcms/system2infinite/ExcelParser.csx` (Modified)",
+        "- `ilcms/system2infinite/SystemConfigConverter.csx` (Modified)",
+        "- `ilcms/system2infinite/docs/TWYABC_V01 - Notes.xlsx` (Added)",
+        "- `ilcms/system2infinite/inputs/TWYABC1.csv` (Modified)",
+        "- `ilcms/system2infinite/inputs/TWYABC2.csv` (Modified)",
+        "- `ilcms/system2infinite/inputs/TWYABC_V01 - Notes.xlsx` (Deleted)",
+        "- `ilcms/system2infinite/outputs/OverallEcbs.json` (Modified)",
+        "- `ilcms/system2infinite/outputs/TWYABC1.csv` (Deleted)",
+        "- `ilcms/system2infinite/outputs/TWYABC2.csv` (Deleted)",
+        "- `ilcms/system2infinite/outputs/TWYABC1.json` (Modified)",
+        "- `ilcms/system2infinite/outputs/TWYABC2.json` (Modified)"
+      ],
+      "description": "Aggiunti `InfiniteVersionCalculator.csx`, `InfiniteVersionManager.csx` e `InfiniteVersionModel.csx` per il calcolo e la gestione della versione composita del sistema Infinite. Gli script del modulo `system2infinite` (ConfigurationManager, ExcelParser, SystemConfigConverter) sono stati aggiornati e migliorati, e il file di note Excel è stato spostato nella sottocartella `docs/`."
+    },
+    "0170638": {
+      "_date": "2025-07-07",
+      "_message": "Merge remote-tracking branch 'origin/feature/nghiselli/ngs-xps13' into feature/nghiselli/ngs-workstation",
+      "_files_changed": [
+        "(merge commit — no direct file changes)"
+      ],
+      "description": "Merge del branch remoto `feature/nghiselli/ngs-xps13` nel branch `feature/nghiselli/ngs-workstation`. Nessuna modifica diretta ai file — allineamento delle due linee di sviluppo."
+    },
+    "c4f5329": {
+      "_date": "2025-07-08",
+      "_message": "- refined SvgManager",
+      "_files_changed": [
+        "- `svg/SvgGenerator.csx` (Modified)",
+        "- `svg/inputs/ocem_stopbar_F.svg` (Deleted)",
+        "- `svg/inputs/stopbar A.svg` (Added)",
+        "- `svg/inputs/stopbar B.svg` (Added)",
+        "- `svg/inputs/stopbar C.svg` (Added)",
+        "- `svg/inputs/stopbar D.svg` (Added)",
+        "- `svg/inputs/stopbar E.svg` (Added)",
+        "- `svg/inputs/stopbar F.svg` (Added)",
+        "- `svg/inputs/stopbar G.svg` (Added)",
+        "- `svg/outputs/ocem_stopbar_A.svg` (Added)",
+        "- `svg/outputs/ocem_stopbar_B.svg` (Added)",
+        "- `svg/outputs/ocem_stopbar_C.svg` (Added)",
+        "- `svg/outputs/ocem_stopbar_D.svg` (Added)",
+        "- `svg/outputs/ocem_stopbar_E.svg` (Added)",
+        "- `svg/outputs/ocem_stopbar_F.svg` (Added)",
+        "- `svg/outputs/ocem_stopbar_G.svg` (Added)",
+        "- `svg/outputs/stopbar_F.svg` (Deleted)"
+      ],
+      "description": "Raffinato il generatore SVG `SvgGenerator.csx` con supporto batch completo per le stopbar dalla A alla G. Aggiunti tutti i file SVG di input e i corrispondenti output OCEM normalizzati; rimossi i file temporanei sostituiti dalla nuova naming convention `ocem_stopbar_{ID}.svg`."
+    },
+    "2e952e3": {
+      "_date": "2025-08-28",
+      "_message": "- effemeridi converter",
+      "_files_changed": [
+        "- `effemeridi-converter/EffemeridiConverter.csx` (Added)",
+        "- `effemeridi-converter/EffemeridiModel.csx` (Added)",
+        "- `effemeridi-converter/input/Effemeridi_ENAV_1_2025.xlsx` (Added)",
+        "- `effemeridi-converter/input/Effemeridi_ENAV_2_2025.xlsx` (Added)",
+        "- `effemeridi-converter/input/Effemeridi_ENAV_3_2025.xlsx` (Added)",
+        "- `effemeridi-converter/output/Effemeridi_Crotone_1_2025.json` (Added)",
+        "- `effemeridi-converter/output/effemeridi.json` (Added)",
+        "- `mouse-manager/FIndMouseCoordinates.ps1` (Added)",
+        "- `mouse-manager/Infintie-Stress-Test.ps1` (Modified)"
+      ],
+      "description": "Aggiunto il modulo `effemeridi-converter` con gli script `EffemeridiConverter.csx` e `EffemeridiModel.csx` per convertire i dati astronomici ENAV da Excel a JSON strutturato. Inclusi i file sorgente ENAV 2025 e i relativi output JSON per Crotone. Aggiunto anche `FIndMouseCoordinates.ps1` nel modulo `mouse-manager` e aggiornato lo script di stress test."
+    },
+    "2494c3b": {
+      "_date": "2025-11-08",
+      "_message": "- updated Infinite version - added Hermes ILCMS configurations",
+      "_files_changed": [
+        "- `SoftwareVersionManager/InfiniteVersionManager.csx` (Modified)",
+        "- `ilcms/system2infinite/SystemConfigConverter.csx` (Modified)",
+        "- `ilcms/system2infinite/history/TWYABC1.csv` (Added)",
+        "- `ilcms/system2infinite/history/TWYABC2.csv` (Added)",
+        "- `ilcms/system2infinite/history/TWYABC_V01.xlsx` (Added)",
+        "- `ilcms/system2infinite/inputs/TB-1.csv` (Added)",
+        "- `ilcms/system2infinite/inputs/TB-1.xlsx` (Added)",
+        "- `ilcms/system2infinite/inputs/TWYABC1.csv` (Deleted)",
+        "- `ilcms/system2infinite/inputs/TWYABC2.csv` (Deleted)",
+        "- `ilcms/system2infinite/inputs/TWYABC_V01.xlsx` (Deleted)",
+        "- `ilcms/system2infinite/outputs/OverallEcbs.json` (Modified)",
+        "- `ilcms/system2infinite/outputs/TB-1.json` (Added)"
+      ],
+      "description": "Aggiornata la versione Infinite in `InfiniteVersionManager.csx` e aggiornato `SystemConfigConverter.csx` per supportare le nuove configurazioni Hermes (TB-1). I file di input TWYABC sono stati archiviati nella cartella `history/` e sostituiti con i nuovi file di configurazione TB-1 in input, con il relativo output JSON generato."
+    },
+    "3aa584b": {
+      "_date": "2025-11-17",
+      "_message": "- updated infinite version",
+      "_files_changed": [
+        "- `SoftwareVersionManager/InfiniteVersionManager.csx` (Modified)"
+      ],
+      "description": "Aggiornata la versione composita Infinite in `InfiniteVersionManager.csx` per riflettere le ultime modifiche ai moduli del sistema. Aggiornamento di manutenzione ordinaria del numero di versione."
+    },
+    "30e1e87": {
+      "_date": "2026-03-05",
+      "_message": "- fixed efffemeridi configuration",
+      "_files_changed": [
+        "- `SoftwareVersionManager/InfiniteVersionManager.csx` (Modified)",
+        "- `effemeridi-converter/EffemeridiConverter.csx` (Modified)",
+        "- `effemeridi-converter/input/Effemeridi_ENAV_2_2025.xlsx` (Modified)",
+        "- `effemeridi-converter/output/Effemeridi_Crotone_1_2025.json` (Modified)",
+        "- `effemeridi-converter/output/Effemeridi_Crotone_1_2026.json` (Added)",
+        "- `effemeridi-converter/output/effemeridi.json` (Modified)",
+        "- `svg/inputs/stopbar F.svg` (Modified)",
+        "- `svg/outputs/ocem_stopbar_F.svg` (Modified)"
+      ],
+      "description": "Corretti errori nella configurazione del convertitore effemeridi e nei dati ENAV 2025; aggiunto l'output delle effemeridi per l'anno 2026 (`Effemeridi_Crotone_1_2026.json`). Corretti anche il file SVG sorgente della stopbar F e il relativo output OCEM. Aggiornata la versione Infinite."
+    },
+    "0644612": {
+      "_date": "2026-03-11",
+      "_message": "- minor fixes",
+      "_files_changed": [
+        "- `SoftwareVersionManager/Airports/crotone.csx` (Added)",
+        "- `SoftwareVersionManager/Airports/pisa.csx` (Added)",
+        "- `SoftwareVersionManager/InfiniteVersionCalculator.csx` (Modified)"
+      ],
+      "description": "Aggiunte le configurazioni aeroportuali specifiche per Crotone (`crotone.csx`) e Pisa (`pisa.csx`) nella cartella `Airports/` del `SoftwareVersionManager`. Applicati aggiustamenti minori a `InfiniteVersionCalculator.csx` per gestire correttamente le configurazioni per aeroporto."
+    },
+    "49fc1f5": {
+      "_date": "2026-03-11",
+      "_message": "- added ngs-test-analyzer",
+      "_files_changed": [
+        "- `ngs-test-analyzer/FAT_Bonaire_UT-SP-0717_Rev0.6_VOCAL.docx` (Added)",
+        "- `ngs-test-analyzer/SAT-Rosario-Sezione7.4-20260309/events.txt` (Added)",
+        "- `ngs-test-analyzer/SAT-Rosario-Sezione7.4-20260309/screenshots/SEZ7.4_STEP1_00m57s_FULL.png` (Added)",
+        "- `ngs-test-analyzer/analyze_recording.py` (Added)",
+        "- `ngs-test-analyzer/enrich_docx.py` (Added)",
+        "- `ngs-test-analyzer/proposed-workflow.md` (Added)",
+        "- `ngs-test-analyzer/vocal-protocol.md` (Added)"
+      ],
+      "description": "Aggiunto il modulo `ngs-test-analyzer` con la pipeline Python per l'analisi automatica di registrazioni video FAT/SAT. Include gli script `analyze_recording.py` (trascrizione audio Whisper, estrazione screenshot, log eventi) e `enrich_docx.py` (arricchimento documentale), la documentazione del workflow proposto, il protocollo vocale e i risultati di una sessione SAT di esempio (Rosario, sezione 7.4, 2026-03-09)."
+    },
+    "f6db02b": {
+      "_date": "2026-03-11",
+      "_message": "- removed wav and mp4 files",
+      "_files_changed": [
+        "- `.gitignore` (Added)"
+      ],
+      "description": "Aggiunto il file `.gitignore` per escludere automaticamente i file multimediali WAV e MP4 dal repository. Questa modifica evita che le registrazioni video e audio delle sessioni di test vengano accidentalmente committate, mantenendo il repository leggero."
+    },
+    "2e2524d": {
+      "_date": "2026-03-12",
+      "_message": "- history doc generator wip",
+      "_files_changed": [
+        "- `docs/history/CHANGELOG-commits.md` (Added)",
+        "- `docs/history/CHANGELOG-features.md` (Added)",
+        "- `docs/history/enrichment-template.json` (Added)",
+        "- `git-history-docs/ENRICHMENT-GUIDE.md` (Added)",
+        "- `git-history-docs/GUIDE.md` (Added)",
+        "- `git-history-docs/enrichment.json` (Added)",
+        "- `git-history-docs/generate-history-docs.py` (Added)"
+      ],
+      "description": "Prima versione funzionante (work in progress) del generatore automatico di documentazione storica `generate-history-docs.py`. Aggiunti i primi CHANGELOG per commit e per feature in `docs/history/`, il template di arricchimento JSON e le guide operative `GUIDE.md` ed `ENRICHMENT-GUIDE.md`."
+    },
+    "b72434d": {
+      "_date": "2026-03-12",
+      "_message": "- enanched doc generator - enanched documentation",
+      "_files_changed": [
+        "- `docs/history/CHANGELOG-commits.md` (Modified)",
+        "- `docs/history/CHANGELOG-features.md` (Modified)",
+        "- `docs/history/CHANGELOG.md` (Added)",
+        "- `docs/history/enrichment-input_ngs-infinite-utilities_all-branches.json` (Added)",
+        "- `docs/history/enrichment-input_ngs-infinite-utilities_main.json` (Added)",
+        "- `git-history-docs/ENRICHMENT-GUIDE.md` (Modified)",
+        "- `git-history-docs/GUIDE.md` (Modified)",
+        "- `git-history-docs/PYTHON-SETUP.md` (Added)",
+        "- `git-history-docs/generate-history-docs.py` (Modified)"
+      ],
+      "description": "Migliorato il generatore di documentazione con supporto al CHANGELOG per versione (`CHANGELOG.md`) e alla generazione di template di arricchimento separati per il branch main e per tutti i branch. Aggiunta la guida alla configurazione dell'ambiente Python (`PYTHON-SETUP.md`) e aggiornate le guide esistenti con istruzioni più dettagliate."
+    }
+  },
+  "versions": {
+    "_comment": "One entry per git tag. Fill 'added', 'changed', 'fixed', etc. based on the commits that belong to that version range. Leave empty lists [] for unused categories.",
+    "v0.1.0": {
+      "_date": "2026-03-12",
+      "_tag_message": "",
+      "added": [
+        "Aggiunta configurazione di debug VS Code tramite `.vscode/launch.json` per l'avvio degli script C# dall'IDE.",
+        "Introdotto il modulo `system2infinite` con `ConfigurationManager.csx`, `EcbModel.csx` e `SystemConfigConverter.csx` per la conversione di configurazioni ILCMS in formato Infinite.",
+        "Aggiunto `SoftwareVersionManager.csx` come script base per la gestione delle versioni software.",
+        "Aggiunto `ExcelParser.csx` per la lettura e conversione di file Excel in CSV nel modulo `system2infinite`."
+      ],
+      "changed": [],
+      "fixed": [],
+      "removed": [],
+      "security": [],
+      "deprecated": []
+    },
+    "v0.2.0": {
+      "_date": "2026-03-12",
+      "_tag_message": "",
+      "added": [
+        "Aggiunti `InfiniteVersionCalculator.csx`, `InfiniteVersionManager.csx` e `InfiniteVersionModel.csx` per il calcolo e la gestione della versione composita Infinite.",
+        "Aggiunto il modulo `ccr-alarm-converter` con versione CLI (`CcrAlarmConverter.csx`), GUI PowerShell (`CcrAlarmConverterGUI.ps1`) ed eseguibile distribuibile.",
+        "Aggiunto lo script di stress test `Infintie-Stress-Test.ps1` per l'interfaccia utente del sistema Infinite.",
+        "Aggiunto `ps2exe-converter.ps1` per la compilazione di script PowerShell in eseguibili Windows standalone.",
+        "Aggiunto supporto batch SVG per le stopbar dalla A alla G con output OCEM normalizzati."
+      ],
+      "changed": [
+        "Aggiornati e migliorati gli script del modulo `system2infinite` (ConfigurationManager, ExcelParser, SystemConfigConverter).",
+        "Raffinato `SvgGenerator.csx` con naming convention standardizzata per gli output OCEM."
+      ],
+      "fixed": [],
+      "removed": [],
+      "security": [],
+      "deprecated": []
+    },
+    "v0.3.0": {
+      "_date": "2026-03-12",
+      "_tag_message": "",
+      "added": [
+        "Aggiunto il modulo `effemeridi-converter` con `EffemeridiConverter.csx` e `EffemeridiModel.csx` per la conversione dei dati astronomici ENAV da Excel a JSON.",
+        "Aggiunto `FIndMouseCoordinates.ps1` per il rilevamento interattivo delle coordinate del mouse."
+      ],
+      "changed": [
+        "Aggiornato lo script di stress test `Infintie-Stress-Test.ps1` con miglioramenti funzionali."
+      ],
+      "fixed": [],
+      "removed": [],
+      "security": [],
+      "deprecated": []
+    },
+    "v0.4.0": {
+      "_date": "2026-03-12",
+      "_tag_message": "",
+      "added": [
+        "Aggiunte configurazioni ILCMS per il sistema Hermes (TB-1) con i relativi file di input CSV/Excel e output JSON.",
+        "Archiviati i file storici TWYABC nella cartella `history/` del modulo `system2infinite`."
+      ],
+      "changed": [
+        "Aggiornata la versione Infinite in `InfiniteVersionManager.csx`.",
+        "Aggiornato `SystemConfigConverter.csx` per supportare le nuove configurazioni Hermes TB-1."
+      ],
+      "fixed": [],
+      "removed": [
+        "Rimossi i file di input TWYABC dalla cartella attiva (spostati in `history/`)."
+      ],
+      "security": [],
+      "deprecated": []
+    },
+    "v0.5.0": {
+      "_date": "2026-03-12",
+      "_tag_message": "",
+      "added": [],
+      "changed": [
+        "Aggiornata la versione Infinite in `InfiniteVersionManager.csx` con i valori più recenti (aggiornamento di novembre 2025)."
+      ],
+      "fixed": [],
+      "removed": [],
+      "security": [],
+      "deprecated": []
+    },
+    "v0.6.0": {
+      "_date": "2026-03-12",
+      "_tag_message": "",
+      "added": [
+        "Aggiunto output effemeridi per l'anno 2026 (`Effemeridi_Crotone_1_2026.json`)."
+      ],
+      "changed": [
+        "Aggiornata la versione Infinite in `InfiniteVersionManager.csx`."
+      ],
+      "fixed": [
+        "Corretti errori nella configurazione del convertitore effemeridi e nei dati ENAV 2025.",
+        "Corretti il file SVG sorgente della stopbar F e il relativo output OCEM normalizzato."
+      ],
+      "removed": [],
+      "security": [],
+      "deprecated": []
+    },
+    "v0.7.0": {
+      "_date": "2026-03-12",
+      "_tag_message": "",
+      "added": [
+        "Aggiunte configurazioni aeroportuali specifiche per Crotone e Pisa nel `SoftwareVersionManager` (`Airports/crotone.csx`, `Airports/pisa.csx`).",
+        "Aggiunto il modulo `ngs-test-analyzer` con pipeline Python per l'analisi automatica di registrazioni FAT/SAT tramite trascrizione Whisper ed estrazione screenshot.",
+        "Aggiunto `.gitignore` per escludere i file multimediali WAV e MP4 dal repository."
+      ],
+      "changed": [
+        "Aggiornato `InfiniteVersionCalculator.csx` con correzioni minori per le configurazioni aeroportuali."
+      ],
+      "fixed": [],
+      "removed": [],
+      "security": [],
+      "deprecated": []
+    },
+    "v0.8.0": {
+      "_date": "2026-03-12",
+      "_tag_message": "",
+      "added": [
+        "Aggiunto il generatore automatico di documentazione storica `generate-history-docs.py` con produzione di CHANGELOG per commit, per feature e per versione.",
+        "Aggiunti template di arricchimento JSON e guide operative (`GUIDE.md`, `ENRICHMENT-GUIDE.md`) per la generazione e l'arricchimento della documentazione.",
+        "Aggiunta guida alla configurazione dell'ambiente Python (`PYTHON-SETUP.md`)."
+      ],
+      "changed": [
+        "Migliorato il generatore di documentazione con supporto a CHANGELOG per versione e template di arricchimento separati per branch main e tutti i branch."
+      ],
+      "fixed": [],
+      "removed": [],
+      "security": [],
+      "deprecated": []
+    }
+  },
+  "features": {
+    "feature/nghiselli/changelod-generator": {
+      "_branch": "feature/nghiselli/changelod-generator",
+      "summary": "Questa funzionalità introduce il generatore automatico di documentazione storica del repository (`generate-history-docs.py`), in grado di produrre tre tipi di CHANGELOG (per commit, per feature e per versione) a partire dalla history git in modalità read-only. Il tool supporta l'arricchimento AI tramite `run-with-ai.py` e template JSON dedicati, permettendo di aggiungere descrizioni narrative ai commit, alle versioni e ai branch. Sono incluse guide operative dettagliate (`GUIDE.md`, `ENRICHMENT-GUIDE.md`) e la guida alla configurazione dell'ambiente Python (`PYTHON-SETUP.md`). La funzionalità è progettata per essere eseguita periodicamente e mantenere aggiornata la documentazione in `docs/history/` senza intervento manuale."
+    },
+    "feature/nghiselli/ngs-workstation": {
+      "_branch": "feature/nghiselli/ngs-workstation",
+      "summary": "Questa funzionalità rappresenta l'ambiente di sviluppo principale della workstation NGS e raccoglie la maggior parte degli strumenti utilitari del progetto. Include il modulo `system2infinite` per la conversione di configurazioni ILCMS in formato Infinite, il `SoftwareVersionManager` per il calcolo della versione composita multi-modulo, il `ccr-alarm-converter` per la decodifica degli allarmi CCR, il convertitore di effemeridi astronomiche ENAV, il generatore SVG per le mappe stopbar in formato OCEM e gli strumenti PowerShell per lo stress test e la compilazione di eseguibili. Il branch integra anche il modulo `ngs-test-analyzer` per l'analisi automatica delle sessioni FAT/SAT. È il branch di sviluppo principale destinato all'uso su workstation Windows con .NET SDK e Python 3.x installati."
+    },
+    "feature/nghiselli/ngs-xps13": {
+      "_branch": "feature/nghiselli/ngs-xps13",
+      "summary": "Questa funzionalità ottimizza la configurazione e l'esperienza utente del progetto NGS sui dispositivi Dell XPS 13. Include adattamenti specifici per l'ambiente portatile, come configurazioni di sistema e impostazioni personalizzate per garantire la piena compatibilità e operatività degli strumenti NGS su hardware XPS 13. Il branch è stato successivamente integrato nel branch principale della workstation (`feature/nghiselli/ngs-workstation`) per unificare la base di codice."
+    }
+  },
+  "readme": {
+    "_instructions": "Fill these fields to populate the README.md. All are optional — missing fields become <!-- TODO --> placeholders in the generated file.",
+    "description": "ngs-infinite-utilities è una raccolta di strumenti e script utilitari per la gestione, configurazione e analisi dei sistemi NGS (Next Generation Systems) in ambito aeroportuale. Il progetto include convertitori di configurazione ILCMS, gestori di versioni software Infinite, analizzatori di sessioni di test SAT/FAT con trascrizione vocale automatica, convertitori di effemeridi astronomiche ENAV e generatori di documentazione storica. È destinato a sviluppatori e ingegneri di sistema che lavorano su piattaforme Infinite per la gestione delle luci di pista e dei sistemi di controllo aeroportuale.",
+    "badges": [],
+    "installation": "Clonare il repository con `git clone <url-del-repository>`. Assicurarsi di avere installato .NET SDK (per gli script `.csx` tramite `dotnet-script`) e Python 3.x (per gli script di analisi e generazione documentazione). Per installare le dipendenze Python eseguire `pip install -r requirements.txt` se presente, oppure seguire le istruzioni in `git-history-docs/PYTHON-SETUP.md`.",
+    "usage": "Ogni modulo è indipendente e può essere eseguito separatamente. Gli script `.csx` si avviano con `dotnet script <NomeScript.csx>`. Gli script Python si eseguono con `python <nome_script.py>`. Gli script PowerShell si avviano con `pwsh <NomeScript.ps1>` o `powershell <NomeScript.ps1>`. Per generare la documentazione storica del repository utilizzare `python git-history-docs/generate-history-docs.py`. Fare riferimento alle guide nella cartella `git-history-docs/` per istruzioni dettagliate.",
+    "contributing": "",
+    "license": "MIT"
+  }
+}
