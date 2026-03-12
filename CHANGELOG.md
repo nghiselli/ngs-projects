@@ -22,6 +22,7 @@ Tutte le modifiche rilevanti di `ngs-projects` saranno documentate in questo fil
 - README root aggiornato con sezione boilerplate e comandi script di bootstrap (`ensure-project-boilerplate.ps1`).
 - `WORKFLOW-STANDARD.md` aggiornato con Fase 0 opzionale per bootstrap documentazione manuale.
 - README root aggiornato con caso `docs-generator` manuale (solo quando manca documentazione affidabile).
+- Cleanup root portfolio: rimossi i workflow/template duplicati dalla root e mantenuti solo in `boilerplate/project-standard/` con riferimenti centralizzati nel README.
 - Home tab "chiusi" aggiornata con board `In pausa`, `In manutenzione`, `Completato`, `Archiviato`.
 - Card progetto aggiornate con visualizzazione progresso (% + barra).
 - Pagina dettaglio progetto aggiornata con progresso in meta e snapshot.

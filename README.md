@@ -9,37 +9,20 @@ Questo repository include:
 - una GitHub Pages in `docs/` generata dai README dei progetti,
 - script di generazione dati in `tools/generate-pages.ps1`,
 - script di bootstrap struttura progetto in `tools/ensure-project-boilerplate.ps1`,
-- boilerplate standard in `boilerplate/project-standard/`,
-- workflow standard riusabili per AI agent (`WORKFLOW-*.md`, `SESSION-PROMPT-TEMPLATE.md`, `NGS-PROJECTS-UPDATE.md`).
+- boilerplate standard in `boilerplate/project-standard/`.
 
-## Workflow standard AI agent
+## Source of truth template
 
-Ordine consigliato per nuova feature/patch:
-- Se mancano `README.md`/`CHANGELOG.md` affidabili, eseguire prima `WORKFLOW-DOCS-BOOTSTRAP.md` (manuale).
-1. `WORKFLOW-SPECIFICATION.md` (raccolta specifiche)
-2. `WORKFLOW-FEATURE-ANALYSIS.md` (analisi impatti e piano)
-3. `SESSION-PROMPT-TEMPLATE.md` (sessione implementativa)
-4. `WORKFLOW-GITFLOW.md` (chiusura feature/release/hotfix)
-5. `NGS-PROJECTS-UPDATE.md` (allineamento tracking portfolio)
+I template operativi NON sono piu mantenuti in root: la fonte unica e il boilerplate.
 
-Per la procedura completa di adozione nei repository esterni, vedere `WORKFLOW-STANDARD.md`.
-
-## Boilerplate standard per nuovi repository
-
-La cartella `boilerplate/project-standard/` contiene la struttura minima consigliata per progetti monitorati con AI agent:
-- `README.md`
-- `CHANGELOG.md`
-- `WORKFLOW-STANDARD.md`
-- `WORKFLOW-DOCS-BOOTSTRAP.md`
-- `WORKFLOW-SPECIFICATION.md`
-- `WORKFLOW-FEATURE-ANALYSIS.md`
-- `WORKFLOW-GITFLOW.md`
-- `SESSION-PROMPT-TEMPLATE.md`
-- `NGS-PROJECTS-UPDATE.md`
-- `checkpoints/README.md`
-- `docs/specs/SPEC-TEMPLATE.md`
-- `docs/analysis/ANALYSIS-TEMPLATE.md`
-- `docs/docs-generator/` (tool manuale per bootstrap README/CHANGELOG da history git)
+Riferimenti principali:
+- `boilerplate/project-standard/WORKFLOW-STANDARD.md`
+- `boilerplate/project-standard/WORKFLOW-DOCS-BOOTSTRAP.md`
+- `boilerplate/project-standard/WORKFLOW-SPECIFICATION.md`
+- `boilerplate/project-standard/WORKFLOW-FEATURE-ANALYSIS.md`
+- `boilerplate/project-standard/WORKFLOW-GITFLOW.md`
+- `boilerplate/project-standard/SESSION-PROMPT-TEMPLATE.md`
+- `boilerplate/project-standard/NGS-PROJECTS-UPDATE.md`
 
 ## Come applicare il boilerplate a un progetto
 
@@ -61,23 +44,12 @@ Preview senza modifiche (`WhatIf`):
 ./tools/ensure-project-boilerplate.ps1 -ProjectPath 'D:\repos\OCEM\Ocem.Snmp.Simulator' -WhatIf
 ```
 
-## Caso documentazione assente (uso manuale docs-generator)
+## Caso documentazione assente (manuale)
 
-Quando un repository non ha documentazione pregressa affidabile, usare il workflow:
-- `WORKFLOW-DOCS-BOOTSTRAP.md`
-
-Comandi consigliati (nel repository target):
-
-```powershell
-python docs/docs-generator/run-with-ai.py --repo . --provider copilot --all-branches --dry-run
-python docs/docs-generator/run-with-ai.py --repo . --provider copilot --all-branches
-```
-
-Solo dopo review umana, promuovere in root:
-
-```powershell
-python docs/docs-generator/run-with-ai.py --repo . --provider copilot --all-branches --promote
-```
+Quando un repository non ha documentazione affidabile:
+1. Segui `boilerplate/project-standard/WORKFLOW-DOCS-BOOTSTRAP.md`.
+2. Esegui manualmente `docs/docs-generator/run-with-ai.py` nel repository target.
+3. Promuovi `README.md`/`CHANGELOG.md` in root solo dopo review umana.
 
 ## GitHub Pages (struttura Home)
 
@@ -85,22 +57,6 @@ La Home e organizzata in 3 tab:
 1. `Da Pianificare a In Corso` con board: `Da pianificare`, `Pianificato`, `In corso`
 2. `In Pausa, In manutenzione, Completato, Archiviato` con board: `In pausa`, `In manutenzione`, `Completato`, `Archiviato`
 3. `Aggiornamenti` con tutte le voci aggiornamento (Decision Log / Snapshot), ordinate per data e filtrate dalla ricerca.
-
-Ogni card progetto mostra:
-- nome progetto,
-- priorita,
-- stato,
-- progresso (% + barra),
-- sintesi obiettivo,
-- ultimo aggiornamento.
-
-La pagina dettaglio progetto mostra anche lo snapshot, incluso:
-- stato,
-- tipo progetto,
-- priorita,
-- progresso,
-- ultimo aggiornamento,
-- path repository.
 
 ## Convenzioni README progetto
 
@@ -133,14 +89,6 @@ Valori stato supportati dalla Pages:
 3. Commit e push su `main`.
 4. La workflow `.github/workflows/pages.yml` rigenera e pubblica automaticamente.
 
-## Nuovo progetto portfolio
-
-Per aggiungere un nuovo progetto al sito:
-1. Crea una nuova cartella in root (es. `my-new-project`).
-2. Aggiungi `README.md` nella cartella con `## Snapshot`.
-3. Esegui `./tools/generate-pages.ps1` oppure fai push su `main`.
-
 ## Nota
 
-Il `README.md` di root (questo file) e il `CHANGELOG.md` di root sono documentazione del repository.
-Il progetto corrente `ngs-projects` e tracciato come progetto portfolio nella cartella dedicata `ngs-projects/README.md`.
+Il `README.md` di root (questo file) e il `CHANGELOG.md` di root sono documentazione del portfolio.
