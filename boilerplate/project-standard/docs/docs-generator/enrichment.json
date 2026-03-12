@@ -1,445 +1,430 @@
 {
   "_instructions": "Fill the 'description' field for each commit (plain text, no markdown headers). For 'versions', fill the Added/Changed/Fixed/etc. lists based on commits in that version range. For 'features', fill 'summary' with a narrative description. Fields starting with '_' are read-only context — do not remove them but they will be ignored by the generator.",
   "_format_version": "1.0",
-  "_repository": "ngs-infinite-utilities",
+  "_repository": "ngs-projects",
   "commits": {
-    "b6060d7": {
-      "_date": "2025-05-21",
-      "_message": "- dotnet-script collection",
+    "dde6ee0": {
+      "_date": "2026-03-09",
+      "_message": "- initial commit",
       "_files_changed": [
         "(merge commit — no direct file changes)"
       ],
-      "description": "Merge del branch iniziale della collezione dotnet-script nel branch principale. Nessuna modifica diretta ai file — integrazione della cronologia del branch."
+      "description": "Commit iniziale del repository ngs-projects. Costituisce la base del portfolio operativo di Nicola Ghiselli Solutions."
     },
-    "e5ab84d": {
-      "_date": "2025-05-21",
-      "_message": "- added debug launch.json",
+    "1c03c7a": {
+      "_date": "2026-03-09",
+      "_message": "Add GitHub Pages project dashboard and README-driven project pages",
       "_files_changed": [
-        "- `.vscode/launch.json` (Added)"
+        "- `.github/workflows/pages.yml` (Added)",
+        "- `docs/.nojekyll` (Added)",
+        "- `docs/assets/site.js` (Added)",
+        "- `docs/assets/styles.css` (Added)",
+        "- `docs/data/projects.json` (Added)",
+        "- `docs/index.html` (Added)",
+        "- `docs/project.html` (Added)",
+        "- `docs/readmes/infinite-digital-twin.md` (Added)",
+        "- `docs/readmes/infinite-installer-cli.md` (Added)",
+        "- `docs/readmes/infinite-installer.md` (Added)",
+        "- `docs/readmes/infinite-unified-simulator.md` (Added)",
+        "- `docs/readmes/infinte-automated-testing-tool.md` (Added)",
+        "- `docs/readmes/ngp-campusworkflow-platform.md` (Added)",
+        "- `docs/readmes/ngs-authentication.md` (Added)",
+        "- `docs/readmes/ngs-budget-utilities.md` (Added)",
+        "- `docs/readmes/ngs-cli-template.md` (Added)",
+        "- `docs/readmes/ngs-documentation-utilities.md` (Added)",
+        "- `docs/readmes/ngs-outlook2notion-syncronizer.md` (Added)",
+        "- `docs/readmes/ngs-ticketing-system.md` (Added)",
+        "- `docs/readmes/ngs-time-utilities-cli.md` (Added)",
+        "- `docs/readmes/ngs-time-utilities.md` (Added)",
+        "- `docs/readmes/ngs-usermanual-creator.md` (Added)",
+        "- `docs/readmes/ocem.snmp.simulator.md` (Added)",
+        "- `tools/generate-pages.ps1` (Added)"
       ],
-      "description": "Aggiunta la configurazione di debug per VS Code tramite il file `.vscode/launch.json`. Questo permette agli sviluppatori di avviare e debuggare gli script C# direttamente dall'IDE senza configurazione manuale."
+      "description": "Aggiunta la GitHub Pages per il portfolio dei progetti NGS, con home page, pagina di dettaglio progetto e workflow di pubblicazione automatica tramite GitHub Actions. Introdotto lo script PowerShell generate-pages.ps1 per generare i dati del sito a partire dai README dei progetti. Aggiunti i file README dei primi progetti monitorati nella cartella docs/readmes/."
     },
-    "13fa4e1": {
-      "_date": "2025-05-24",
-      "_message": "- added system2infinite",
+    "8bb0c12": {
+      "_date": "2026-03-09",
+      "_message": "- fixes github pages first version",
       "_files_changed": [
-        "- `.vscode/launch.json` (Modified)",
-        "- `ilcms/ECB_A-lampgroups-config.json` (Deleted)",
-        "- `ilcms/ECB_A-lamps-config.json` (Deleted)",
-        "- `ilcms/ECB_A-mccs-config.json` (Deleted)",
-        "- `ilcms/ECB_B-lampgroups-config.json` (Deleted)",
-        "- `ilcms/ECB_B-lamps-config.json` (Deleted)",
-        "- `ilcms/ECB_B-mccs-config.json` (Deleted)",
-        "- `ilcms/ECB_C-lampgroups-config.json` (Deleted)",
-        "- `ilcms/ECB_C-lamps-config.json` (Deleted)",
-        "- `ilcms/ECB_C-mccs-config.json` (Deleted)",
-        "- `ilcms/ECB_D-lampgroups-config.json` (Deleted)",
-        "- `ilcms/ECB_D-lamps-config.json` (Deleted)",
-        "- `ilcms/ECB_D-mccs-config.json` (Deleted)",
-        "- `ilcms/EcbConfigGenerator.csx` (Deleted)",
-        "- `ilcms/EcbManager.csx` (Deleted)",
-        "- `ilcms/EcbModel.csx` (Deleted)",
-        "- `ilcms/ecbSimulator2infinite/ECB_A-lampgroups-config.json` (Added)",
-        "- `ilcms/ecbSimulator2infinite/ECB_A-lamps-config.json` (Added)",
-        "- `ilcms/ecbSimulator2infinite/ECB_A-mccs-config.json` (Added)",
-        "- `ilcms/ecbSimulator2infinite/ECB_B-lampgroups-config.json` (Added)",
-        "- `ilcms/ecbSimulator2infinite/ECB_B-lamps-config.json` (Added)",
-        "- `ilcms/ecbSimulator2infinite/ECB_B-mccs-config.json` (Added)",
-        "- `ilcms/ecbSimulator2infinite/ECB_C-lampgroups-config.json` (Added)",
-        "- `ilcms/ecbSimulator2infinite/ECB_C-lamps-config.json` (Added)",
-        "- `ilcms/ecbSimulator2infinite/ECB_C-mccs-config.json` (Added)",
-        "- `ilcms/ecbSimulator2infinite/ECB_D-lampgroups-config.json` (Added)",
-        "- `ilcms/ecbSimulator2infinite/ECB_D-lamps-config.json` (Added)",
-        "- `ilcms/ecbSimulator2infinite/ECB_D-mccs-config.json` (Added)",
-        "- `ilcms/ecbSimulator2infinite/EcbConfigGenerator.csx` (Added)",
-        "- `ilcms/ecbSimulator2infinite/EcbManager.csx` (Added)",
-        "- `ilcms/ecbSimulator2infinite/EcbModel.csx` (Added)",
-        "- `ilcms/system2infinite/ConfigurationManager.csx` (Added)",
-        "- `ilcms/system2infinite/EcbModel.csx` (Added)",
-        "- `ilcms/system2infinite/SystemConfigConverter.csx` (Added)",
-        "- `ilcms/system2infinite/inputs/TWYABC1.csv` (Added)",
-        "- `ilcms/system2infinite/inputs/TWYABC2.csv` (Added)",
-        "- `ilcms/system2infinite/outputs/OverallEcbs.json` (Added)",
-        "- `ilcms/system2infinite/outputs/TWYABC1.json` (Added)",
-        "- `ilcms/system2infinite/outputs/TWYABC2.json` (Added)"
+        "- `CHANGELOG.md` (Added)",
+        "- `README.md` (Added)",
+        "- `docs/assets/ngs-mark.svg` (Added)",
+        "- `docs/assets/site.js` (Modified)",
+        "- `docs/assets/styles.css` (Modified)",
+        "- `docs/data/brand.js` (Added)",
+        "- `docs/data/projects.js` (Added)",
+        "- `docs/data/readmes.js` (Added)",
+        "- `docs/data/projects.json` (Modified)",
+        "- `docs/index.html` (Modified)",
+        "- `docs/project.html` (Modified)",
+        "- `tools/generate-pages.ps1` (Modified)"
       ],
-      "description": "Introdotto il modulo `system2infinite` per la conversione delle configurazioni ILCMS nel formato Infinite, con gli script `ConfigurationManager.csx`, `EcbModel.csx` e `SystemConfigConverter.csx`. I file ECB precedentemente nella root di `ilcms/` sono stati riorganizzati nella sottocartella `ecbSimulator2infinite/`. Aggiunti i file di input TWYABC in CSV e i relativi output JSON come primo esempio di conversione."
+      "description": "Correzioni e completamento della prima versione della GitHub Pages. Aggiunti README.md e CHANGELOG.md radice del repository, branding NGS tramite brand.js e ngs-mark.svg, e fallback dati locali con projects.js e readmes.js per supportare l'apertura del sito anche in modalità file://. Aggiornati layout HTML, stili e logica JavaScript del sito."
     },
-    "ae7ad7b": {
-      "_date": "2025-06-05",
-      "_message": "- added version manager",
+    "9090a1a": {
+      "_date": "2026-03-09",
+      "_message": "- completata impostazione pagina statica",
       "_files_changed": [
-        "- `.vscode/launch.json` (Modified)",
-        "- `SoftwareVersionManager/SoftwareVersionManager.csx` (Added)"
+        "- `Ocem.Snmp.Simulator/README.md` (Modified)",
+        "- `README.md` (Modified)",
+        "- `docs/assets/site.js` (Modified)",
+        "- `docs/assets/styles.css` (Modified)",
+        "- `docs/data/projects.js` (Modified)",
+        "- `docs/data/projects.json` (Modified)",
+        "- `docs/data/readmes.js` (Modified)",
+        "- `docs/index.html` (Modified)",
+        "- `docs/readmes/infinite-digital-twin.md` (Modified)",
+        "- `docs/readmes/infinite-installer-cli.md` (Modified)",
+        "- `docs/readmes/infinite-installer.md` (Modified)",
+        "- `docs/readmes/infinite-unified-simulator.md` (Modified)",
+        "- `docs/readmes/infinte-automated-testing-tool.md` (Modified)",
+        "- `docs/readmes/ngp-campusworkflow-platform.md` (Modified)",
+        "- `docs/readmes/ngs-authentication.md` (Modified)",
+        "- `docs/readmes/ngs-budget-utilities.md` (Modified)",
+        "- `docs/readmes/ngs-cli-template.md` (Modified)",
+        "- `docs/readmes/ngs-documentation-utilities.md` (Modified)",
+        "- `docs/readmes/ngs-outlook2notion-syncronizer.md` (Modified)",
+        "- `docs/readmes/ngs-ticketing-system.md` (Modified)",
+        "- `docs/readmes/ngs-time-utilities-cli.md` (Modified)",
+        "- `docs/readmes/ngs-time-utilities.md` (Modified)",
+        "- `docs/readmes/ngs-usermanual-creator.md` (Modified)",
+        "- `docs/readmes/ocem.snmp.simulator.md` (Modified)",
+        "- `infinite-digital-twin/README.md` (Modified)",
+        "- `infinite-installer-cli/README.md` (Modified)",
+        "- `infinite-installer/README.md` (Modified)",
+        "- `infinite-unified-simulator/README.md` (Modified)",
+        "- `infinte-automated-testing-tool/README.md` (Modified)",
+        "- `ngp-campusWorkflow-platform/README.md` (Modified)",
+        "- `ngs-authentication/README.md` (Modified)",
+        "- `ngs-budget-utilities/README.md` (Modified)",
+        "- `ngs-cli-template/README.md` (Modified)",
+        "- `ngs-documentation-utilities/README.md` (Modified)",
+        "- `ngs-outlook2notion-syncronizer/README.md` (Modified)",
+        "- `ngs-ticketing-system/README.md` (Modified)",
+        "- `ngs-time-utilities-cli/README.md` (Modified)",
+        "- `ngs-time-utilities/README.md` (Modified)",
+        "- `ngs-userManual-creator/README.md` (Modified)",
+        "- `tools/generate-pages.ps1` (Modified)"
       ],
-      "description": "Aggiunto lo script base `SoftwareVersionManager.csx` per la gestione delle versioni software del sistema Infinite. La configurazione di debug VS Code è stata aggiornata per includere il nuovo script tra i target avviabili."
+      "description": "Completata l'impostazione della pagina statica GitHub Pages con aggiornamenti diffusi a stili, logica JavaScript e dati di progetto. Allineati i README di tutti i progetti monitorati e i corrispondenti file in docs/readmes/ per garantire coerenza tra sorgenti e pagine generate."
     },
-    "13b6f0c": {
-      "_date": "2025-06-05",
-      "_message": "- added excel parser",
-      "_files_changed": [
-        "- `ilcms/system2infinite/ExcelParser.csx` (Added)",
-        "- `ilcms/system2infinite/inputs/TWYABC_V01 - Notes.xlsx` (Added)",
-        "- `ilcms/system2infinite/inputs/TWYABC_V01.xlsx` (Added)",
-        "- `ilcms/system2infinite/outputs/TWYABC1.csv` (Added)",
-        "- `ilcms/system2infinite/outputs/TWYABC2.csv` (Added)"
-      ],
-      "description": "Aggiunto `ExcelParser.csx` al modulo `system2infinite` per la lettura e conversione di file Excel in CSV. Inclusi i file sorgente TWYABC in formato Excel e i corrispondenti output CSV generati, necessari come input intermedio per il convertitore di configurazione."
-    },
-    "8d7d6a8": {
-      "_date": "2025-07-07",
-      "_message": "- added ccr alarm converter - added infinte stress test - added powershell to exe converter",
-      "_files_changed": [
-        "- `ccr-alarm-converter/BitFieldUtils.csx` (Added)",
-        "- `ccr-alarm-converter/CcrAlarmConverter.csx` (Added)",
-        "- `ccr-alarm-converter/CcrAlarmConverter.exe` (Added)",
-        "- `ccr-alarm-converter/CcrAlarmConverter.ps1` (Added)",
-        "- `ccr-alarm-converter/CcrAlarmConverter.zip` (Added)",
-        "- `ccr-alarm-converter/CcrAlarmConverterGUI.ps1` (Added)",
-        "- `ccr-alarm-converter/CcrBitfieldAlarms.csx` (Added)",
-        "- `mouse-manager/Infintie-Stress-Test.ps1` (Added)",
-        "- `powershell2exe/ps2exe-converter.ps1` (Added)",
-        "- `svg/SvgGenerator.csx` (Modified)",
-        "- `svg/inputs/ocem_stopbar_F.svg` (Added)",
-        "- `svg/outputs/stopbar_F.svg` (Added)"
-      ],
-      "description": "Aggiunti tre nuovi moduli: `ccr-alarm-converter` per la decodifica di allarmi CCR da bitfield (con versione CLI, GUI PowerShell ed eseguibile), `mouse-manager` con lo script di stress test automatizzato per l'interfaccia Infinite, e `powershell2exe` per la compilazione di script PowerShell in eseguibili Windows. Aggiornato anche `SvgGenerator.csx` con il supporto per la stopbar F."
-    },
-    "ac5ac2a": {
-      "_date": "2025-07-07",
-      "_message": "Merge branch 'tmp' into feature/nghiselli/ngs-workstation",
-      "_files_changed": [
-        "(merge commit — no direct file changes)"
-      ],
-      "description": "Merge del branch temporaneo `tmp` nel branch `feature/nghiselli/ngs-workstation`. Nessuna modifica diretta ai file — integrazione della cronologia."
-    },
-    "e77e374": {
-      "_date": "2025-07-07",
-      "_message": "- system to infinite parser - software versioning utility",
-      "_files_changed": [
-        "- `SoftwareVersionManager/InfiniteVersionCalculator.csx` (Added)",
-        "- `SoftwareVersionManager/InfiniteVersionManager.csx` (Added)",
-        "- `SoftwareVersionManager/InfiniteVersionModel.csx` (Added)",
-        "- `ilcms/system2infinite/ConfigurationManager.csx` (Modified)",
-        "- `ilcms/system2infinite/ExcelParser.csx` (Modified)",
-        "- `ilcms/system2infinite/SystemConfigConverter.csx` (Modified)",
-        "- `ilcms/system2infinite/docs/TWYABC_V01 - Notes.xlsx` (Added)",
-        "- `ilcms/system2infinite/inputs/TWYABC1.csv` (Modified)",
-        "- `ilcms/system2infinite/inputs/TWYABC2.csv` (Modified)",
-        "- `ilcms/system2infinite/inputs/TWYABC_V01 - Notes.xlsx` (Deleted)",
-        "- `ilcms/system2infinite/outputs/OverallEcbs.json` (Modified)",
-        "- `ilcms/system2infinite/outputs/TWYABC1.csv` (Deleted)",
-        "- `ilcms/system2infinite/outputs/TWYABC2.csv` (Deleted)",
-        "- `ilcms/system2infinite/outputs/TWYABC1.json` (Modified)",
-        "- `ilcms/system2infinite/outputs/TWYABC2.json` (Modified)"
-      ],
-      "description": "Aggiunti `InfiniteVersionCalculator.csx`, `InfiniteVersionManager.csx` e `InfiniteVersionModel.csx` per il calcolo e la gestione della versione composita del sistema Infinite. Gli script del modulo `system2infinite` (ConfigurationManager, ExcelParser, SystemConfigConverter) sono stati aggiornati e migliorati, e il file di note Excel è stato spostato nella sottocartella `docs/`."
-    },
-    "0170638": {
-      "_date": "2025-07-07",
-      "_message": "Merge remote-tracking branch 'origin/feature/nghiselli/ngs-xps13' into feature/nghiselli/ngs-workstation",
+    "f489f44": {
+      "_date": "2026-03-09",
+      "_message": "Merge branch 'release-v1.0.0'",
       "_files_changed": [
         "(merge commit — no direct file changes)"
       ],
-      "description": "Merge del branch remoto `feature/nghiselli/ngs-xps13` nel branch `feature/nghiselli/ngs-workstation`. Nessuna modifica diretta ai file — allineamento delle due linee di sviluppo."
+      "description": "Merge del branch release-v1.0.0 in main per il rilascio della versione 1.0.0."
     },
-    "c4f5329": {
-      "_date": "2025-07-08",
-      "_message": "- refined SvgManager",
+    "700c5e3": {
+      "_date": "2026-03-09",
+      "_message": "Merge tag 'v1.0.0' into develop",
       "_files_changed": [
-        "- `svg/SvgGenerator.csx` (Modified)",
-        "- `svg/inputs/ocem_stopbar_F.svg` (Deleted)",
-        "- `svg/inputs/stopbar A.svg` (Added)",
-        "- `svg/inputs/stopbar B.svg` (Added)",
-        "- `svg/inputs/stopbar C.svg` (Added)",
-        "- `svg/inputs/stopbar D.svg` (Added)",
-        "- `svg/inputs/stopbar E.svg` (Added)",
-        "- `svg/inputs/stopbar F.svg` (Added)",
-        "- `svg/inputs/stopbar G.svg` (Added)",
-        "- `svg/outputs/ocem_stopbar_A.svg` (Added)",
-        "- `svg/outputs/ocem_stopbar_B.svg` (Added)",
-        "- `svg/outputs/ocem_stopbar_C.svg` (Added)",
-        "- `svg/outputs/ocem_stopbar_D.svg` (Added)",
-        "- `svg/outputs/ocem_stopbar_E.svg` (Added)",
-        "- `svg/outputs/ocem_stopbar_F.svg` (Added)",
-        "- `svg/outputs/ocem_stopbar_G.svg` (Added)",
-        "- `svg/outputs/stopbar_F.svg` (Deleted)"
+        "(merge commit — no direct file changes)"
       ],
-      "description": "Raffinato il generatore SVG `SvgGenerator.csx` con supporto batch completo per le stopbar dalla A alla G. Aggiunti tutti i file SVG di input e i corrispondenti output OCEM normalizzati; rimossi i file temporanei sostituiti dalla nuova naming convention `ocem_stopbar_{ID}.svg`."
+      "description": "Merge del tag v1.0.0 nel branch develop per allineare develop alla baseline rilasciata."
     },
-    "2e952e3": {
-      "_date": "2025-08-28",
-      "_message": "- effemeridi converter",
+    "83a1d4a": {
+      "_date": "2026-03-09",
+      "_message": "- added some legacy project",
       "_files_changed": [
-        "- `effemeridi-converter/EffemeridiConverter.csx` (Added)",
-        "- `effemeridi-converter/EffemeridiModel.csx` (Added)",
-        "- `effemeridi-converter/input/Effemeridi_ENAV_1_2025.xlsx` (Added)",
-        "- `effemeridi-converter/input/Effemeridi_ENAV_2_2025.xlsx` (Added)",
-        "- `effemeridi-converter/input/Effemeridi_ENAV_3_2025.xlsx` (Added)",
-        "- `effemeridi-converter/output/Effemeridi_Crotone_1_2025.json` (Added)",
-        "- `effemeridi-converter/output/effemeridi.json` (Added)",
-        "- `mouse-manager/FIndMouseCoordinates.ps1` (Added)",
-        "- `mouse-manager/Infintie-Stress-Test.ps1` (Modified)"
+        "- `cae-sentry-backend/README.md` (Added)",
+        "- `cae-sentry-frontend/README.md` (Added)",
+        "- `docs/readmes/cae-sentry-backend.md` (Added)",
+        "- `docs/readmes/cae-sentry-frontend.md` (Added)",
+        "- `docs/readmes/siboni-frontend.md` (Added)",
+        "- `siboni-backend/README.md` (Added)",
+        "- `siboni-frontend/README.md` (Added)"
       ],
-      "description": "Aggiunto il modulo `effemeridi-converter` con gli script `EffemeridiConverter.csx` e `EffemeridiModel.csx` per convertire i dati astronomici ENAV da Excel a JSON strutturato. Inclusi i file sorgente ENAV 2025 e i relativi output JSON per Crotone. Aggiunto anche `FIndMouseCoordinates.ps1` nel modulo `mouse-manager` e aggiornato lo script di stress test."
+      "description": "Aggiunti i progetti legacy clienti CAE Sentry (backend e frontend) e Siboni (backend e frontend) al portfolio. Creati i rispettivi README nelle cartelle di progetto e i file corrispondenti in docs/readmes/ per renderli visibili nella GitHub Pages. Aggiornati i dati del sito per includere i nuovi progetti."
     },
-    "2494c3b": {
-      "_date": "2025-11-08",
-      "_message": "- updated Infinite version - added Hermes ILCMS configurations",
+    "ff02ac5": {
+      "_date": "2026-03-10",
+      "_message": "- added all projects - improved frontend - added project rules",
       "_files_changed": [
-        "- `SoftwareVersionManager/InfiniteVersionManager.csx` (Modified)",
-        "- `ilcms/system2infinite/SystemConfigConverter.csx` (Modified)",
-        "- `ilcms/system2infinite/history/TWYABC1.csv` (Added)",
-        "- `ilcms/system2infinite/history/TWYABC2.csv` (Added)",
-        "- `ilcms/system2infinite/history/TWYABC_V01.xlsx` (Added)",
-        "- `ilcms/system2infinite/inputs/TB-1.csv` (Added)",
-        "- `ilcms/system2infinite/inputs/TB-1.xlsx` (Added)",
-        "- `ilcms/system2infinite/inputs/TWYABC1.csv` (Deleted)",
-        "- `ilcms/system2infinite/inputs/TWYABC2.csv` (Deleted)",
-        "- `ilcms/system2infinite/inputs/TWYABC_V01.xlsx` (Deleted)",
-        "- `ilcms/system2infinite/outputs/OverallEcbs.json` (Modified)",
-        "- `ilcms/system2infinite/outputs/TB-1.json` (Added)"
+        "- `NGS-PROJECTS-UPDATE.md` (Added)",
+        "- `ngs-infinite-utilities/README.md` (Added)",
+        "- `ngs-projects/README.md` (Added)",
+        "- `ocem.gateway.modbus/README.md` (Added)",
+        "- `ocem.gatewaytoinfinite/README.md` (Added)",
+        "- `ocem.ilcms.simulator/README.md` (Added)",
+        "- `ocem.infinite.backend/README.md` (Added)",
+        "- `ocem.infinite.configurator/README.md` (Added)",
+        "- `ocem.infinite.frontend/README.md` (Added)",
+        "- `ocem.infinite.proxy/README.md` (Added)",
+        "- `ocem.modbus.simulator/README.md` (Added)",
+        "- `ocem.plugin.dds/README.md` (Added)",
+        "- `ocem.sao.mapgenerator/README.md` (Added)",
+        "- `ocem.snmp.gateway/README.md` (Added)"
       ],
-      "description": "Aggiornata la versione Infinite in `InfiniteVersionManager.csx` e aggiornato `SystemConfigConverter.csx` per supportare le nuove configurazioni Hermes (TB-1). I file di input TWYABC sono stati archiviati nella cartella `history/` e sostituiti con i nuovi file di configurazione TB-1 in input, con il relativo output JSON generato."
+      "description": "Aggiunti tutti i progetti rimanenti al portfolio: intera suite OCEM Infinite (backend, frontend, proxy, configurator, plugin DDS, gateway Modbus, gateway SNMP, simulatori ILCMS e Modbus, SAO MapGenerator, GatewayToInfinite), ngs-infinite-utilities e ngs-projects stesso. Introdotto NGS-PROJECTS-UPDATE.md come guida per l'aggiornamento strutturato dei README dei progetti. Migliorato il frontend della GitHub Pages con aggiornamenti a stili, JavaScript e dati generati."
     },
-    "3aa584b": {
-      "_date": "2025-11-17",
-      "_message": "- updated infinite version",
+    "39d3a42": {
+      "_date": "2026-03-10",
+      "_message": "Merge branch 'release-v1.1.0'",
       "_files_changed": [
-        "- `SoftwareVersionManager/InfiniteVersionManager.csx` (Modified)"
+        "(merge commit — no direct file changes)"
       ],
-      "description": "Aggiornata la versione composita Infinite in `InfiniteVersionManager.csx` per riflettere le ultime modifiche ai moduli del sistema. Aggiornamento di manutenzione ordinaria del numero di versione."
+      "description": "Merge del branch release-v1.1.0 in main per il rilascio della versione 1.1.0."
     },
-    "30e1e87": {
-      "_date": "2026-03-05",
-      "_message": "- fixed efffemeridi configuration",
+    "7668daa": {
+      "_date": "2026-03-10",
+      "_message": "Merge tag 'v1.1.0' into develop",
       "_files_changed": [
-        "- `SoftwareVersionManager/InfiniteVersionManager.csx` (Modified)",
-        "- `effemeridi-converter/EffemeridiConverter.csx` (Modified)",
-        "- `effemeridi-converter/input/Effemeridi_ENAV_2_2025.xlsx` (Modified)",
-        "- `effemeridi-converter/output/Effemeridi_Crotone_1_2025.json` (Modified)",
-        "- `effemeridi-converter/output/Effemeridi_Crotone_1_2026.json` (Added)",
-        "- `effemeridi-converter/output/effemeridi.json` (Modified)",
-        "- `svg/inputs/stopbar F.svg` (Modified)",
-        "- `svg/outputs/ocem_stopbar_F.svg` (Modified)"
+        "(merge commit — no direct file changes)"
       ],
-      "description": "Corretti errori nella configurazione del convertitore effemeridi e nei dati ENAV 2025; aggiunto l'output delle effemeridi per l'anno 2026 (`Effemeridi_Crotone_1_2026.json`). Corretti anche il file SVG sorgente della stopbar F e il relativo output OCEM. Aggiornata la versione Infinite."
+      "description": "Merge del tag v1.1.0 nel branch develop per allineare develop alla baseline rilasciata."
     },
-    "0644612": {
+    "be81683": {
+      "_date": "2026-03-10",
+      "_message": "- consolidated NGS-PROJECTS-UPDATE - added WORKFLOW-GITFLOW",
+      "_files_changed": [
+        "- `NGS-PROJECTS-UPDATE.md` (Modified)",
+        "- `WORKFLOW-GITFLOW.md` (Added)"
+      ],
+      "description": "Consolidato il documento NGS-PROJECTS-UPDATE.md con procedure più complete per l'aggiornamento dei README dei progetti. Aggiunto WORKFLOW-GITFLOW.md come guida operativa standardizzata per la gestione del flusso Git (branch, tag, merge) nei progetti NGS. Aggiornati i README di diversi progetti per allineamento."
+    },
+    "1ae3946": {
+      "_date": "2026-03-10",
+      "_message": "- added generic WORKFLOW-GITFLOW",
+      "_files_changed": [
+        "- `WORKFLOW-GITFLOW.md` (Modified)"
+      ],
+      "description": "Esteso WORKFLOW-GITFLOW.md con una versione generica del flusso Git, applicabile a qualsiasi progetto NGS indipendentemente dal contesto specifico. La guida fornisce convenzioni per branch, commit, tag e merge."
+    },
+    "cb43966": {
+      "_date": "2026-03-10",
+      "_message": "- ordered categories - edited ocem.snmp.simulator",
+      "_files_changed": [
+        "- `Ocem.Snmp.Simulator/README.md` (Modified)",
+        "- `docs/assets/site.js` (Modified)",
+        "- `docs/data/projects.js` (Modified)",
+        "- `docs/data/projects.json` (Modified)",
+        "- `docs/data/readmes.js` (Modified)",
+        "- `ngs-authentication/README.md` (Modified)",
+        "- `ngs-budget-utilities/README.md` (Modified)"
+      ],
+      "description": "Riordinato l'ordinamento delle categorie di progetto nella GitHub Pages per una navigazione più logica. Aggiornato il README di ocem.snmp.simulator con informazioni più accurate sullo stato del progetto. Piccoli aggiustamenti ai README di ngs-authentication e ngs-budget-utilities."
+    },
+    "886cb4d": {
+      "_date": "2026-03-10",
+      "_message": "- ocem.snmp.simulator v1.7.0",
+      "_files_changed": [
+        "- `Ocem.Snmp.Simulator/README.md` (Modified)",
+        "- `docs/data/projects.js` (Modified)",
+        "- `docs/data/projects.json` (Modified)",
+        "- `docs/data/readmes.js` (Modified)",
+        "- `docs/readmes/ocem.snmp.simulator.md` (Modified)"
+      ],
+      "description": "Aggiornato il README del progetto ocem.snmp.simulator alla versione 1.7.0 con le novità del rilascio. Rigenerati i dati della GitHub Pages per riflettere l'aggiornamento dello stato del progetto."
+    },
+    "081b9cd": {
+      "_date": "2026-03-10",
+      "_message": "- decision minor fixes",
+      "_files_changed": [
+        "- `NGS-PROJECTS-UPDATE.md` (Modified)",
+        "- `SESSION-PROMPT-TEMPLATE.md` (Added)",
+        "- `WORKFLOW-GITFLOW.md` (Modified)"
+      ],
+      "description": "Aggiunti e corretti documenti operativi: introdotto SESSION-PROMPT-TEMPLATE.md come template per i prompt di sessione AI, aggiornato WORKFLOW-GITFLOW.md con correzioni minori e consolidato NGS-PROJECTS-UPDATE.md. Aggiornati i README di numerosi progetti e rigenerati tutti i dati e i file della GitHub Pages per allineamento generale."
+    },
+    "48f2fe0": {
+      "_date": "2026-03-10",
+      "_message": "Merge branch 'release-v1.2.0'",
+      "_files_changed": [
+        "(merge commit — no direct file changes)"
+      ],
+      "description": "Merge del branch release-v1.2.0 in main per il rilascio della versione 1.2.0."
+    },
+    "e673d90": {
+      "_date": "2026-03-10",
+      "_message": "Merge tag 'v1.2.0' into develop",
+      "_files_changed": [
+        "(merge commit — no direct file changes)"
+      ],
+      "description": "Merge del tag v1.2.0 nel branch develop per allineare develop alla baseline rilasciata."
+    },
+    "89d4541": {
       "_date": "2026-03-11",
-      "_message": "- minor fixes",
+      "_message": "- ocem.snmp.simulator v1.9.0",
       "_files_changed": [
-        "- `SoftwareVersionManager/Airports/crotone.csx` (Added)",
-        "- `SoftwareVersionManager/Airports/pisa.csx` (Added)",
-        "- `SoftwareVersionManager/InfiniteVersionCalculator.csx` (Modified)"
+        "- `Ocem.Snmp.Simulator/README.md` (Modified)",
+        "- `docs/data/projects.js` (Modified)",
+        "- `docs/data/projects.json` (Modified)",
+        "- `docs/data/readmes.js` (Modified)",
+        "- `docs/readmes/ocem.snmp.simulator.md` (Modified)"
       ],
-      "description": "Aggiunte le configurazioni aeroportuali specifiche per Crotone (`crotone.csx`) e Pisa (`pisa.csx`) nella cartella `Airports/` del `SoftwareVersionManager`. Applicati aggiustamenti minori a `InfiniteVersionCalculator.csx` per gestire correttamente le configurazioni per aeroporto."
+      "description": "Aggiornato il README del progetto ocem.snmp.simulator alla versione 1.9.0 con le novità del rilascio. Rigenerati i dati della GitHub Pages per rispecchiare lo stato aggiornato del progetto."
     },
-    "49fc1f5": {
-      "_date": "2026-03-11",
-      "_message": "- added ngs-test-analyzer",
-      "_files_changed": [
-        "- `ngs-test-analyzer/FAT_Bonaire_UT-SP-0717_Rev0.6_VOCAL.docx` (Added)",
-        "- `ngs-test-analyzer/SAT-Rosario-Sezione7.4-20260309/events.txt` (Added)",
-        "- `ngs-test-analyzer/SAT-Rosario-Sezione7.4-20260309/screenshots/SEZ7.4_STEP1_00m57s_FULL.png` (Added)",
-        "- `ngs-test-analyzer/analyze_recording.py` (Added)",
-        "- `ngs-test-analyzer/enrich_docx.py` (Added)",
-        "- `ngs-test-analyzer/proposed-workflow.md` (Added)",
-        "- `ngs-test-analyzer/vocal-protocol.md` (Added)"
-      ],
-      "description": "Aggiunto il modulo `ngs-test-analyzer` con la pipeline Python per l'analisi automatica di registrazioni video FAT/SAT. Include gli script `analyze_recording.py` (trascrizione audio Whisper, estrazione screenshot, log eventi) e `enrich_docx.py` (arricchimento documentale), la documentazione del workflow proposto, il protocollo vocale e i risultati di una sessione SAT di esempio (Rosario, sezione 7.4, 2026-03-09)."
-    },
-    "f6db02b": {
-      "_date": "2026-03-11",
-      "_message": "- removed wav and mp4 files",
-      "_files_changed": [
-        "- `.gitignore` (Added)"
-      ],
-      "description": "Aggiunto il file `.gitignore` per escludere automaticamente i file multimediali WAV e MP4 dal repository. Questa modifica evita che le registrazioni video e audio delle sessioni di test vengano accidentalmente committate, mantenendo il repository leggero."
-    },
-    "2e2524d": {
+    "5b374c5": {
       "_date": "2026-03-12",
-      "_message": "- history doc generator wip",
+      "_message": "- ocem.snmp.simulator v1.10.0",
       "_files_changed": [
-        "- `docs/history/CHANGELOG-commits.md` (Added)",
-        "- `docs/history/CHANGELOG-features.md` (Added)",
-        "- `docs/history/enrichment-template.json` (Added)",
-        "- `git-history-docs/ENRICHMENT-GUIDE.md` (Added)",
-        "- `git-history-docs/GUIDE.md` (Added)",
-        "- `git-history-docs/enrichment.json` (Added)",
-        "- `git-history-docs/generate-history-docs.py` (Added)"
+        "- `Ocem.Snmp.Simulator/README.md` (Modified)",
+        "- `docs/data/projects.js` (Modified)",
+        "- `docs/data/projects.json` (Modified)",
+        "- `docs/data/readmes.js` (Modified)",
+        "- `docs/readmes/ocem.snmp.simulator.md` (Modified)"
       ],
-      "description": "Prima versione funzionante (work in progress) del generatore automatico di documentazione storica `generate-history-docs.py`. Aggiunti i primi CHANGELOG per commit e per feature in `docs/history/`, il template di arricchimento JSON e le guide operative `GUIDE.md` ed `ENRICHMENT-GUIDE.md`."
+      "description": "Aggiornato il README del progetto ocem.snmp.simulator alla versione 1.10.0. Rigenerati i dati della GitHub Pages per riflettere il nuovo stato del progetto."
     },
-    "b72434d": {
+    "4748e60": {
       "_date": "2026-03-12",
-      "_message": "- enanched doc generator - enanched documentation",
+      "_message": "- added project update commit in procedure",
       "_files_changed": [
-        "- `docs/history/CHANGELOG-commits.md` (Modified)",
-        "- `docs/history/CHANGELOG-features.md` (Modified)",
-        "- `docs/history/CHANGELOG.md` (Added)",
-        "- `docs/history/enrichment-input_ngs-infinite-utilities_all-branches.json` (Added)",
-        "- `docs/history/enrichment-input_ngs-infinite-utilities_main.json` (Added)",
-        "- `git-history-docs/ENRICHMENT-GUIDE.md` (Modified)",
-        "- `git-history-docs/GUIDE.md` (Modified)",
-        "- `git-history-docs/PYTHON-SETUP.md` (Added)",
-        "- `git-history-docs/generate-history-docs.py` (Modified)"
+        "- `NGS-PROJECTS-UPDATE.md` (Modified)"
       ],
-      "description": "Migliorato il generatore di documentazione con supporto al CHANGELOG per versione (`CHANGELOG.md`) e alla generazione di template di arricchimento separati per il branch main e per tutti i branch. Aggiunta la guida alla configurazione dell'ambiente Python (`PYTHON-SETUP.md`) e aggiornate le guide esistenti con istruzioni più dettagliate."
+      "description": "Aggiornata la procedura in NGS-PROJECTS-UPDATE.md per includere esplicitamente lo step di commit dell'aggiornamento del progetto nel flusso operativo standard. Migliora la completezza e la tracciabilità del processo di aggiornamento."
+    },
+    "6fb0ad5": {
+      "_date": "2026-03-12",
+      "_message": "- added boilerplate",
+      "_files_changed": [
+        "- `WORKFLOW-DOCS-BOOTSTRAP.md` (Added)",
+        "- `WORKFLOW-FEATURE-ANALYSIS.md` (Added)",
+        "- `WORKFLOW-SPECIFICATION.md` (Added)",
+        "- `WORKFLOW-STANDARD.md` (Added)",
+        "- `boilerplate/project-standard/` (Added)",
+        "- `tools/ensure-project-boilerplate.ps1` (Added)"
+      ],
+      "description": "Introdotto il sistema di boilerplate standard per i progetti NGS: aggiunta la cartella boilerplate/project-standard/ con tutti i template operativi (workflow, README, CHANGELOG, SESSION-PROMPT, docs-generator). Aggiunti i workflow WORKFLOW-STANDARD.md, WORKFLOW-DOCS-BOOTSTRAP.md, WORKFLOW-SPECIFICATION.md e WORKFLOW-FEATURE-ANALYSIS.md come documenti operativi in root. Introdotto lo script tools/ensure-project-boilerplate.ps1 per applicare automaticamente la struttura boilerplate a qualsiasi repository target."
+    },
+    "a008638": {
+      "_date": "2026-03-12",
+      "_message": "- cleaned repository",
+      "_files_changed": [
+        "- `CHANGELOG.md` (Modified)",
+        "- `NGS-PROJECTS-UPDATE.md` (Deleted)",
+        "- `README.md` (Modified)",
+        "- `SESSION-PROMPT-TEMPLATE.md` (Deleted)",
+        "- `WORKFLOW-DOCS-BOOTSTRAP.md` (Deleted)",
+        "- `WORKFLOW-FEATURE-ANALYSIS.md` (Deleted)",
+        "- `WORKFLOW-GITFLOW.md` (Deleted)",
+        "- `WORKFLOW-SPECIFICATION.md` (Deleted)",
+        "- `WORKFLOW-STANDARD.md` (Deleted)"
+      ],
+      "description": "Pulizia del repository root: rimossi tutti i workflow e template duplicati (NGS-PROJECTS-UPDATE.md, SESSION-PROMPT-TEMPLATE.md, WORKFLOW-*.md) che ora risiedono esclusivamente in boilerplate/project-standard/. Aggiornati README.md e CHANGELOG.md per riflettere la nuova struttura con fonte unica centralizzata nel boilerplate."
+    },
+    "5081afa": {
+      "_date": "2026-03-12",
+      "_message": "- released v1.3.0",
+      "_files_changed": [
+        "- `CHANGELOG.md` (Modified)",
+        "- `docs/data/projects.js` (Modified)",
+        "- `docs/data/projects.json` (Modified)",
+        "- `docs/data/readmes.js` (Modified)",
+        "- `docs/readmes/ocem.snmp.simulator.md` (Modified)"
+      ],
+      "description": "Preparazione e rilascio della versione 1.3.0: aggiornato CHANGELOG.md con tutte le novità della release e rigenerati i dati della GitHub Pages. Aggiornato il README di ocem.snmp.simulator per riflettere lo stato di manutenzione a completamento raggiunto."
+    },
+    "dd1902f": {
+      "_date": "2026-03-12",
+      "_message": "Merge branch 'release-v1.3.0'",
+      "_files_changed": [
+        "(merge commit — no direct file changes)"
+      ],
+      "description": "Merge del branch release-v1.3.0 in main per il rilascio della versione 1.3.0."
+    },
+    "32102d1": {
+      "_date": "2026-03-12",
+      "_message": "Merge tag 'v1.3.0' into develop",
+      "_files_changed": [
+        "(merge commit — no direct file changes)"
+      ],
+      "description": "Merge del tag v1.3.0 nel branch develop per allineare develop alla baseline rilasciata."
     }
   },
   "versions": {
-    "_comment": "One entry per git tag. Fill 'added', 'changed', 'fixed', etc. based on the commits that belong to that version range. Leave empty lists [] for unused categories.",
-    "v0.1.0": {
-      "_date": "2026-03-12",
-      "_tag_message": "",
+    "_comment": "One entry per git tag. Fill 'added', 'changed', 'fixed', etc. based on the commits that belong to that version. Leave empty lists [] for unused categories.",
+    "v1.0.0": {
+      "_date": "2026-03-09",
+      "_tag_message": "v.1.0.0",
       "added": [
-        "Aggiunta configurazione di debug VS Code tramite `.vscode/launch.json` per l'avvio degli script C# dall'IDE.",
-        "Introdotto il modulo `system2infinite` con `ConfigurationManager.csx`, `EcbModel.csx` e `SystemConfigConverter.csx` per la conversione di configurazioni ILCMS in formato Infinite.",
-        "Aggiunto `SoftwareVersionManager.csx` come script base per la gestione delle versioni software.",
-        "Aggiunto `ExcelParser.csx` per la lettura e conversione di file Excel in CSV nel modulo `system2infinite`."
+        "GitHub Pages portfolio con home page, pagina dettaglio progetto e workflow di pubblicazione automatica tramite GitHub Actions.",
+        "Script PowerShell tools/generate-pages.ps1 per generare i dati del sito dai README dei progetti.",
+        "Supporto branding tramite docs/data/brand.js con logo e informazioni aziendali NGS.",
+        "Fallback dati locale con docs/data/projects.js e docs/data/readmes.js per aprire il sito anche in modalità file://.",
+        "README.md e CHANGELOG.md radice del repository come documentazione del portfolio.",
+        "README iniziali di tutti i progetti personali NGS monitorati nella cartella docs/readmes/."
       ],
       "changed": [],
-      "fixed": [],
+      "fixed": [
+        "Correzioni al layout HTML, stili CSS e logica JavaScript della prima versione della GitHub Pages."
+      ],
       "removed": [],
       "security": [],
       "deprecated": []
     },
-    "v0.2.0": {
-      "_date": "2026-03-12",
-      "_tag_message": "",
+    "v1.1.0": {
+      "_date": "2026-03-10",
+      "_tag_message": "v1.1.0",
       "added": [
-        "Aggiunti `InfiniteVersionCalculator.csx`, `InfiniteVersionManager.csx` e `InfiniteVersionModel.csx` per il calcolo e la gestione della versione composita Infinite.",
-        "Aggiunto il modulo `ccr-alarm-converter` con versione CLI (`CcrAlarmConverter.csx`), GUI PowerShell (`CcrAlarmConverterGUI.ps1`) ed eseguibile distribuibile.",
-        "Aggiunto lo script di stress test `Infintie-Stress-Test.ps1` per l'interfaccia utente del sistema Infinite.",
-        "Aggiunto `ps2exe-converter.ps1` per la compilazione di script PowerShell in eseguibili Windows standalone.",
-        "Aggiunto supporto batch SVG per le stopbar dalla A alla G con output OCEM normalizzati."
+        "Progetti legacy clienti CAE Sentry (backend e frontend) e Siboni (backend e frontend) aggiunti al portfolio.",
+        "Intera suite OCEM Infinite aggiunta al portfolio: backend, frontend, proxy, configurator, plugin DDS, gateway Modbus, gateway SNMP, simulatori ILCMS e Modbus, SAO MapGenerator, GatewayToInfinite.",
+        "Progetti ngs-infinite-utilities e ngs-projects aggiunti come voci del portfolio.",
+        "Documento NGS-PROJECTS-UPDATE.md come guida operativa per l'aggiornamento strutturato dei README dei progetti."
       ],
       "changed": [
-        "Aggiornati e migliorati gli script del modulo `system2infinite` (ConfigurationManager, ExcelParser, SystemConfigConverter).",
-        "Raffinato `SvgGenerator.csx` con naming convention standardizzata per gli output OCEM."
-      ],
-      "fixed": [],
-      "removed": [],
-      "security": [],
-      "deprecated": []
-    },
-    "v0.3.0": {
-      "_date": "2026-03-12",
-      "_tag_message": "",
-      "added": [
-        "Aggiunto il modulo `effemeridi-converter` con `EffemeridiConverter.csx` e `EffemeridiModel.csx` per la conversione dei dati astronomici ENAV da Excel a JSON.",
-        "Aggiunto `FIndMouseCoordinates.ps1` per il rilevamento interattivo delle coordinate del mouse."
-      ],
-      "changed": [
-        "Aggiornato lo script di stress test `Infintie-Stress-Test.ps1` con miglioramenti funzionali."
+        "Frontend della GitHub Pages migliorato con aggiornamenti a stili, JavaScript e ordinamento categorie.",
+        "README di tutti i progetti esistenti aggiornati e allineati alle convenzioni portfolio."
       ],
       "fixed": [],
       "removed": [],
       "security": [],
       "deprecated": []
     },
-    "v0.4.0": {
-      "_date": "2026-03-12",
-      "_tag_message": "",
+    "v1.2.0": {
+      "_date": "2026-03-10",
+      "_tag_message": "v1.2.0",
       "added": [
-        "Aggiunte configurazioni ILCMS per il sistema Hermes (TB-1) con i relativi file di input CSV/Excel e output JSON.",
-        "Archiviati i file storici TWYABC nella cartella `history/` del modulo `system2infinite`."
+        "WORKFLOW-GITFLOW.md come guida operativa standardizzata per la gestione del flusso Git nei progetti NGS.",
+        "SESSION-PROMPT-TEMPLATE.md come template per i prompt di sessione AI agent."
       ],
       "changed": [
-        "Aggiornata la versione Infinite in `InfiniteVersionManager.csx`.",
-        "Aggiornato `SystemConfigConverter.csx` per supportare le nuove configurazioni Hermes TB-1."
+        "NGS-PROJECTS-UPDATE.md consolidato con procedure più complete e aggiunta dello step di commit nel flusso operativo.",
+        "WORKFLOW-GITFLOW.md esteso con versione generica applicabile a qualsiasi progetto NGS.",
+        "README di numerosi progetti aggiornati con correzioni minori e allineamento alle convenzioni."
+      ],
+      "fixed": [],
+      "removed": [],
+      "security": [],
+      "deprecated": []
+    },
+    "v1.3.0": {
+      "_date": "2026-03-12",
+      "_tag_message": "v1.3.0",
+      "added": [
+        "Boilerplate standard in boilerplate/project-standard/ con template riusabili per README, CHANGELOG, workflow operativi, docs-generator e SESSION-PROMPT.",
+        "Script tools/ensure-project-boilerplate.ps1 per applicare automaticamente la struttura boilerplate a qualsiasi repository target.",
+        "Workflow WORKFLOW-STANDARD.md come indice operativo end-to-end per l'AI agent.",
+        "Workflow WORKFLOW-DOCS-BOOTSTRAP.md per il bootstrap manuale della documentazione da history git.",
+        "Workflow WORKFLOW-SPECIFICATION.md e WORKFLOW-FEATURE-ANALYSIS.md per formalizzare raccolta specifiche e analisi tecnica.",
+        "Pacchetto docs/docs-generator nel boilerplate per il caso repository legacy non documentati.",
+        "Tracking progresso per progetto con campo Snapshot Progresso e output dati progressPercent/progressText.",
+        "Nuovo stato portfolio In manutenzione per progetti completati ma ancora attivi."
+      ],
+      "changed": [
+        "Cleanup root portfolio: workflow e template duplicati rimossi dalla root e mantenuti solo in boilerplate/project-standard/.",
+        "README root aggiornato con sezione boilerplate, comandi script di bootstrap e convenzioni correnti.",
+        "SESSION-PROMPT-TEMPLATE.md allineato al nuovo flusso con gate specifica/analisi e riferimenti ai workflow standard.",
+        "Home tab portfolio aggiornata con board In manutenzione e visualizzazione progresso (percentuale e barra) nelle card progetto."
       ],
       "fixed": [],
       "removed": [
-        "Rimossi i file di input TWYABC dalla cartella attiva (spostati in `history/`)."
+        "Workflow e template operativi rimossi dalla root del repository (NGS-PROJECTS-UPDATE.md, SESSION-PROMPT-TEMPLATE.md, WORKFLOW-*.md) in favore della fonte unica in boilerplate/project-standard/."
       ],
-      "security": [],
-      "deprecated": []
-    },
-    "v0.5.0": {
-      "_date": "2026-03-12",
-      "_tag_message": "",
-      "added": [],
-      "changed": [
-        "Aggiornata la versione Infinite in `InfiniteVersionManager.csx` con i valori più recenti (aggiornamento di novembre 2025)."
-      ],
-      "fixed": [],
-      "removed": [],
-      "security": [],
-      "deprecated": []
-    },
-    "v0.6.0": {
-      "_date": "2026-03-12",
-      "_tag_message": "",
-      "added": [
-        "Aggiunto output effemeridi per l'anno 2026 (`Effemeridi_Crotone_1_2026.json`)."
-      ],
-      "changed": [
-        "Aggiornata la versione Infinite in `InfiniteVersionManager.csx`."
-      ],
-      "fixed": [
-        "Corretti errori nella configurazione del convertitore effemeridi e nei dati ENAV 2025.",
-        "Corretti il file SVG sorgente della stopbar F e il relativo output OCEM normalizzato."
-      ],
-      "removed": [],
-      "security": [],
-      "deprecated": []
-    },
-    "v0.7.0": {
-      "_date": "2026-03-12",
-      "_tag_message": "",
-      "added": [
-        "Aggiunte configurazioni aeroportuali specifiche per Crotone e Pisa nel `SoftwareVersionManager` (`Airports/crotone.csx`, `Airports/pisa.csx`).",
-        "Aggiunto il modulo `ngs-test-analyzer` con pipeline Python per l'analisi automatica di registrazioni FAT/SAT tramite trascrizione Whisper ed estrazione screenshot.",
-        "Aggiunto `.gitignore` per escludere i file multimediali WAV e MP4 dal repository."
-      ],
-      "changed": [
-        "Aggiornato `InfiniteVersionCalculator.csx` con correzioni minori per le configurazioni aeroportuali."
-      ],
-      "fixed": [],
-      "removed": [],
-      "security": [],
-      "deprecated": []
-    },
-    "v0.8.0": {
-      "_date": "2026-03-12",
-      "_tag_message": "",
-      "added": [
-        "Aggiunto il generatore automatico di documentazione storica `generate-history-docs.py` con produzione di CHANGELOG per commit, per feature e per versione.",
-        "Aggiunti template di arricchimento JSON e guide operative (`GUIDE.md`, `ENRICHMENT-GUIDE.md`) per la generazione e l'arricchimento della documentazione.",
-        "Aggiunta guida alla configurazione dell'ambiente Python (`PYTHON-SETUP.md`)."
-      ],
-      "changed": [
-        "Migliorato il generatore di documentazione con supporto a CHANGELOG per versione e template di arricchimento separati per branch main e tutti i branch."
-      ],
-      "fixed": [],
-      "removed": [],
       "security": [],
       "deprecated": []
     }
   },
-  "features": {
-    "feature/nghiselli/changelod-generator": {
-      "_branch": "feature/nghiselli/changelod-generator",
-      "summary": "Questa funzionalità introduce il generatore automatico di documentazione storica del repository (`generate-history-docs.py`), in grado di produrre tre tipi di CHANGELOG (per commit, per feature e per versione) a partire dalla history git in modalità read-only. Il tool supporta l'arricchimento AI tramite `run-with-ai.py` e template JSON dedicati, permettendo di aggiungere descrizioni narrative ai commit, alle versioni e ai branch. Sono incluse guide operative dettagliate (`GUIDE.md`, `ENRICHMENT-GUIDE.md`) e la guida alla configurazione dell'ambiente Python (`PYTHON-SETUP.md`). La funzionalità è progettata per essere eseguita periodicamente e mantenere aggiornata la documentazione in `docs/history/` senza intervento manuale."
-    },
-    "feature/nghiselli/ngs-workstation": {
-      "_branch": "feature/nghiselli/ngs-workstation",
-      "summary": "Questa funzionalità rappresenta l'ambiente di sviluppo principale della workstation NGS e raccoglie la maggior parte degli strumenti utilitari del progetto. Include il modulo `system2infinite` per la conversione di configurazioni ILCMS in formato Infinite, il `SoftwareVersionManager` per il calcolo della versione composita multi-modulo, il `ccr-alarm-converter` per la decodifica degli allarmi CCR, il convertitore di effemeridi astronomiche ENAV, il generatore SVG per le mappe stopbar in formato OCEM e gli strumenti PowerShell per lo stress test e la compilazione di eseguibili. Il branch integra anche il modulo `ngs-test-analyzer` per l'analisi automatica delle sessioni FAT/SAT. È il branch di sviluppo principale destinato all'uso su workstation Windows con .NET SDK e Python 3.x installati."
-    },
-    "feature/nghiselli/ngs-xps13": {
-      "_branch": "feature/nghiselli/ngs-xps13",
-      "summary": "Questa funzionalità ottimizza la configurazione e l'esperienza utente del progetto NGS sui dispositivi Dell XPS 13. Include adattamenti specifici per l'ambiente portatile, come configurazioni di sistema e impostazioni personalizzate per garantire la piena compatibilità e operatività degli strumenti NGS su hardware XPS 13. Il branch è stato successivamente integrato nel branch principale della workstation (`feature/nghiselli/ngs-workstation`) per unificare la base di codice."
-    }
-  },
+  "features": {},
   "readme": {
     "_instructions": "Fill these fields to populate the README.md. All are optional — missing fields become <!-- TODO --> placeholders in the generated file.",
-    "description": "ngs-infinite-utilities è una raccolta di strumenti e script utilitari per la gestione, configurazione e analisi dei sistemi NGS (Next Generation Systems) in ambito aeroportuale. Il progetto include convertitori di configurazione ILCMS, gestori di versioni software Infinite, analizzatori di sessioni di test SAT/FAT con trascrizione vocale automatica, convertitori di effemeridi astronomiche ENAV e generatori di documentazione storica. È destinato a sviluppatori e ingegneri di sistema che lavorano su piattaforme Infinite per la gestione delle luci di pista e dei sistemi di controllo aeroportuale.",
+    "description": "ngs-projects è il repository portfolio operativo di Nicola Ghiselli Solutions: raccoglie i README di tutti i progetti NGS (personali e clienti), genera una GitHub Pages con board di stato, pagine di dettaglio e sezione aggiornamenti, e fornisce strumenti e boilerplate standardizzati per mantenere la documentazione di ogni progetto allineata e aggiornata. È pensato per sviluppatori e team che vogliono un punto unico di visibilità sullo stato di avanzamento del proprio portfolio.",
     "badges": [],
-    "installation": "Clonare il repository con `git clone <url-del-repository>`. Assicurarsi di avere installato .NET SDK (per gli script `.csx` tramite `dotnet-script`) e Python 3.x (per gli script di analisi e generazione documentazione). Per installare le dipendenze Python eseguire `pip install -r requirements.txt` se presente, oppure seguire le istruzioni in `git-history-docs/PYTHON-SETUP.md`.",
-    "usage": "Ogni modulo è indipendente e può essere eseguito separatamente. Gli script `.csx` si avviano con `dotnet script <NomeScript.csx>`. Gli script Python si eseguono con `python <nome_script.py>`. Gli script PowerShell si avviano con `pwsh <NomeScript.ps1>` o `powershell <NomeScript.ps1>`. Per generare la documentazione storica del repository utilizzare `python git-history-docs/generate-history-docs.py`. Fare riferimento alle guide nella cartella `git-history-docs/` per istruzioni dettagliate.",
+    "installation": "1. Clonare il repository: git clone https://github.com/NicolaGhiselliSolutions/ngs-projects.git\n2. Assicurarsi di avere PowerShell disponibile sull'ambiente di lavoro.\n3. Per applicare il boilerplate standard a un progetto target:\n   ./tools/ensure-project-boilerplate.ps1 -ProjectPath 'D:\\repos\\<nome-progetto>'\n4. Per aggiornare i dati della GitHub Pages dopo aver modificato i README dei progetti:\n   ./tools/generate-pages.ps1\n5. Eseguire commit e push su main per attivare la pubblicazione automatica tramite GitHub Actions.",
+    "usage": "Aggiornare il file README.md nella cartella del progetto interessato, assicurandosi che contenga la sezione ## Snapshot con i campi obbligatori (Stato avanzamento, Priorita, Progresso, Tipo progetto, Includi nel portfolio, Ultimo aggiornamento). Eseguire ./tools/generate-pages.ps1 per rigenerare i dati del sito. Fare commit e push su main: la workflow .github/workflows/pages.yml pubblicherà automaticamente la GitHub Pages aggiornata. Per applicare la struttura boilerplate a un nuovo progetto, usare ./tools/ensure-project-boilerplate.ps1 con il parametro -ProjectPath.",
     "contributing": "",
-    "license": "MIT"
+    "license": ""
   }
 }

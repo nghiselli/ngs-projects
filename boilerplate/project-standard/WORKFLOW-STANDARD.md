@@ -10,6 +10,7 @@
 File consigliati:
 - `WORKFLOW-STANDARD.md` (questo indice)
 - `WORKFLOW-DOCS-BOOTSTRAP.md` (bootstrap documentazione da history git, quando serve)
+- `FEATURE-STANDARD.md` (standard branch feature/hotfix per migliorare README/CHANGELOG automatici)
 - `WORKFLOW-SPECIFICATION.md` (raccolta specifiche)
 - `WORKFLOW-FEATURE-ANALYSIS.md` (analisi feature/patch)
 - `SESSION-PROMPT-TEMPLATE.md` (prompt operativo di sessione)
@@ -24,6 +25,7 @@ File consigliati:
 - [ ] Valorizzare i blocchi variabili in ogni workflow (path, branch, comandi build/run).
 - [ ] Verificare che `README.md` e `CHANGELOG.md` esistano.
 - [ ] Se `README.md`/`CHANGELOG.md` mancano o sono inaffidabili, eseguire `WORKFLOW-DOCS-BOOTSTRAP.md`.
+- [ ] Applicare `FEATURE-STANDARD.md` per gestione `FEATURE.md` e convenzioni commit su branch feature/hotfix.
 - [ ] Se usi checkpoint, creare `checkpoints/README.md`.
 - [ ] Definire il branch model (`main`/`develop`) nel `WORKFLOW-GITFLOW.md`.
 - [ ] Eseguire una prova completa su una micro-feature per validare il processo.
@@ -39,6 +41,14 @@ Output minimo:
 - bozza `README.md` e `CHANGELOG.md` in `docs/history/`;
 - review umana completata;
 - promozione in root solo dopo validazione.
+
+### Fase 0.5 - Standard feature branch
+Usare `FEATURE-STANDARD.md` all'apertura di `feature/*` o `hotfix/*`.
+
+Output minimo:
+- `FEATURE.md` creato/aggiornato sul branch;
+- commit message descrittivi (preferibilmente Conventional Commits);
+- contesto utile al tool `docs/docs-generator/run-with-ai.py`.
 
 ### Fase 1 - Specifica
 Usare `WORKFLOW-SPECIFICATION.md`.
@@ -108,6 +118,7 @@ Output minimo:
 ```text
 Segui WORKFLOW-STANDARD.md e applica in ordine i workflow collegati.
 Se mancano README/CHANGELOG affidabili, esegui prima WORKFLOW-DOCS-BOOTSTRAP.md in modalita manuale con review umana.
+All'apertura feature/hotfix applica FEATURE-STANDARD.md (FEATURE.md + commit quality) per migliorare il contesto del generatore docs.
 Poi parti da specifica (WORKFLOW-SPECIFICATION.md), analisi (WORKFLOW-FEATURE-ANALYSIS.md), implementazione (SESSION-PROMPT-TEMPLATE.md) e chiusura git (WORKFLOW-GITFLOW.md).
 Se richiesto, aggiorna anche ngs-projects con NGS-PROJECTS-UPDATE.md.
 Mostra sempre i gate bloccanti e fermati quando manca una conferma utente obbligatoria.

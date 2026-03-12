@@ -390,7 +390,7 @@ def collect_repo_context(repo_path: Path, max_chars: int = 4000) -> str:
     parts = []
 
     # Root-level docs
-    for fname in ["README.md", "CHANGELOG.md"]:
+    for fname in ["README.md", "CHANGELOG.md", "FEATURE.md"]:
         fpath = repo_path / fname
         if fpath.exists():
             content = fpath.read_text(encoding="utf-8", errors="replace").strip()

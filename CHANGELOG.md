@@ -16,33 +16,57 @@ Tutte le modifiche rilevanti di `ngs-projects` saranno documentate in questo fil
 ## [v1.3.0] - 2026-03-12
 
 ### Added
+- Boilerplate standard in `boilerplate/project-standard/` con template riusabili per README, CHANGELOG, workflow operativi, docs-generator e session prompt.
+- Script `tools/ensure-project-boilerplate.ps1` per applicare automaticamente la struttura boilerplate a qualsiasi repository target.
+- Workflow `WORKFLOW-STANDARD.md` come indice operativo end-to-end per l'AI agent.
+- Workflow `WORKFLOW-DOCS-BOOTSTRAP.md` per il bootstrap manuale della documentazione da history git.
+- Workflow `WORKFLOW-SPECIFICATION.md` e `WORKFLOW-FEATURE-ANALYSIS.md` per formalizzare raccolta specifiche e analisi tecnica.
+- Pacchetto `docs/docs-generator` nel boilerplate per il caso repository legacy non documentati.
 - Tracking progresso per progetto con campo Snapshot `Progresso` e output dati `progressPercent/progressText`.
 - Nuovo stato portfolio `In manutenzione` per progetti completati ma ancora attivi.
-- Progetto portfolio `ngs-projects` con stato `In manutenzione` e progresso `95%`.
-- File guida `NGS-PROJECTS-UPDATE.md` per aggiornamento strutturato README progetto (seed su `Ocem.Snmp.Simulator`).
-- Nuovi workflow standard `WORKFLOW-SPECIFICATION.md` e `WORKFLOW-FEATURE-ANALYSIS.md` per formalizzare raccolta specifiche e analisi tecnica.
-- Nuovo indice operativo `WORKFLOW-STANDARD.md` per orchestrare il flusso end-to-end tra tutti i template.
-- Boilerplate standard `boilerplate/project-standard/` con struttura cartelle e template markdown riusabili.
-- Script `tools/ensure-project-boilerplate.ps1` per verificare/completare automaticamente la struttura dei progetti target.
-- Nuovo workflow `WORKFLOW-DOCS-BOOTSTRAP.md` per bootstrap manuale di `README.md`/`CHANGELOG.md` da history git quando manca documentazione pregressa.
-- Pacchetto boilerplate esteso con `docs/docs-generator/` per il caso legacy/non documentato.
+- Nuovo `FEATURE-STANDARD.md` nel boilerplate per standardizzare `FEATURE.md` e commit quality su branch feature/hotfix.
 
 ### Changed
-- `SESSION-PROMPT-TEMPLATE.md` allineato al nuovo flusso (gate specifica/analisi + riferimenti ai workflow standard).
-- README root esteso con sezione dedicata ai workflow standard AI agent.
-- README root aggiornato con sezione boilerplate e comandi script di bootstrap (`ensure-project-boilerplate.ps1`).
-- `WORKFLOW-STANDARD.md` aggiornato con Fase 0 opzionale per bootstrap documentazione manuale.
-- README root aggiornato con caso `docs-generator` manuale (solo quando manca documentazione affidabile).
-- Cleanup root portfolio: rimossi i workflow/template duplicati dalla root e mantenuti solo in `boilerplate/project-standard/` con riferimenti centralizzati nel README.
-- Home tab "chiusi" aggiornata con board `In pausa`, `In manutenzione`, `Completato`, `Archiviato`.
-- Card progetto aggiornate con visualizzazione progresso (% + barra).
-- Pagina dettaglio progetto aggiornata con progresso in meta e snapshot.
-- Lista aggiornamenti non piu limitata ai primi 12 record (mostra tutte le voci filtrate).
-- Counter nella hero disposti su una singola riga, centrati e con valore piu leggibile.
-- README root aggiornato alle convenzioni correnti (stati, progresso, includi nel portfolio).
+- Cleanup root portfolio: workflow e template duplicati rimossi dalla root e mantenuti solo in `boilerplate/project-standard/`.
+- README root aggiornato con sezione boilerplate, comandi script di bootstrap e convenzioni correnti.
+- `run-with-ai.py` aggiornato per includere `FEATURE.md` nel contesto AI (se presente).
+- Home tab portfolio aggiornata con board `In manutenzione` e visualizzazione progresso (percentuale + barra) nelle card progetto.
 
-### Existing Base
-- Setup GitHub Pages portfolio in `docs/` con home, dettaglio progetto e sezione aggiornamenti.
-- Script `tools/generate-pages.ps1` per generare i dati del sito dai README progetto.
-- Supporto branding tramite `docs/data/brand.js` (logo + informazioni aziendali).
-- Fallback dati locale con `docs/data/projects.js` e `docs/data/readmes.js` per aprire il sito anche in `file://`.
+### Removed
+- Workflow e template operativi rimossi dalla root del repository (`NGS-PROJECTS-UPDATE.md`, `SESSION-PROMPT-TEMPLATE.md`, `WORKFLOW-*.md`) in favore della fonte unica in `boilerplate/project-standard/`.
+
+## [v1.2.0] - 2026-03-10
+
+### Added
+- `WORKFLOW-GITFLOW.md` come guida operativa standardizzata per la gestione del flusso Git nei progetti NGS.
+- `SESSION-PROMPT-TEMPLATE.md` come template per i prompt di sessione AI agent.
+
+### Changed
+- `NGS-PROJECTS-UPDATE.md` consolidato con procedure piu complete e aggiunta dello step di commit nel flusso operativo.
+- `WORKFLOW-GITFLOW.md` esteso con versione generica applicabile a qualsiasi progetto NGS.
+- README di numerosi progetti aggiornati con correzioni minori e allineamento alle convenzioni.
+
+## [v1.1.0] - 2026-03-10
+
+### Added
+- Progetti legacy clienti CAE Sentry (backend e frontend) e Siboni (backend e frontend) aggiunti al portfolio.
+- Intera suite OCEM Infinite aggiunta al portfolio: backend, frontend, proxy, configurator, plugin DDS, gateway Modbus, gateway SNMP, simulatori ILCMS e Modbus, SAO MapGenerator, GatewayToInfinite.
+- Progetti `ngs-infinite-utilities` e `ngs-projects` aggiunti come voci del portfolio.
+- Documento `NGS-PROJECTS-UPDATE.md` come guida operativa per l'aggiornamento strutturato dei README dei progetti.
+
+### Changed
+- Frontend della GitHub Pages migliorato con aggiornamenti a stili, JavaScript e ordinamento categorie.
+- README di tutti i progetti esistenti aggiornati e allineati alle convenzioni portfolio.
+
+## [v1.0.0] - 2026-03-09
+
+### Added
+- GitHub Pages portfolio con home page, pagina dettaglio progetto e workflow di pubblicazione automatica tramite GitHub Actions.
+- Script PowerShell `tools/generate-pages.ps1` per generare i dati del sito dai README dei progetti.
+- Supporto branding tramite `docs/data/brand.js` con logo e informazioni aziendali NGS.
+- Fallback dati locale con `docs/data/projects.js` e `docs/data/readmes.js` per apertura anche in modalita `file://`.
+- `README.md` e `CHANGELOG.md` di root come documentazione del portfolio.
+- README iniziali dei progetti NGS monitorati.
+
+### Fixed
+- Correzioni a layout HTML, stili CSS e logica JavaScript della prima versione della GitHub Pages.
