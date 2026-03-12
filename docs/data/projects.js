@@ -1,5 +1,5 @@
 window.NGS_SITE_DATA = {
-  "generatedAt": "2026-03-11T09:15:34+01:00",
+  "generatedAt": "2026-03-12T07:53:03+01:00",
   "totalProjects": 29,
   "statusCounts": {
     "Da pianificare": 7,
@@ -273,14 +273,14 @@ window.NGS_SITE_DATA = {
       "includeInPortfolio": "Si",
       "progressPercent": 100,
       "progressText": "100%",
-      "lastUpdate": "2026-03-11",
+      "lastUpdate": "2026-03-12",
       "objective": "Costruire un simulatore SNMP affidabile e configurabile per emulare device INFINITE (UPS, host, switch, NTP, printer), supportare test di integrazione senza hardware reale, e permettere verifica visuale/runtime del co...",
       "readmePath": "readmes/ocem.snmp.simulator.md",
       "repositoryPath": "ocem.snmp.simulator",
       "latestDecision": {
-        "date": "2026-03-11T09:03:00+01:00",
-        "decision": "Chiusa release \u000b1.9.0 su main con tag \u000b1.9.0 e merge-back su develop",
-        "reason": "Consolidare baseline notifiche SNMP multi-versione e pubblicare versione stabile"
+        "date": "2026-03-12T09:02:00+01:00",
+        "decision": "Chiusa release \u000b1.10.0 su main con tag \u000b1.10.0 e merge-back su develop",
+        "reason": "Stabilizzare baseline quality gate pre-refactoring e versionamento semantico"
       }
     },
     {
@@ -562,11 +562,11 @@ window.NGS_SITE_DATA = {
   ],
   "updates": [
     {
-      "date": "2026-03-11T09:03:00+01:00",
+      "date": "2026-03-12T09:02:00+01:00",
       "project": "ocem.snmp.simulator",
       "slug": "ocem.snmp.simulator",
       "status": "In manutenzione",
-      "summary": "Chiusa release \u000b1.9.0 su main con tag \u000b1.9.0 e merge-back su develop",
+      "summary": "Chiusa release \u000b1.10.0 su main con tag \u000b1.10.0 e merge-back su develop",
       "source": "decision-log"
     },
     {

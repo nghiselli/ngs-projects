@@ -10,7 +10,7 @@
 - Tipo progetto: Personale
 
 - Includi nel portfolio: Si
-- Ultimo aggiornamento: 2026-03-11
+- Ultimo aggiornamento: 2026-03-12
 - Owner: Nicola
 
 ## Obiettivo
@@ -33,6 +33,10 @@ Documenti principali di riferimento:
 | `D:\repos\OCEM\Ocem.Snmp.Simulator\docs\HTTPS-CONFIGURATION-GUIDE.md` | Guida operativa configurazione HTTPS (dev cert e certificati custom) |
 | `D:\repos\OCEM\Ocem.Snmp.Simulator\docs\v1.8.0-simulator-snmp-v2c-v3-specification.md` | Specifica roadmap SNMP v2c/v3 |
 | `D:\repos\OCEM\Ocem.Snmp.Simulator\docs\v1.9.0-simulator-trap-inform-v2c-v3-specification.md` | Specifica roadmap Trap/Inform v2c/v3 |
+| `D:\repos\OCEM\Ocem.Snmp.Simulator\docs\v1.10.0-unit-tests.md` | Specifica unit test e code coverage pre-refactoring |
+| `D:\repos\OCEM\Ocem.Snmp.Simulator\docs\v1.11.0-simulator-project-modularization-analysis.md` | Analisi refactoring architetturale multi-progetto |
+| `D:\repos\OCEM\Ocem.Snmp.Simulator\docs\v1.12.0-simulator-multi-instance-cluster-analysis.md` | Analisi distribuzione multi-istanza/orchestrazione cluster |
+| `D:\repos\OCEM\Ocem.Snmp.Simulator\docs\v1.12.0-simulator-multi-instance-cluster-specification.md` | Specifica distribuzione multi-istanza/orchestrazione cluster |
 | `D:\repos\OCEM\Ocem.Snmp.Simulator\docs\TRAP-MANAGEMENT.md` | Linee guida operative trap lato agent .NET 8+ |
 | `D:\repos\OCEM\Ocem.Snmp.Simulator\docs\topology-configuration-guide.md` | Guida configurazione topologia |
 
@@ -52,12 +56,17 @@ Il progetto riduce dipendenze da ambienti fisici per validare integrazioni SNMP 
 - [x] Gating notifiche per-device tramite `TrapObjIds` e policy write via `WriteObjIds`
 - [x] Hardening security runtime SNMP v3 (rigetto security level incoerente, no downgrade implicito)
 - [x] Management API v1 (/api/v1) con endpoint read/command runtime, sicurezza HTTPS+API key, CORS e rate limiting
+
+## Ambito V2c/V3
 - [x] Tooling operativo: `tools/test-snmp-matrix.ps1`, `tools/test-snmp-set-single.ps1`, `tools/test-snmp-v2c-v3-matrix.ps1`, `tools/test-snmp-v3-security-negative.ps1`, `tools/add-mib-absolute-oid-comments.ps1`
 - [x] Release `v1.9.0` chiusa su `main` con tag `v1.9.0` e merge-back su `develop`
-## Fuori Ambito (Per Ora)
+- [x] Release `v1.10.0` chiusa su `main` con tag `v1.10.0` (baseline unit test + coverage 89.58%)
 - [x] Supporto SNMP v2c/v3 (`GET`, `GETNEXT`, `GETBULK`, `SET`)
 - [x] Supporto Trap/Inform v2c/v3
+
+## Fuori Ambito (Per Ora)
 - [ ] Distribuzione multi-istanza/orchestrazione cluster
+
 ## Stack e Architettura Ipotizzata
 - Linguaggio/framework: C# su ASP.NET Core Blazor Server (`net10.0`)
 - UI: MudBlazor
@@ -82,11 +91,14 @@ Il progetto riduce dipendenze da ambienti fisici per validare integrazioni SNMP 
 | Management API v1.7.0 | 2026-03-10 | Completata | Endpoint runtime, sicurezza HTTPS+API key, Swagger e tooling curl |
 | SNMP v2c/v3 v1.8.0 | 2026-03-10 | Completata | Feature/release chiuse con baseline multi-versione consolidata |
 | Trap/Inform v2c/v3 v1.9.0 | 2026-03-11 | Completata | Feature chiusa su develop, release `v1.9.0` chiusa su main con tag `v1.9.0` |
+| Unit test + coverage baseline v1.10.0 | 2026-03-12 | Completata | Feature chiusa su develop, release `v1.10.0` chiusa su main con tag `v1.10.0` |
+
 ## Next Steps (2-4 Settimane)
 1. Eseguire regressione completa SNMP `GET`/`SET` + trap/inform + Management API su matrix device/topologia.
 2. Estendere tooling trap receiver con decode/ack inform per test automatizzati v2c/v3.
 3. Automatizzare regressione protocol-aware SNMP `v1/v2c/v3` con report unico e baseline confrontabile per release.
-4. Pianificare roadmap post-v1.9 per distribuzione multi-istanza/orchestrazione cluster.
+4. Pianificare roadmap post-v1.10 per distribuzione multi-istanza/orchestrazione cluster.
+
 ## Prompt / Specifiche da Preparare
 - [x] Spec 01 - Release v1.5.0 (scope, acceptance criteria, regression matrix)
 - [x] Spec 02 - SNMP SET v1.6.0 (policy write, validazioni MIB, error mapping)
@@ -113,15 +125,19 @@ Il progetto riduce dipendenze da ambienti fisici per validare integrazioni SNMP 
 
 | 2026-03-11T09:00:00+01:00 | Implementata v1.9 (trap/inform `v2c/v3`) con sender multi-versione, parser esteso e gating `TrapObjIds` | Completare copertura notifiche moderne mantenendo retrocompatibilita trap v1 e riuso runtime store |
 | 2026-03-11T09:01:00+01:00 | Introdotto hardening security runtime SNMP v3 su security level coerente | Eliminare downgrade impliciti e allineare comportamento ai test negativi di sicurezza |
-| 2026-03-11T09:02:00+01:00 | Chiusa feature eature/nghiselli/snmp-v2c-v3-trap su develop con merge --no-ff | Stabilizzare baseline v1.9 prima della fase release |
-| 2026-03-11T09:03:00+01:00 | Chiusa release 1.9.0 su main con tag 1.9.0 e merge-back su develop | Consolidare baseline notifiche SNMP multi-versione e pubblicare versione stabile |
+| 2026-03-11T09:02:00+01:00 | Chiusa feature `feature/nghiselli/snmp-v2c-v3-trap` su develop con merge --no-ff | Stabilizzare baseline v1.9 prima della fase release |
+| 2026-03-11T09:03:00+01:00 | Chiusa release `v1.9.0` su main con tag `v1.9.0` e merge-back su develop | Consolidare baseline notifiche SNMP multi-versione e pubblicare versione stabile |
+| 2026-03-12T09:00:00+01:00 | Consolidata baseline test automatizzati (88 test, coverage 89.58%) con script dedicato | Ridurre rischio regressioni prima del refactoring architetturale |
+| 2026-03-12T09:01:00+01:00 | Allineata documentazione progetto e checkpoint v1.10 | Garantire tracciabilita completa tra stato codice, release e roadmap |
+| 2026-03-12T09:02:00+01:00 | Chiusa release `v1.10.0` su main con tag `v1.10.0` e merge-back su develop | Stabilizzare baseline quality gate pre-refactoring e versionamento semantico |
+
 ## Rischi / Blocchi
 - Errori di configurazione JSONC/MIB bloccano startup (fail-fast): alto impatto operativo se i file non sono versionati con disciplina.
 - Copertura regressione ancora in parte manuale su scenari topologici complessi.
 - Compatibilita con tool SNMP terzi da verificare in modo sistematico su tutte le categorie device e su tutte le versioni SNMP supportate (v1/v2c/v3).
 - Identificazione trap in ambienti NAT/IP condivisi richiede metadati aggiuntivi (varbind identificativo).
 
-- Roadmap post-v1.9 focalizzata su cluster/multi-istanza e maggiore automazione test notifiche trap/inform.
+- Roadmap post-v1.10 focalizzata su cluster/multi-istanza e maggiore automazione test notifiche trap/inform.
 ## Note Libere
 - Comandi rapidi utili:
   - `dotnet build Ocem.Snmp.Simulator.slnx`
@@ -130,8 +146,10 @@ Il progetto riduce dipendenze da ambienti fisici per validare integrazioni SNMP 
   - `./tools/test-snmp-v2c-v3-matrix.ps1`
   - `./tools/test-snmp-v3-security-negative.ps1`
   - `./tools/test-snmp-set-single.ps1`
-- Versione applicativa corrente in `csproj`: `1.9.0`.
-- `CHANGELOG.md`: release `1.9.0` promossa e sezione `[Unreleased]` riaperta.
+- Versione applicativa corrente in `csproj`: `1.10.0`.
+- `CHANGELOG.md`: release `1.10.0` promossa e sezione `[Unreleased]` riaperta.
+
+
 
 
 
