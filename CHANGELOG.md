@@ -5,6 +5,17 @@ Tutte le modifiche rilevanti di `ngs-projects` saranno documentate in questo fil
 ## [Unreleased]
 
 ### Added
+- N/A
+
+### Changed
+- N/A
+
+### Fixed
+- N/A
+
+## [v1.3.0] - 2026-03-12
+
+### Added
 - Tracking progresso per progetto con campo Snapshot `Progresso` e output dati `progressPercent/progressText`.
 - Nuovo stato portfolio `In manutenzione` per progetti completati ma ancora attivi.
 - Progetto portfolio `ngs-projects` con stato `In manutenzione` e progresso `95%`.

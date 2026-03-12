@@ -1,5 +1,5 @@
 window.NGS_SITE_DATA = {
-  "generatedAt": "2026-03-12T07:53:03+01:00",
+  "generatedAt": "2026-03-12T10:59:54+01:00",
   "totalProjects": 29,
   "statusCounts": {
     "Da pianificare": 7,
@@ -279,7 +279,7 @@ window.NGS_SITE_DATA = {
       "repositoryPath": "ocem.snmp.simulator",
       "latestDecision": {
         "date": "2026-03-12T09:02:00+01:00",
-        "decision": "Chiusa release \u000b1.10.0 su main con tag \u000b1.10.0 e merge-back su develop",
+        "decision": "Chiusa release `v1.10.0` su main con tag `v1.10.0` e merge-back su develop",
         "reason": "Stabilizzare baseline quality gate pre-refactoring e versionamento semantico"
       }
     },
@@ -566,7 +566,7 @@ window.NGS_SITE_DATA = {
       "project": "ocem.snmp.simulator",
       "slug": "ocem.snmp.simulator",
       "status": "In manutenzione",
-      "summary": "Chiusa release \u000b1.10.0 su main con tag \u000b1.10.0 e merge-back su develop",
+      "summary": "Chiusa release `v1.10.0` su main con tag `v1.10.0` e merge-back su develop",
       "source": "decision-log"
     },
     {
