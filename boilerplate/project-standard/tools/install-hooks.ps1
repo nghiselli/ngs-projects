@@ -41,7 +41,7 @@ if (-not (Test-Path $HooksSourceDir)) {
     exit 1
 }
 
-$hookFiles = Get-ChildItem -Path $HooksSourceDir -File
+$hookFiles = @(Get-ChildItem -Path $HooksSourceDir -File)
 if ($hookFiles.Count -eq 0) {
     Write-Host "Nessun hook trovato in: $HooksSourceDir"
     exit 0
@@ -57,3 +57,4 @@ foreach ($hook in $hookFiles) {
 Write-Host ""
 Write-Host "Hook installati correttamente in: $hooksDestDir"
 Write-Host "Nota: su Linux/macOS eseguire 'chmod +x .git/hooks/*' se necessario."
+

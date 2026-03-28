@@ -22,6 +22,7 @@ Breve descrizione del progetto.
 - `README.md`
 - `CHANGELOG.md`
 - `WORKFLOW-STANDARD.md`
+- `WORKFLOW-POST-INIT-CUSTOMIZATION.md`
 - `WORKFLOW-DOCS-BOOTSTRAP.md`
 - `FEATURE-STANDARD.md`
 - `WORKFLOW-SPECIFICATION.md`
@@ -35,15 +36,17 @@ Breve descrizione del progetto.
 - `checkpoints/`
 
 ## Processo standard (AI agent)
-1. Se `README.md`/`CHANGELOG.md` mancano o non sono affidabili, usare `WORKFLOW-DOCS-BOOTSTRAP.md` (manuale).
-2. All'apertura branch `feature/*`/`hotfix/*`, usare `FEATURE-STANDARD.md` per `FEATURE.md` e convenzioni commit.
-3. Definire/aggiornare specifica (`WORKFLOW-SPECIFICATION.md`).
-4. Eseguire analisi tecnica (`WORKFLOW-FEATURE-ANALYSIS.md`).
-5. Implementare con session prompt (`SESSION-PROMPT-TEMPLATE.md`).
-6. Chiudere feature/release/hotfix (`WORKFLOW-GITFLOW.md`).
-7. Aggiornare tracking portfolio se richiesto (`NGS-PROJECTS-UPDATE.md`).
+1. Eseguire la personalizzazione iniziale con `WORKFLOW-POST-INIT-CUSTOMIZATION.md`.
+2. Se `README.md`/`CHANGELOG.md` mancano o non sono affidabili, usare `WORKFLOW-DOCS-BOOTSTRAP.md` (manuale).
+3. All'apertura branch `feature/*`/`hotfix/*`, usare `FEATURE-STANDARD.md` per `FEATURE.md` e convenzioni commit.
+4. Definire/aggiornare specifica (`WORKFLOW-SPECIFICATION.md`).
+5. Eseguire analisi tecnica (`WORKFLOW-FEATURE-ANALYSIS.md`).
+6. Implementare con session prompt (`SESSION-PROMPT-TEMPLATE.md`).
+7. Chiudere feature/release/hotfix (`WORKFLOW-GITFLOW.md`).
+8. Aggiornare tracking portfolio se richiesto (`NGS-PROJECTS-UPDATE.md`).
 
 ## Documentazione funzionale/tecnica
+- Personalizzazione post-init: `WORKFLOW-POST-INIT-CUSTOMIZATION.md`
 - Specifiche: `docs/specs/`
 - Analisi: `docs/analysis/`
 - Bootstrap docs legacy: `docs/docs-generator/`

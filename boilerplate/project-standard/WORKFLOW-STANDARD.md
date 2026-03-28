@@ -9,6 +9,7 @@
 
 File consigliati:
 - `WORKFLOW-STANDARD.md` (questo indice)
+- `WORKFLOW-POST-INIT-CUSTOMIZATION.md` (personalizzazione iniziale dei template post bootstrap)
 - `WORKFLOW-DOCS-BOOTSTRAP.md` (bootstrap documentazione da history git, quando serve)
 - `FEATURE-STANDARD.md` (standard branch feature/hotfix per migliorare README/CHANGELOG automatici)
 - `WORKFLOW-SPECIFICATION.md` (raccolta specifiche)
@@ -22,6 +23,7 @@ File consigliati:
 ## Checklist adozione repository (una tantum)
 
 - [ ] Copiare i file standard nella root del repository.
+- [ ] Eseguire WORKFLOW-POST-INIT-CUSTOMIZATION.md e risolvere tutti i placeholder critici.
 - [ ] Valorizzare i blocchi variabili in ogni workflow (path, branch, comandi build/run).
 - [ ] Verificare che `README.md` e `CHANGELOG.md` esistano.
 - [ ] Se `README.md`/`CHANGELOG.md` mancano o sono inaffidabili, eseguire `WORKFLOW-DOCS-BOOTSTRAP.md`.
@@ -33,6 +35,14 @@ File consigliati:
 ---
 
 ## Flusso standard per nuova feature/patch
+
+### Fase -1 - Personalizzazione post-inizializzazione
+Usare WORKFLOW-POST-INIT-CUSTOMIZATION.md subito dopo il bootstrap.
+
+Output minimo:
+- placeholder rimossi nei file obbligatori;
+- workflow principali valorizzati (gitflow/sessione/portfolio);
+- repository pronto per la prima feature.
 
 ### Fase 0 - Bootstrap documentazione (opzionale)
 Usare `WORKFLOW-DOCS-BOOTSTRAP.md` solo se manca documentazione pregressa affidabile.
@@ -117,9 +127,13 @@ Output minimo:
 
 ```text
 Segui WORKFLOW-STANDARD.md e applica in ordine i workflow collegati.
+Per prima cosa esegui WORKFLOW-POST-INIT-CUSTOMIZATION.md per personalizzare i template base.
 Se mancano README/CHANGELOG affidabili, esegui prima WORKFLOW-DOCS-BOOTSTRAP.md in modalita manuale con review umana.
 All'apertura feature/hotfix applica FEATURE-STANDARD.md (FEATURE.md + commit quality) per migliorare il contesto del generatore docs.
 Poi parti da specifica (WORKFLOW-SPECIFICATION.md), analisi (WORKFLOW-FEATURE-ANALYSIS.md), implementazione (SESSION-PROMPT-TEMPLATE.md) e chiusura git (WORKFLOW-GITFLOW.md).
 Se richiesto, aggiorna anche ngs-projects con NGS-PROJECTS-UPDATE.md.
 Mostra sempre i gate bloccanti e fermati quando manca una conferma utente obbligatoria.
 ```
+
+
+

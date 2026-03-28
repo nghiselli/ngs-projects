@@ -17,6 +17,8 @@ I tool di generazione automatica (`docs/docs-generator/generate-history-docs.py`
 
 ---
 
+<div style="page-break-before: always"></div>
+
 ## Tier 1 — Minimo (commit message descrittivi)
 
 Scrivere sempre commit message che rispondano a "cosa fa questo commit":
@@ -38,6 +40,8 @@ remove duplicate lamp group entries from ECB_A config
 **Regola:** almeno 8-10 parole, soggetto-verbo-oggetto, in inglese o italiano ma coerente.
 
 ---
+
+<div style="page-break-before: always"></div>
 
 ## Tier 2 — Raccomandato (Conventional Commits)
 
@@ -80,6 +84,8 @@ chore(SoftwareVersionManager): update ClosedXML to 0.96.0
 docs(git-history-docs): add FEATURE-STANDARD reference to GUIDE.md
 ```
 
+<div style="page-break-before: always"></div>
+
 ### Esempi concreti
 
 ```bash
@@ -109,6 +115,8 @@ git commit -m "docs(ngs-test-analyzer): add vocal protocol PDF export instructio
 - La history è leggibile da qualsiasi sviluppatore senza contesto pregresso
 
 ---
+
+<div style="page-break-before: always"></div>
 
 ## Tier 3 — Ideale (FEATURE.md sul branch)
 
@@ -186,6 +194,8 @@ Il modello AI riceve quindi sia la *storia* (commit) sia l'*intento* (FEATURE.md
 
 ---
 
+<div style="page-break-before: always"></div>
+
 ## Tier 4 — Automatizzato (commit-msg hook)
 
 ### Installare il hook (opzionale)
@@ -229,6 +239,8 @@ scripts/
   install-hooks.ps1     ← copia da boilerplate/project-standard/tools/install-hooks.ps1
 ```
 
+<div style="page-break-before: always"></div>
+
 Eseguire dalla root del progetto (Windows, Linux, macOS):
 
 ```powershell
@@ -260,6 +272,8 @@ Lo script individua automaticamente la root git, copia tutti i file da `scripts/
 ```
 
 ---
+
+<div style="page-break-before: always"></div>
 
 ## Riferimenti
 
