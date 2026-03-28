@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-03-12T17:07:55+01:00",
-  "totalProjects": 29,
+  "generatedAt": "2026-03-28T19:10:53+01:00",
+  "totalProjects": 30,
   "statusCounts": {
     "Da pianificare": 7,
     "Pianificato": 2,
-    "In corso": 9,
+    "In corso": 10,
     "In pausa": 5,
     "In manutenzione": 2,
     "Completato": 3,
@@ -89,6 +89,26 @@
         "date": "2026-03-10T09:00:00+01:00",
         "decision": "Inserito `ocem.plugin.dds` come progetto portfolio dedicato",
         "reason": "Rendere visibile il componente shared critico della suite"
+      }
+    },
+    {
+      "name": "ocem.modbus.simulator.v2",
+      "slug": "ocem.modbus.simulator.v2",
+      "status": "In corso",
+      "statusRaw": "In corso",
+      "priority": "Alta",
+      "projectType": "Cliente",
+      "includeInPortfolio": "Si",
+      "progressPercent": 35,
+      "progressText": "35%",
+      "lastUpdate": "2026-03-28",
+      "objective": "Migrare il simulatore Modbus OCEM da WinForms legacy a stack moderno .NET 10 con UI Web (Blazor/MudBlazor), mantenendo compatibilita comportamentale lato simulazione e protocollo.",
+      "readmePath": "readmes/ocem.modbus.simulator.v2.md",
+      "repositoryPath": "ocem.modbus.simulator.v2",
+      "latestDecision": {
+        "date": "2026-03-28T19:15:00+01:00",
+        "decision": "Avviato tracking dedicato `ocem.modbus.simulator.v2` con release `v0.1.0`",
+        "reason": "Separare il percorso di migrazione v2 dal simulatore legacy"
       }
     },
     {
@@ -264,26 +284,6 @@
       "latestDecision": null
     },
     {
-      "name": "ocem.snmp.simulator",
-      "slug": "ocem.snmp.simulator",
-      "status": "In manutenzione",
-      "statusRaw": "In manutenzione",
-      "priority": "Alta",
-      "projectType": "Personale",
-      "includeInPortfolio": "Si",
-      "progressPercent": 100,
-      "progressText": "100%",
-      "lastUpdate": "2026-03-12",
-      "objective": "Costruire un simulatore SNMP affidabile e configurabile per emulare device INFINITE (UPS, host, switch, NTP, printer), supportare test di integrazione senza hardware reale, e permettere verifica visuale/runtime del co...",
-      "readmePath": "readmes/ocem.snmp.simulator.md",
-      "repositoryPath": "ocem.snmp.simulator",
-      "latestDecision": {
-        "date": "2026-03-12T09:02:00+01:00",
-        "decision": "Chiusa release `v1.10.0` su main con tag `v1.10.0` e merge-back su develop",
-        "reason": "Stabilizzare baseline quality gate pre-refactoring e versionamento semantico"
-      }
-    },
-    {
       "name": "ngs-projects",
       "slug": "ngs-projects",
       "status": "In manutenzione",
@@ -302,6 +302,22 @@
         "decision": "Mostrare tutti gli aggiornamenti senza limite hardcoded",
         "reason": "Aumentare visibilita storica nel tab Aggiornamenti"
       }
+    },
+    {
+      "name": "ngs-outlook2notion-syncronizer",
+      "slug": "ngs-outlook2notion-syncronizer",
+      "status": "Da pianificare",
+      "statusRaw": "Da Pianificare",
+      "priority": "Bassa",
+      "projectType": "Personale",
+      "includeInPortfolio": "Si",
+      "progressPercent": 0,
+      "progressText": "0%",
+      "lastUpdate": "N/D",
+      "objective": "Breve descrizione del risultato che vuoi ottenere.",
+      "readmePath": "readmes/ngs-outlook2notion-syncronizer.md",
+      "repositoryPath": "ngs-outlook2notion-syncronizer",
+      "latestDecision": null
     },
     {
       "name": "ngs-infinite-utilities",
@@ -524,20 +540,24 @@
       }
     },
     {
-      "name": "ngs-outlook2notion-syncronizer",
-      "slug": "ngs-outlook2notion-syncronizer",
-      "status": "Da pianificare",
-      "statusRaw": "Da Pianificare",
-      "priority": "Bassa",
+      "name": "ocem.snmp.simulator",
+      "slug": "ocem.snmp.simulator",
+      "status": "In manutenzione",
+      "statusRaw": "In manutenzione",
+      "priority": "Alta",
       "projectType": "Personale",
       "includeInPortfolio": "Si",
-      "progressPercent": 0,
-      "progressText": "0%",
-      "lastUpdate": "N/D",
-      "objective": "Breve descrizione del risultato che vuoi ottenere.",
-      "readmePath": "readmes/ngs-outlook2notion-syncronizer.md",
-      "repositoryPath": "ngs-outlook2notion-syncronizer",
-      "latestDecision": null
+      "progressPercent": 100,
+      "progressText": "100%",
+      "lastUpdate": "2026-03-12",
+      "objective": "Costruire un simulatore SNMP affidabile e configurabile per emulare device INFINITE (UPS, host, switch, NTP, printer), supportare test di integrazione senza hardware reale, e permettere verifica visuale/runtime del co...",
+      "readmePath": "readmes/ocem.snmp.simulator.md",
+      "repositoryPath": "ocem.snmp.simulator",
+      "latestDecision": {
+        "date": "2026-03-12T09:02:00+01:00",
+        "decision": "Chiusa release `v1.10.0` su main con tag `v1.10.0` e merge-back su develop",
+        "reason": "Stabilizzare baseline quality gate pre-refactoring e versionamento semantico"
+      }
     },
     {
       "name": "siboni-frontend",
@@ -561,6 +581,14 @@
     }
   ],
   "updates": [
+    {
+      "date": "2026-03-28T19:15:00+01:00",
+      "project": "ocem.modbus.simulator.v2",
+      "slug": "ocem.modbus.simulator.v2",
+      "status": "In corso",
+      "summary": "Avviato tracking dedicato `ocem.modbus.simulator.v2` con release `v0.1.0`",
+      "source": "decision-log"
+    },
     {
       "date": "2026-03-12T09:02:00+01:00",
       "project": "ocem.snmp.simulator",
