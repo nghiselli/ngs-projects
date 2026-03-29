@@ -1,5 +1,5 @@
 window.NGS_SITE_DATA = {
-  "generatedAt": "2026-03-28T19:10:53+01:00",
+  "generatedAt": "2026-03-29T17:11:37+02:00",
   "totalProjects": 30,
   "statusCounts": {
     "Da pianificare": 7,
@@ -99,16 +99,16 @@ window.NGS_SITE_DATA = {
       "priority": "Alta",
       "projectType": "Cliente",
       "includeInPortfolio": "Si",
-      "progressPercent": 35,
-      "progressText": "35%",
-      "lastUpdate": "2026-03-28",
+      "progressPercent": 65,
+      "progressText": "65%",
+      "lastUpdate": "2026-03-29",
       "objective": "Migrare il simulatore Modbus OCEM da WinForms legacy a stack moderno .NET 10 con UI Web (Blazor/MudBlazor), mantenendo compatibilita comportamentale lato simulazione e protocollo.",
       "readmePath": "readmes/ocem.modbus.simulator.v2.md",
       "repositoryPath": "ocem.modbus.simulator.v2",
       "latestDecision": {
-        "date": "2026-03-28T19:15:00+01:00",
-        "decision": "Avviato tracking dedicato `ocem.modbus.simulator.v2` con release `v0.1.0`",
-        "reason": "Separare il percorso di migrazione v2 dal simulatore legacy"
+        "date": "2026-03-29T18:45:00+01:00",
+        "decision": "Rilasciata baseline `v0.2.0` e allineata roadmap su phase 10",
+        "reason": "Consolidare stato pre-runtime Modbus e preparare incremento tecnico successivo"
       }
     },
     {
@@ -582,11 +582,11 @@ window.NGS_SITE_DATA = {
   ],
   "updates": [
     {
-      "date": "2026-03-28T19:15:00+01:00",
+      "date": "2026-03-29T18:45:00+01:00",
       "project": "ocem.modbus.simulator.v2",
       "slug": "ocem.modbus.simulator.v2",
       "status": "In corso",
-      "summary": "Avviato tracking dedicato `ocem.modbus.simulator.v2` con release `v0.1.0`",
+      "summary": "Rilasciata baseline `v0.2.0` e allineata roadmap su phase 10",
       "source": "decision-log"
     },
     {
